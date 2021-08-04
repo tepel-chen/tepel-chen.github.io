@@ -1,0 +1,2136 @@
+
+/*
+ *  Some useful numbers...
+ *
+ *  When font-size is 1em/12pt/16px/100%:
+ *  1px = 0.0625em (when PPI is 96)
+ *  1in = 6em
+ *  1pt = 0.0833333em (1/12em)
+ *
+ */
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+@media print {
+    html,
+    button,
+    input,
+    select,
+    textarea {
+        color: #000;
+    }
+}
+
+html {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 12pt;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        background: url('../img/web-background.jpg');
+        background-attachment: fixed;
+    }
+	body.dark {
+        background: url('../img/web-background-dark.jpg');
+    }
+}
+
+p,
+pre {
+    margin: .5em 0 1em; /* bring top of paragraphs closer to headers */
+}
+
+em {
+    font-style: normal;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0 0;
+}
+
+h6 {
+    font-size: 0.67em;
+    margin: 2.33em 0 0;
+}
+
+h2, h3, h4 {
+    text-decoration: underline;
+}
+
+li ul {
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #222;
+}
+
+@media print {
+    table, th, td {
+        border-color: black;
+    }
+}
+
+td, th {
+    padding: .3em .6em .2em;
+}
+
+.new-block-formatting-context {
+    /* Starts a new block formatting context which will prevent text from wrapping tightly around
+        an image, etc.
+        http://colinaarts.com/articles/the-magic-of-overflow-hidden/
+      */
+    overflow: hidden;
+}
+
+.no-border, .no-border tr, .no-border tr th, .no-border tr td {
+    border: none;
+}
+
+.centered-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.diagram {
+    width: 5em;
+    float: right;
+    margin-left: .5em;
+    margin-bottom: .5em;
+    /* background-color: #FFF; */
+}
+
+[dir='rtl'] .diagram {
+    float: left;
+    margin-left: 0;
+    margin-right: .5em;
+}
+
+@media screen and (min-width: 900px), print {
+    .diagram {
+        width: 9em;
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+
+    [dir='rtl'] .diagram {
+        margin-left: 0;
+        margin-right: 1em;
+    }
+}
+
+.diagram-label {
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+}
+
+table {
+    max-width: 100%;
+}
+@media screen and (min-width: 900px) {
+    .page {
+        margin: 1em auto;
+        padding: 0;
+        border: 1px solid #222; /* Safely using px because exists outside layout of page content */
+        box-shadow: #222 0.0em 0em 0.6em;
+        clear: both;
+        background-color: #FFF;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        width: 8.5in; /* = 8.5in at 12pt (1em) */
+        min-height: 11in; /* = 11in at 12pt (1em) */
+    }
+    .dark .page {
+        background-color: #232323;
+    }
+    .page-bg-01 {
+        background-image: url("../img/page-bg-noise-01.png");
+    }
+    
+    .page-bg-02 {
+        background-image: url("../img/page-bg-noise-02.png");
+    }
+    
+    .page-bg-03 {
+        background-image: url("../img/page-bg-noise-03.png");
+    }
+    
+    .page-bg-04 {
+        background-image: url("../img/page-bg-noise-04.png");
+    }
+    
+    .page-bg-05 {
+        background-image: url("../img/page-bg-noise-05.png");
+    }
+    
+    .page-bg-06 {
+        background-image: url("../img/page-bg-noise-06.png");
+    }
+    
+    .page-bg-07 {
+        background-image: url("../img/page-bg-noise-07.png");
+    }
+    
+    .dark .page-bg-01 {
+        background-image: url("../img/page-bg-noise-01-dark.png");
+    }
+    
+    .dark .page-bg-02 {
+        background-image: url("../img/page-bg-noise-02-dark.png");
+    }
+    
+    .dark .page-bg-03 {
+        background-image: url("../img/page-bg-noise-03-dark.png");
+    }
+    
+    .dark .page-bg-04 {
+        background-image: url("../img/page-bg-noise-04-dark.png");
+    }
+    
+    .dark .page-bg-05 {
+        background-image: url("../img/page-bg-noise-05-dark.png");
+    }
+    
+    .dark .page-bg-06 {
+        background-image: url("../img/page-bg-noise-06-dark.png");
+    }
+    
+    .dark .page-bg-07 {
+        background-image: url("../img/page-bg-noise-07-dark.png");
+    }
+    
+}
+
+@media print {
+    .page {
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        max-width: none;
+        min-height: initial;
+        background-color: #FFF;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        width: 8.5in; /* = 8.5in at 12pt (1em) */
+        height: 11in; /* = 11in at 12pt (1em) */
+        page-break-before: always;
+    }
+}
+
+
+.dark {
+    color: #ddd;
+    background-color: #222;
+}
+
+.dark table, .dark th, .dark td {
+    border: 1px solid #ccc;
+}
+
+.page-content {
+    margin: 0 .25in;
+    padding-top: 2em;
+}
+
+@media print {
+    .page-first {
+        page-break-before: auto;
+    }
+}
+
+@media screen and (min-width: 900px), print {
+    .page-content {
+        margin: 0 .75in;
+        padding-top: 4.5em;
+        min-height: 9.5in; /* Leaving 3em at the bottom for footer (0.75in) */
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body.multipage .section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.page-header {
+    display: block;
+    position: relative;
+    height: 0;
+    top: .25in; /* = 0.25in at 12pt (1em) */
+    margin: 0 .5in; /* = ~0.5in at 12pt (1em) */
+}
+
+@media screen and (max-width: 900px) {
+    .page .page-header {
+        display: none;
+    }
+
+    .section {
+        margin-bottom: 3em;
+    }
+}
+
+.page-header-section-title {
+    float: right;
+}
+
+[dir='rtl'] .page-header-section-title {
+    float: left;
+}
+
+.page-header-doc-title {
+    float: left;
+}
+
+[dir='rtl'] .page-header-doc-title {
+    float: right;
+}
+
+.page-footer {
+    text-align: center;
+}
+
+.relative-footer {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .relative-footer {
+        margin-top: .25in; /* = 0.25in */
+        height: .5in; /* = 0.5in */
+        display: block;
+    }
+}
+
+.absolute-footer {
+    display: none;
+}
+
+.appendix-reference {
+    font-style: italic;
+}
+
+/* ==========================================================================
+   Section-specific
+   ========================================================================== */
+
+.instructions {
+    font-family: 'Cabin', sans-serif;
+    line-height: normal;
+}
+
+    .instructions h2, .instructions h3, .instructions h4 {
+        text-decoration: none;
+    }
+
+    .instructions em {
+        font-style: italic;
+        text-decoration: none;
+    }
+
+.bomb-diagram {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.bomb-diagram-front {
+    width: 100%;
+    max-width: 18.0020625em; /* Hardcoding for IE */
+}
+
+.bomb-diagram-side {
+    max-width: 5.3895625em; /* Hardcoding for IE */
+}
+
+.bomb-diagram img {
+    height: 11.7em; /* just barely gives enough room for all the other text */
+    vertical-align: middle;
+    padding: .5em 1em;
+}
+
+.bomb-diagram table, .bomb-diagram tr, .bomb-diagram td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.bomb-diagram table {
+    margin: 0 auto;
+}
+
+.timer-diagram {
+    text-align: center;
+    display: block;
+    float: right;
+    width: 5em;
+    padding: 0;
+    margin: 0 0 2em 2em;
+}
+
+[dir='rtl'] .timer-diagram {
+    float: left;
+}
+
+.timer-diagram img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.section-title .page-content {
+    text-align: center;
+}
+
+.section-title .vertical-spacer {
+    height: 20.5em;
+}
+
+.music-image {
+    height: 45em;
+}
+
+.music-table td, .music-table th {
+    padding: 0;
+}
+
+.password-table {
+    margin: 3em auto 0 auto;
+    font-size: 1.2em;
+}
+
+.password-table td {
+    padding: 0.75em 1em;
+}
+
+.repeaters-table {
+    width: 98%;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.repeaters-spacer {
+    border: none;
+}
+
+.whos-on-first-step1-table, .whos-on-first-step1-table td {
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+    .whos-on-first-step1-table th, .whos-on-first-step1-table td {
+        font-size: 0.9em;
+        width: 6.5em;
+        padding: 0.45em 0.45em .7em .7em;
+    }
+
+        .whos-on-first-step1-table th table, .whos-on-first-step1-table td table {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+.whos-on-first-look-at-display {
+    background-color: black;
+    color: white;
+}
+
+.whos-on-first-step1-table td table td {
+    font-size: 1em;
+    height: 1.5em;
+    width: 50%;
+    padding: 0;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.whos-on-first-step1-table td table th {
+    font-size: 1em;
+    height: 1.5em;
+    padding: 0.1em 0.1em;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.whos-on-first-step1-table th {
+    border: 1px solid black;
+}
+
+.whos-on-first-step2-table {
+    width: 105%;
+}
+
+    .whos-on-first-step2-table th {
+        padding-left: .2em;
+        padding-right: .2em;
+        padding-top: .15em;
+        padding-bottom: .15em;
+    }
+
+    .whos-on-first-step2-table td {
+        font-size: .78em;
+    }
+
+.whos-on-morse-step2-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .whos-on-morse-step2-table th {
+        padding-left: 1.2em;
+        padding-right: 1.2em;
+        padding-top: .3em;
+        padding-bottom: .1em;
+    }
+
+    .whos-on-morse-step2-table td {
+        font-size: .9em;
+    }
+
+.keypad-table {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, sans-serif;
+    font-size: 2.2em;
+    border-style: none;
+    text-align: center;
+}
+
+.keypad-table-column {
+    background-color: #FFF; /*For ensuring photocopy noise doesn't affect symbols*/
+    padding: .1em;
+}
+
+.dark .keypad-table-column {
+    background-color: #222;
+}
+
+.keypad-table-spacer, .dark .keypad-table-spacer, .dark .keypad-table {
+    border-style: none;
+}
+
+.keypad-symbol-image {
+    height: 1.9em;
+}
+
+.maze {
+    width: 11em;
+    height: 11em;
+    margin: .1em;
+}
+
+.maze-grid {
+    text-align: center;
+    margin-top: 3em;
+}
+
+#morseCodeChart {
+    float: left;
+    margin-right: 1em;
+    height: 32em;
+    width: 24.8270625em; /* Hardcode for IE */
+    border: 1px solid #021a40;
+    background-color: #ffffff;
+}
+
+[dir='rtl'] #morseCodeChart {
+    float: right;
+    margin-right: 0;
+    margin-left: 1em;
+}
+
+.morse-code table th {
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 5.5em;
+}
+
+.morse-code table td {
+    text-align: center;
+}
+
+.morse-signal-table {
+    float: left;
+    margin-right: 1em;
+    height: 32em;
+    width: 24.8270625em;
+    border: 1px solid #021a40;
+    background-color: #ffffff;
+}
+
+.dark .morse-signal-table {
+    background-color: #222;
+}
+
+.morse-signal-table td, .morse-signal-table th {
+    border: none;
+}
+
+.morse-interpret th, .morse-interpret td {
+    padding: 0.4em 0.3em;
+}
+
+.morse-interpret p {
+    margin: 0 1em;
+    font-size: 0.8em;
+}
+
+#morseSignalImg {
+    width: 100%;
+}
+
+.venn-wires table th {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.venn-wires table td {
+    text-align: center;
+    font-size: 0.85em;
+}
+
+.venn-wires table td.venn-legend-text {
+    text-align: left;
+}
+
+#venndiagram {
+    display: block;
+    width: 70%;
+    position: relative;
+    top: -2em;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#vennlegend {
+    width: 20em;
+    float: left;
+    position: relative;
+    top: -0.7em;
+}
+
+[dir='rtl'] #vennlegend {
+    float: right;
+}
+
+#venntable {
+    border-width: 0.2em;
+    position: relative;
+    top: -0.7em;
+}
+
+#vennlegendtable {
+    width: 18em;
+    float: left;
+    position: relative;
+    margin-right: 1em;
+    top: -0.7em;
+}
+
+#vennlegendtable td img {
+    text-align: center;
+}
+
+#vennlegendtable td {
+    border: none;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+}
+
+    #venntable td {
+        font-size: 0.75em;
+    }
+
+#venninstructiontable {
+    position: relative;
+    top: -0.7em;
+}
+
+.venn-legend-line {
+    margin: 1em 0;
+    width: 10em;
+}
+
+.venn-wires .appendix-reference {
+    margin-top: 0;
+    position: relative;
+}
+
+.venn-wires table {
+    border-width: 0.2em;
+}
+
+#simon-legend {
+    height: 9em;
+    margin: 1em auto;
+    display: block;
+}
+
+.appendix-ports table {
+    margin-top: 1em;
+}
+
+.appendix-ports img {
+    height: 5em;
+}
+
+.appendix-ports table td {
+    text-align: center;
+}
+
+.appendix-ports table th {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.needy-knob table {
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+}
+
+    .needy-knob table td, .needy-knob table th {
+        width: 1.5em;
+        text-align: center;
+    }
+
+.needy-diagram-label {
+    text-align: left;
+}
+
+[dir='rtl'] .needy-diagram-label {
+    text-align: right;
+}
+
+.wire-sequence table {
+    display: inline-table;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 15.1em;
+    font-size: 0.9em;
+}
+
+.wire-sequence td, .wire-sequence th {
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+}
+
+.wire-sequence table .header {
+    background-color: #222;
+    color: #FFF;
+}
+
+.wire-sequence .blue-table {
+    /* Because it's the middle table... */
+    margin-left: .3em;
+    margin-right: .3em;
+}
+
+.wire-sequence .second-col {
+    width: 5em;
+}
+
+.memory-rules p {
+    margin-top: .3em;
+    font-size: 0.95em; /* TODO: Remove this, it's a quick hack to get printing looking nicer with our placeholder graphic design. */
+}
+
+.flavour-text {
+    font-style: italic;
+    font-size: 75%;
+    margin-top: .5em;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+    .ir:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide from both screenreaders and browsers, but only for non-print
+ */
+.hide-screen {
+    display: none;
+    visibility: hidden;
+}
+
+@media print {
+    .hide-screen {
+        display: initial;
+        visibility: initial;
+    }
+}
+
+/*
+ * Hide from both screenreaders and browsers, but only for print
+ */
+@media print {
+    .hide-print {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+    /*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    /* Removed all this stuff because we'll be aiming to make everything deliberate for print */
+    /* * { */
+        /*background: transparent !important;
+        color: #000 !important;*/ /* Black prints faster: h5bp.com/s */
+        /*box-shadow: none !important;
+        text-shadow: none !important;*/
+    /* } */
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* Rule seed */
+.page-header-section-title.ruleseed-seeded {
+    color: #800;
+    background: rgba(255, 0, 0, .1);
+    border: 2px solid #f00;
+    padding: .3em .7em;
+}
+
+.ruleseed-header {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .ruleseed-active .ruleseed-header {
+        display: block;
+        background: rgba(255, 0, 0, .1);
+        padding: .3em 0;
+        font-weight: bold;
+        font-size: 14pt;
+        text-align: center;
+    }
+}
+
+
+
+/** NOTIFICATION AND OPTIONS MENU **/
+
+#notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 6px;
+    color: black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom-right-radius: 5px;
+    box-shadow: rgba(0,0,0,.5) 0 0 10px;
+    font-family: sans-serif;
+}
+
+#optionsMenu {
+    position: fixed;
+    transition: transform 300ms ease-out;
+    left: 0;
+    top: 50px;
+    transform: translateX(-120%);
+    background: #f7f7f7;
+    border: 1px solid black;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: rgba(0,0,0,.5) 0 0 10px;
+    font-family: sans-serif;
+    padding: 10px 15px 15px 20px;
+}
+
+    .dark #optionsMenu {
+        background: #212121;
+    }
+
+    #optionsMenu.open {
+        transform: none;
+    }
+
+    #optionsMenu h2 {
+        text-decoration: none;
+    }
+
+    #optionsMenu blockquote {
+        margin: 0 0 0 25px;
+    }
+
+    #optionsMenu kbd {
+        font: inherit;
+        text-decoration: underline;
+    }
+
+@media screen and (max-width: 900px), print {
+    #pageTypeOption {
+        display: none;
+    }
+}
+
+.dark a {
+    color: #F44121;
+}
+
+.versioning {
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 3.8em auto 0;
+}
+
+#appendix-indicator-img {
+    height: 5em;
+    display: block;
+    margin: .6em 0 0;
+}
+
+.title h1 {
+    border-style: solid;
+    border-color: #000;
+    border-width: 0.03em 0;
+    font-size: 4.39em;
+    font-weight: normal;
+    margin: 1.6em 0.7em 0.5em;
+    padding: 0.5em 0 0.2em;
+    line-height: 1.1;
+}
+
+.censored {
+    font-size: .9em;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+
+@media screen and (max-width: 900px) {
+    .title h1 {
+        font-size: 3em;
+    }
+}
+
+.dark .title h1 {
+    border-color: white;
+
+}
+
+.needy-knob table {
+    display: inline-table;
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+}
+
+
+/* WIRE SEQUENCE */
+.wire-sequence .table-container {
+	text-align: center; /* center the inline tables */
+}
+
+.wire-sequence table {
+    display: inline-table;
+	margin: 1em auto;
+    width: 15em;
+    font-size: 0.9em;
+}
+
+.wire-sequence td, .wire-sequence th {
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+}
+
+.wire-sequence td {
+	text-align: left;
+}
+
+.wire-sequence table .header {
+    background-color: #222;
+    color: #FFF;
+}
+
+.wire-sequence .blue-table {
+    /* Because it's the middle table... */
+    margin-left: .3em;
+    margin-right: .3em;
+}
+
+.wire-sequence .second-col {
+    width: 5em;
+}
+
+
+.appendix-ports table {
+    margin-top: 1em;
+}
+
+.appendix-ports img {
+	height: 5em;
+}
+
+#appendix-ports-dvi-img {
+	width: 10.15em;
+}
+
+#appendix-ports-parallel-img {
+	width: 16.1em;
+}
+
+#appendix-ports-ps2-img {
+	width: 5.55em;
+}
+
+#appendix-ports-rj45-img {
+	width: 5.2em;
+}
+
+#appendix-ports-serial-img {
+	width: 8.35em;
+}
+
+#appendix-ports-rca-img {
+	width: 5em;
+}
+
+.appendix-ports table td {
+	text-align: center;
+}
+
+.appendix-ports table th {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+
+.footnote {
+    font-size: .83em;
+    font-style: italic;
+    margin-bottom: 0;
+    margin-top: .1em;
+}
+
+.dark svg,
+.dark img {
+    filter: contrast(75%) invert(100%);
+}
+
+.index h2{
+    margin-bottom: 2em;
+}
+
+.index .indexGrid {
+    display: grid;
+    grid-template-columns: minmax(100px,max-content) 1fr max-content;
+    gap: 1em
+}
+
+.index .indexGrid a {
+    display: block;
+}
+
+
+.index .indexGrid .filler{
+    overflow: hidden;
+}
+
+.index li::marker {
+    content: "・";
+}
+
+
+.index li.boss::marker {
+    content: "★";
+    font-size: .8em;
+}
+
+
+.index li {
+    padding-left: .3em;
+}
+
+.chap3 .index {
+    font-size: .85em;
+}
+
+
+#GoBack {
+    position: sticky;
+    background-color: #fff;
+    bottom: 1em;
+    right: 1em;
+    width: fit-content;
+    height: fit-content;
+    padding: 1em;
+    border: #222 1px solid;
+    border-radius: 4px;
+    margin-left: auto;
+    box-shadow: rgba(0,0,0,.5) 2px 2px 2px;
+}
+
+#GoBack a {
+    text-decoration: none;
+    line-height: 2.5em;
+    color: #222;
+    font-weight: bold;
+}
+
+#GoBack a::before {
+    content: "▲";
+    margin-right: .8em;
+}
+
+.dark #GoBack {
+    background-color: #222;
+}
+
+@media print {
+    #GoBack {
+        display: none;
+    }
+}
+
+.dark #GoBack a {
+    color: white;
+}
+
+table.switches svg {
+    width: 14mm;
+}
+table.switches {
+    margin: 1em auto;
+}
+table.switches td {
+    padding: 0;
+    border: .5mm solid black;
+}
+.dark table.switches td {
+    border: .5mm solid white;
+}
+table.switches td > svg {
+    display: block;
+}
+
+.dark ::selection {
+    background-color: #7851a5;
+}
+
+.left-col {
+    width: 20%;
+}
+table.colsq tr:first-of-type {
+    width: 20%;
+}
+
+table.colsq td {
+    white-space: nowrap;
+}
+
+table.switches .switches-knob {
+    fill: #fff
+}
+
+.TextField .tf-rule-column {
+    float: left;
+    width: 50%;
+    font-size: 15px;
+}
+.TextField .tf-rule-column ul {
+    margin: .1em;
+    list-style-type: none;
+    padding-left: 1.5em;
+}
+.TextField .tf-rule-column li {
+    position: relative;
+}
+.TextField .tf-rule-column li:before {
+    position: absolute;
+    left: -1.5em;
+    font-size: 14px;
+    content: '—';
+}
+.TextField h4 {
+    text-decoration: none;
+}
+
+.ConnectionCheck .all-graphs {
+    width: 160mm;
+    display: block;
+    margin: 0 auto;
+}
+.ConnectionCheck .explain {
+    font-style: italic;
+}
+
+p.note {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.Background .a-table {
+    width: 90%;
+    text-align: center;
+    border: none;
+    margin: 0 auto;
+}
+.Background .a-table tr:first-child td:first-child {
+    border: none;
+}
+
+.Background .b-table {
+    width: 90%;
+    text-align: center;
+    border: none;
+    margin: 0 auto;
+    table-layout: fixed
+}
+
+.Background .b-table th:first-child {
+    width: 50%;
+}
+
+.CombinationLock .stage {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#TwoFactor img {
+    height: 5em;
+}
+
+#RPS .squeeze {
+    position: absolute;
+    white-space: nowrap;
+    transform: scaleX(.930);
+    transform-origin: left;
+    text-decoration: inherit;
+}
+
+#RPS table#rock-paper-scissors-lizard-spock {
+    width: 100%;
+    table-layout: fixed;
+}
+#RPS table#rock-paper-scissors-lizard-spock th:first-child {
+    width: 30%;
+}
+#RPS table#rock-paper-scissors-lizard-spock td {
+    white-space: nowrap;
+    vertical-align: top;
+}
+#RPS .skip {
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+#RPS .page-header-section-title.ruleseed-seeded {
+    transform: scaleX(.75);
+    transform-origin: right;
+    right: 0;
+    position: absolute;
+    width: auto;
+}
+#RPS .unlit-ind{
+    font-size: 0.8em;
+}
+
+#TwoBits p:not(.flavour-text) {
+    margin: 0.5em 0;
+    font-size: .89em;
+}
+#TwoBits .note {
+    font-size: 0.7em;
+    margin: 0 0;
+}
+#TwoBits .querytable {
+    border: none;
+    font-family: 'Special Elite', 'Courier New', monospace;
+}
+#TwoBits .querytable td, .querytable th{
+    padding: .2em .75em .1em;
+}
+#TwoBits .querytable tr:first-child th:first-child {
+    border: none;
+}
+
+
+#RoundKeypad .keypad-table {
+    margin-top: 64px;
+}
+
+#DoubleOh td {
+    text-align: center;
+}
+
+#DoubleOh table.double-oh {
+    margin: 0 auto 0;
+    border: 2mm solid black;
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 90%;
+}
+
+#DoubleOh table.double-oh col {
+    width: 25%;
+}
+
+#DoubleOh table.double-oh td {
+    height: 35px;
+    width: 35px;
+    white-space: nowrap;
+    border-right: .5mm dotted black;
+    border-bottom: .5mm dotted black;
+}
+
+#DoubleOh table.double-oh tr:nth-child(3n) td {
+    border-bottom: 1.5mm solid black;
+}
+
+#DoubleOh table.double-oh td:nth-child(3n) {
+    border-right: 1.5mm solid black;
+}
+
+.dark #DoubleOh table.double-oh td,
+.dark #DoubleOh table.double-oh,
+.dark #DoubleOh table.double-oh tr:nth-child(3n) td {
+    border-color: white;
+}
+
+#DoubleOh .note {
+    font-weight: bold;
+    font-size: 93%;
+}
+
+#DoubleOh .goal {
+    font-weight: bold;
+}
+
+#DoubleOh .page-content.double-oh-content ul {
+    font-size: 93%;
+}
+
+#CLSQ .brother {
+    clear: both;
+    margin: 1em 0;
+    overflow: auto;
+}
+#CLSQ .brother > .component {
+    float: right;
+    margin-left: .5cm;
+}
+#CLSQ .brother > .component > img {
+    width: 3cm;
+}
+#CLSQ .brother > .explanation {
+    font-weight: bold;
+}
+#CLSQ .brother > .link {
+    font-size: 24pt;
+}
+
+#UncoloredSquares svg.pattern {
+    width: 2cm;
+}
+#UncoloredSquares table {
+    width: 100%;
+}
+#UncoloredSquares td, th {
+    text-align: center;
+    vertical-align: middle;
+}
+.dark #UncoloredSquares svg.pattern {
+    color: white;
+}
+
+
+.TheScrew .boxed {
+    border: 3px solid black;
+    padding-left: 3px;
+    line-height: 1.3;
+}
+
+.dark .TheScrew .boxed {
+    border-color: white;
+}
+
+#DividedSquares .amytaslydertorisaitmicswat {
+    width: 100%;
+    margin: 1.33em 0 0;
+}
+
+#DividedSquares .amytaslydertorisaitmicswat caption {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#DividedSquares .amytaslydertorisaitmicswat td {
+    text-align: center;
+    font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+#DividedSquares .amytaslydertorisaitmicswat tr:nth-child(2) th {
+    width: 14.2%;
+}
+
+#DividedSquares .amytaslydertorisaitmicswat .invalid {
+    background: #ddd;
+}
+
+#DividedSquares .container {
+    clear: both;
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-column-gap: 32px;
+}
+
+#DividedSquares .table-and-flavor {
+    width: 100%;
+}
+
+.bitwise {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.bitwise thead tr th:nth-child(2) {
+    width: 64px;
+}
+
+.bitwise tbody tr td:nth-child(2) {
+    text-align: center;
+}
+
+.bitwise thead tr th:nth-child(1),
+.bitwise thead tr th:nth-child(3) {
+    width: calc(50% - 32px);
+}
+
+code,kbd,pre {
+    font-family: 'Special Elite', 'Noto Serif JP', 'Courier New', monospace;
+}
+
+.third-base-table {
+    font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+.Semaphore table.semaphore-table {
+    width: 100%;
+}
+
+.Semaphore table.semaphore-table td {
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Semaphore img.semaphore-img {
+    width: 5em;
+}
+
+.Semaphore img.semaphore-img-small {
+    width: 2em;
+}
+
+.symbolic-keypad-table {
+    margin-top: 64px;
+}
+
+#BVD .example {
+    font-style: italic;
+}
+
+#BVD .formula-table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 32px;
+}
+
+#BVD .symbol {
+    font-size: 2em;
+    line-height: 1em;
+}
+
+#BVD .isymbol {
+    font-size: 1.25em;
+}
+
+#BVD .formula {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 1.25em;
+}
+
+.TheBulb p {
+    margin: .7em 0;
+    font-size: .95em;
+}
+
+.TheBulb ul {
+    padding-left: 2em;
+    margin: 0;
+    font-size: .95em;
+}
+
+.TheBulb strong {
+    white-space: nowrap;
+}
+
+.TheBulb table.layout {
+    border: none;
+}
+
+.TheBulb table.layout td, table.layout th {
+    border: none;
+    vertical-align: top;
+    padding: .5em 0;
+}
+
+.TheBulb table.layout th {
+    white-space: nowrap;
+}
+
+.TheBulb .ruleseed-active .bulb-page-2 {
+    font-size: 10.5pt;
+}
+
+.TheBulb .underscore {
+    text-decoration: underline;
+}
+
+.SimonStates table {
+    font-size: .95em;
+}
+
+#DecoloredSquares svg.flowchart {
+    width: 85%;
+    margin: 0 auto;
+    display: block;
+}
+
+#DecoloredSquares ul {
+    margin-bottom: .2em;
+    padding-left: 1.25em;
+}
+
+
+#Minesweeper .borderless {
+    border: none;
+}
+
+#Minesweeper .color-lookup {
+    float: right;
+    margin-left: 1.5em;
+}
+
+#Minesweeper .red {
+    background: red;
+}
+
+#Minesweeper .orange {
+    background: orange;
+}
+
+#Minesweeper .yellow {
+    background: yellow;
+}
+
+#Minesweeper .green {
+    background: green;
+}
+
+#Minesweeper .blue {
+    background: blue;
+}
+
+#Minesweeper .purple {
+    background: purple;
+}
+
+.dark img.uninvertible ,
+.dark svg.uninvertible {
+    filter: none;
+}
+
+.mazes-table {
+    border: none;
+    width: 100%;
+}
+    .mazes-table td {
+        padding-bottom: 2em;
+        border: none;
+    }
+
+.TDMaze div.tmaze-outer {
+    border: .7mm solid black;
+    padding: .7mm;
+    line-height: 0;
+    display: inline-block;
+}
+
+.TDMaze svg.tmaze {
+    border: .7mm solid black;
+    padding: 2mm 3mm 3mm 2mm;
+    width: 60mm;
+    font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+.TDMaze svg.tmaze line {
+    stroke: #000;
+    stroke-width: .3px;
+    stroke-linecap: square;
+}
+
+.TDMaze svg.tmaze text.cell {
+    font-size: 14pt;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+.TDMaze svg.tmaze text.x-label {
+    font-size: 9pt;
+    text-anchor: middle;
+}
+
+.TDMaze svg.tmaze text.y-label {
+    font-size: 9pt;
+    text-anchor: end;
+}
+
+#ColoredSwitches svg .black {
+    stroke: #000;
+}
+
+#ColoredSwitches svg .blackFill {
+    fill: #000;
+}
+
+.dark #ColoredSwitches svg .blackFill {
+    fill: #fff;
+}
+
+.dark #ColoredSwitches svg .black {
+    stroke: #fff;
+}
+
+
+.LogicGates table.gate-types { 
+    font-family: 'Special Elite', 'Courier New', 'Noto Serif JP', serif, monospace;
+    margin: 0 auto; border: 0; border-collapse: separate 
+}
+.LogicGates table.gate-types td {
+    border: 0; text-align: center 
+}
+.LogicGates table.gate-types td.gate-type {
+    width: 4rem; border: 1px solid #222; border-radius: 50%; line-height: 1rem; padding: 1rem .5rem .5rem 
+}
+.dark .LogicGates table.gate-types td.gate-type {
+    border-color: white;
+}
+.LogicGates table.gate-types td.gate-type span {
+    font-size: 1.1rem 
+}
+.LogicGates table.gate-types td.arrow {
+    font-size: 2rem; padding: 0 .2rem; line-height: 1em 
+}
+.LogicGates table.truth {
+    margin: 32px auto;
+    font-family: 'Special Elite', 'Courier New', 'Noto Serif JP', serif, monospace;
+}
+
+
+#DiscoloredSquares ul {
+    padding-left: 1.5em;
+}
+#DiscoloredSquares table.order {
+    display: inline-block;
+    margin-right: .67cm;
+    border: none;
+}
+#DiscoloredSquares table.order td {
+        padding: .3em 0 .2em;
+        text-align: center;
+        width: 2.1em;
+    }
+#DiscoloredSquares table#rules {
+    width: 100%;
+    font-size: 11pt;
+}
+#DiscoloredSquares caption {
+    font-weight: bold;
+    text-decoration: underline;
+}
+#DiscoloredSquares .orders {
+    text-align: center;
+}
+#DiscoloredSquares .instr {
+    float: left;
+    width: 1.125cm;
+    height: 1.125cm;
+    margin-right: .2cm;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900"><defs><marker id="Z" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-linejoin="round" stroke-width=".375" d="M5.23115268 2.42024112L-1.3243737.00960795l6.55552674-2.41063263C4.183854-.97778814 4.18988856.96944646 5.23115268 2.42024112z"/></marker><marker id="Y" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-linejoin="round" stroke-width=".375" d="M-5.23115268-2.42024112L1.3243737-.00960795l-6.55552674 2.41063263c1.04729904-1.42323654 1.04126448-3.37047114 3.6e-7-4.8212658z"/></marker><marker id="T" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-linejoin="round" stroke-width=".375" d="M-5.23115268-2.42024112L1.3243737-.00960795l-6.55552674 2.41063263c1.04729904-1.42323654 1.04126448-3.37047114 3.6e-7-4.8212658z"/></marker><marker id="U" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-linejoin="round" stroke-width=".375" d="M5.23115268 2.42024112L-1.3243737.00960795l6.55552674-2.41063263C4.183854-.97778814 4.18988856.96944646 5.23115268 2.42024112z"/></marker><marker id="V" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-linejoin="round" stroke-width=".375" d="M-5.23115268-2.42024112L1.3243737-.00960795l-6.55552674 2.41063263c1.04729904-1.42323654 1.04126448-3.37047114 3.6e-7-4.8212658z"/></marker><marker id="W" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-linejoin="round" stroke-width=".375" d="M5.23115268 2.42024112L-1.3243737.00960795l6.55552674-2.41063263C4.183854-.97778814 4.18988856.96944646 5.23115268 2.42024112z"/></marker><marker id="R" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-linejoin="round" stroke-width=".375" d="M-5.23115268-2.42024112L1.3243737-.00960795l-6.55552674 2.41063263c1.04729904-1.42323654 1.04126448-3.37047114 3.6e-7-4.8212658z"/></marker><marker id="S" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-linejoin="round" stroke-width=".375" d="M5.23115268 2.42024112L-1.3243737.00960795l6.55552674-2.41063263C4.183854-.97778814 4.18988856.96944646 5.23115268 2.42024112z"/></marker><marker id="P" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-linejoin="round" stroke-width=".375" d="M-5.23115268-2.42024112L1.3243737-.00960795l-6.55552674 2.41063263c1.04729904-1.42323654 1.04126448-3.37047114 3.6e-7-4.8212658z"/></marker><marker id="Q" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-linejoin="round" stroke-width=".375" d="M5.23115268 2.42024112L-1.3243737.00960795l6.55552674-2.41063263C4.183854-.97778814 4.18988856.96944646 5.23115268 2.42024112z"/></marker><marker id="b" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="c" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="d" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="e" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="f" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><clipPath id="a"><rect width="200" height="200" y="-225.04724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/></clipPath><clipPath id="k"><rect width="200" height="200" y="-225.04724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/></clipPath><marker id="l" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="m" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="n" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="o" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="p" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><clipPath id="g"><rect width="200" height="200" y="-225.04724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/></clipPath><marker id="h" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="i" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="j" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><clipPath id="q"><rect width="200" height="200" y="-225.04724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/></clipPath><marker id="r" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="s" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="t" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><clipPath id="u"><rect width="200" height="200" y="-225.04724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/></clipPath><marker id="v" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="w" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="x" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="y" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="z" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><clipPath id="A"><rect width="200" height="200" y="-225.04724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/></clipPath><marker id="B" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="C" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="D" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><clipPath id="E"><rect width="200" height="200" y="-225.04724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/></clipPath><marker id="F" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="G" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="H" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="I" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="J" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><clipPath id="K"><rect width="200" height="200" y="-225.04724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/></clipPath><marker id="L" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="M" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><marker id="N" orient="auto" overflow="visible"><path fill-rule="evenodd" stroke="%23000" stroke-width=".53333335" d="M-4 0l-2 2 7-2-7-2z"/></marker><clipPath id="O"><rect width="200" height="200" y="-225.04724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/></clipPath><clipPath id="X"><rect width="200" height="200" y="-225.04724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/></clipPath></defs><g transform="translate(0 325.04724)"><g fill="none" stroke="%23000" clip-path="url(%23a)" transform="translate(12.5 -87.5)"><path d="M50-225.04724v200m50-200v200m50-200v200m-150-150h200m-200 50h200m-200 50h200"/><path stroke-width="5" marker-end="url(%23b)" d="M175-200.04724l-50-50"/><path stroke-width="5" marker-end="url(%23c)" d="M175-.0472393L125-50.047239"/><path stroke-width="5" marker-end="url(%23d)" d="M25.000001-100.04724l-50-50"/><path stroke-width="5" marker-end="url(%23e)" d="M225-100.04724l-50-50"/><path stroke-width="5" marker-end="url(%23f)" d="M125-100.04724l-49.999999-50"/></g><g fill="none" stroke="%23000" clip-path="url(%23g)" transform="translate(237.5 -87.499999)"><path d="M50-225.04724v200m50-200v200m50-200v200m-150-150h200m-200 50h200m-200 50h200"/><path stroke-width="5" marker-end="url(%23h)" d="M75-200.04724v-50"/><path stroke-width="5" marker-end="url(%23i)" d="M75-.047241v-50.000001"/><path stroke-width="5" marker-end="url(%23j)" d="M75-100.04724v-50"/></g><g fill="none" stroke="%23000" clip-path="url(%23k)" transform="translate(462.5 -87.5)"><path d="M50-225.04724v200m50-200v200m50-200v200m-150-150h200m-200 50h200m-200 50h200"/><path stroke-width="5" marker-end="url(%23l)" d="M175-100.04724l50-50"/><path stroke-width="5" marker-end="url(%23m)" d="M-25-100.04724l50-50"/><path stroke-width="5" marker-end="url(%23n)" d="M75-200.04724l50-50"/><path stroke-width="5" marker-end="url(%23o)" d="M75-.047241l50-50"/><path stroke-width="5" marker-end="url(%23p)" d="M75-100.04724l50-50"/></g><g fill="none" stroke="%23000" clip-path="url(%23q)" transform="translate(687.5 -87.5)"><path d="M50-225.04724v200m50-200v200m50-200v200m-150-150h200m-200 50h200m-200 50h200"/><path stroke-width="5" marker-end="url(%23r)" d="M175-150.04724h50"/><path stroke-width="5" marker-end="url(%23s)" d="M-25-150.04724h50"/><path stroke-width="5" marker-end="url(%23t)" d="M75-150.04724h50"/></g><g fill="none" stroke="%23000" clip-path="url(%23u)" transform="translate(12.5 137.5)"><path d="M50-225.04724v200m50-200v200m50-200v200m-150-150h200m-200 50h200m-200 50h200"/><path stroke-width="5" marker-end="url(%23v)" d="M175-150.04724l50 50"/><path stroke-width="5" marker-end="url(%23w)" d="M-25-150.04724l50 50"/><path stroke-width="5" marker-end="url(%23x)" d="M75-250.04724l50 50"/><path stroke-width="5" marker-end="url(%23y)" d="M75-50.047241L125-.04724"/><path stroke-width="5" marker-end="url(%23z)" d="M75-150.04724l50 50"/></g><g fill="none" stroke="%23000" clip-path="url(%23A)" transform="translate(237.5 137.5)"><path d="M50-225.04724v200m50-200v200m50-200v200m-150-150h200m-200 50h200m-200 50h200"/><path stroke-width="5" marker-end="url(%23B)" d="M125-250.04724v50"/><path stroke-width="5" marker-end="url(%23C)" d="M125-50.04724V-.047242"/><path stroke-width="5" marker-end="url(%23D)" d="M125-150.04724v50"/></g><g fill="none" stroke="%23000" clip-path="url(%23E)" transform="translate(462.5 137.5)"><path d="M50-225.04724v200m50-200v200m50-200v200m-150-150h200m-200 50h200m-200 50h200"/><path stroke-width="5" marker-end="url(%23F)" d="M225-150.04724l-50 50"/><path stroke-width="5" marker-end="url(%23G)" d="M25-150.04724l-50 50"/><path stroke-width="5" marker-end="url(%23H)" d="M125-250.04724l-50 50"/><path stroke-width="5" marker-end="url(%23I)" d="M125-50.04724l-50 50"/><path stroke-width="5" marker-end="url(%23J)" d="M125-150.04724l-50 50"/></g><g fill="none" stroke="%23000" clip-path="url(%23K)" transform="translate(687.5 137.5)"><path d="M50-225.04724v200m50-200v200m50-200v200m-150-150h200m-200 50h200m-200 50h200"/><path stroke-width="5" marker-end="url(%23L)" d="M225-100.04724h-50"/><path stroke-width="5" marker-end="url(%23M)" d="M25-100.04724h-50"/><path stroke-width="5" marker-end="url(%23N)" d="M125-100.04724H75"/></g><g fill="none" clip-path="url(%23O)" transform="translate(12.5 362.5)"><path stroke="gray" d="M50-225.04724v200m100-200v200m-150-150h200m-200 50h200m-200 50h200"/><path stroke="%23000" stroke-width="2" d="M100-225.04724v200"/><path stroke="%23000" stroke-width="5" marker-end="url(%23P)" marker-start="url(%23Q)" d="M50-125.04724s25-25 50-25 50 25 50 25"/></g><g fill="none" clip-path="url(%23O)" transform="translate(237.5 362.5)"><path stroke="gray" d="M50-225.04724v200m100-200v200m-150-150h200m-200 100h200m-100-150v200"/><path stroke="%23000" stroke-width="5" marker-end="url(%23R)" marker-start="url(%23S)" d="M100-175.04724s25 25 25 50-25 50-25 50"/><path stroke="%23000" stroke-width="2" d="M0-125.04724h200"/></g><g fill="none" clip-path="url(%23O)" transform="translate(462.5 362.5)"><path stroke="gray" d="M50-225.04724v200m100-200v200m-150-150h200m-200 50h200m-200 50h200m-100-150v200"/><path stroke="%23000" stroke-width="5" marker-end="url(%23T)" marker-start="url(%23U)" d="M50-75.04724s0-50 25-75 75-25 75-25"/><path stroke="%23000" stroke-width="2" d="M0-225.04724l200 200"/></g><g fill="none" clip-path="url(%23O)" transform="translate(687.5 362.5)"><path stroke="gray" d="M50-225.04724v200m100-200v200m-150-150h200m-200 50h200m-200 50h200m-100-150v200"/><path stroke="%23000" stroke-width="5" marker-end="url(%23V)" marker-start="url(%23W)" d="M50-175.04724s50 0 75 25 25 75 25 75"/><path stroke="%23000" stroke-width="2" d="M200-225.04724l-200 200"/></g><g clip-path="url(%23X)" transform="translate(12.5 587.5)"><path fill="none" stroke="%23000" d="M50-225.04724v200m100-200v200m-150-150h200m-200 50h200m-200 50h200m-100-150v200"/><path fill="none" stroke="%23000" stroke-width="5" marker-end="url(%23Y)" d="M164.95191-87.547241a75 75 0 0 1-84.363338 34.944437A75 75 0 0 1 25-125.04724a75 75 0 0 1 55.58857-72.44444 75 75 0 0 1 84.36333 34.94444"/><circle cx="100" cy="-125.04724" r="40" fill="%23fff" fill-opacity=".8627451"/><text x="99.90625" y="-109.73474" font-family="Special Elite" font-size="43" text-anchor="middle"><tspan x="99.90625" y="-109.73474">90°</tspan></text></g><g clip-path="url(%23X)" transform="translate(237.5 587.5)"><path fill="none" stroke="%23000" d="M50-225.04724v200m100-200v200m-150-150h200m-200 50h200m-200 50h200m-100-150v200"/><path fill="none" stroke="%23000" stroke-width="5" marker-start="url(%23Z)" d="M164.95191-87.547241a75 75 0 0 1-84.363338 34.944437A75 75 0 0 1 25-125.04724a75 75 0 0 1 55.58857-72.44444 75 75 0 0 1 84.36333 34.94444"/><circle cx="100" cy="-125.04724" r="40" fill="%23fff" fill-opacity=".8627451"/><text x="99.90625" y="-109.73474" font-family="Special Elite" font-size="43" text-anchor="middle"><tspan x="99.90625" y="-109.73474">90°</tspan></text></g><g clip-path="url(%23X)" transform="translate(462.5 587.5)"><path fill="none" stroke="%23000" d="M50-225.04724v200m100-200v200m-150-150h200m-200 50h200m-200 50h200m-100-150v200"/><path fill="none" stroke="%23000" stroke-width="5" marker-end="url(%23Y)" d="M164.95191-87.547241a75 75 0 0 1-84.363338 34.944437A75 75 0 0 1 25-125.04724a75 75 0 0 1 55.58857-72.44444 75 75 0 0 1 84.36333 34.94444"/><circle cx="100" cy="-125.04724" r="40" fill="%23fff" fill-opacity=".8627451"/><text x="99.90625" y="-109.73474" font-family="Special Elite" font-size="43" text-anchor="middle"><tspan x="99.90625" y="-109.73474">180°</tspan></text></g><g clip-path="url(%23a)" transform="translate(687.5 587.5)"><path fill="none" stroke="%23000" d="M50-225.04724v200m50-200v200m50-200v200m-150-150h200m-200 50h200m-200 50h200"/><circle cx="75" cy="-150.04724" r="12.5"/></g><rect width="200" height="200" x="12.5" y="-312.54724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="237.5" y="-312.54724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="462.5" y="-312.54724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="687.5" y="-312.54724" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="12.5" y="-87.547241" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="237.5" y="-87.547241" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="462.5" y="-87.547241" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="687.5" y="-87.547241" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="12.5" y="137.45276" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="237.5" y="137.45276" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="462.5" y="137.45276" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="687.5" y="137.45276" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="12.5" y="362.45276" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="237.5" y="362.45276" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="462.5" y="362.45276" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/><rect width="200" height="200" x="687.5" y="362.45276" fill="none" stroke="%23000" stroke-width="3" rx="0" ry="0"/></g></svg>');
+    background-size: 4.5cm 4.5cm;
+    background-repeat: no-repeat;
+}
+
+.dark #DiscoloredSquares .instr {
+    filter: contrast(75%) invert(100%);
+}
+
+#DiscoloredSquares .instr-0 { background-position: 0cm 0cm; }
+#DiscoloredSquares .instr-1 { background-position: -1.125cm 0cm; }
+#DiscoloredSquares .instr-2 { background-position: -2.25cm 0cm; }
+#DiscoloredSquares .instr-3 { background-position: -3.375cm 0cm; }
+#DiscoloredSquares .instr-4 { background-position: 0cm -1.125cm; }
+#DiscoloredSquares .instr-5 { background-position: -1.125cm -1.125cm; }
+#DiscoloredSquares .instr-6 { background-position: -2.25cm -1.125cm; }
+#DiscoloredSquares .instr-7 { background-position: -3.375cm -1.125cm; }
+#DiscoloredSquares .instr-8 { background-position: 0cm -2.25cm; }
+#DiscoloredSquares .instr-9 { background-position: -1.125cm -2.25cm; }
+#DiscoloredSquares .instr-10 { background-position: -2.25cm -2.25cm; }
+#DiscoloredSquares .instr-11 { background-position: -3.375cm -2.25cm; }
+#DiscoloredSquares .instr-12 { background-position: 0cm -3.375cm; }
+#DiscoloredSquares .instr-13 { background-position: -1.125cm -3.375cm; }
+#DiscoloredSquares .instr-14 { background-position: -2.25cm -3.375cm; }
+#DiscoloredSquares .instr-15 { background-position: -3.375cm -3.375cm; }
+
+.PianoKeys .music-symbol {
+    font-family: 'OpusStd';
+    font-size: 1.6em;
+    position: relative;
+    top: -0.2em;
+}
+
+.PianoKeys .no-requirement {
+    font-style: italic;
+}
+
+.PianoKeys .rule-table {
+    table-layout: fixed;
+}
+
+.PianoKeys .rule-table thead th:nth-child(1) {
+    width: 20%;
+}
+.PianoKeys .rule-table thead th:nth-child(2) {
+    width: 40%;
+}
+.PianoKeys .rule-table thead th:nth-child(3) {
+    width: 40%;
+}
+.PianoKeys .music-chord {
+    font-family: 'Noto Sans JP';
+}
+
+.PianoKeys .cpk-table {
+    table-layout: fixed;
+}
+.PianoKeys .cpk-table thead tr th {
+        text-decoration: underline;
+        text-align: left;
+    }
+
+.PianoKeys .cpk-table-1 thead tr th:nth-child(2n+1){
+    width: 4%;
+}
+
+.PianoKeys .cpk-table-1 thead tr th:nth-child(2n){
+    width: 46%;
+}
+
+.PianoKeys .cpk-table-1 tr td:nth-child(2n){
+    font-size: 0.9em;
+}
+
+.BlackHole table.grid {
+    margin: 3em auto 0;
+    font-size: 14pt;
+    font-family: 'Special Elite', 'Courier New', 'Noto Serif JP', serif, monospace;
+}
+
+.BlackHole table.grid col {
+    width: 1.2cm;
+}
+
+.BlackHole table.grid td {
+    text-align: center;
+}
+
+.BlackHole table.grid tr {
+    height: 1.2cm;
+}
+
+.SafetySafe .densetable,
+.SafetySafe .densetable thead tr th:first-child {
+    border-style: none;
+}
+
+.SafetySafe .densetable td,
+.SafetySafe .densetable th {
+    padding: .0em .3em .0em;
+}
+
+.SafetySafe .densetable tbody td,
+.SafetySafe .densetable tbody th {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    text-align: center;
+}
+
+.SafetySafe .densetable thead tr:nth-child(3) th:nth-child(n+2),
+.SafetySafe .densetable tbody tr:nth-child(6n+1) {
+    border-top: #222 2px solid;
+}
+
+.dark .SafetySafe .densetable thead tr:nth-child(3) th:nth-child(n+2),
+.dark .SafetySafe .densetable tbody tr:nth-child(6n+1) {
+    border-top: white;
+}
+
+.SafetySafe .densetable thead tr:nth-child(3) th:nth-child(n+2) {
+    width: 58px;
+}
+
+.SafetySafe .corner {
+    border: none;
+}
+
+
+#BinaryLed table { margin-top: 1em; }
+
+
+#FastMath .letter-row, .letter-col, .number {
+    font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+
+#AdjacentLetters table.adjacent-letters {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    width: 100%;
+    border: none;
+}
+
+#AdjacentLetters table.adjacent-letters td {
+    text-align: center;
+}
+
+#AdjacentLetters table.adjacent-letters td.no-border {
+    border: none;
+}
+
+
+.FollowTheLeader .ftl-table {
+    table-layout: fixed;
+}
+.FollowTheLeader .ftl-table thead tr th:first-child {
+    width: 92px;
+}
+.Varicolored .note {
+    font-style: italic;
+    text-align: center;
+}
+.Varicolored .note em {
+    font-style: italic;
+}
+
+.Varicolored .pentagon {
+    width: 240px;
+    margin: 0 auto;
+    display: block;
+}
+
+.Varicolored table {
+    margin: 0 auto;
+}
+
+.Varicolored .table-1-col {
+    white-space: nowrap;
+}
+
+#TheSwan {
+    font-size: 0.89em;
+}
+
+
+#ForgetThis .color-code {
+    margin: .35em 0 .35em
+}
+
+.hub h3 {
+    margin-top: 3em;
+}
