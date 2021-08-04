@@ -2,7 +2,7 @@
 
 ## Contents
 
-* Entrance to Mods - [ハブページ](https://tepel-chen.github.io/Entrance%20to%20Mods/Entrance%20To%20Mods%20Intro.html)
+* [Entrance to Mods](https://tepel-chen.github.io/Entrance%20to%20Mods)
   * [完全版](https://tepel-chen.github.io/Entrance%20to%20Mods/Entrance%20To%20Mods%20Complete.html)
   * [チャプター1用](https://tepel-chen.github.io/Entrance%20to%20Mods/Entrance%20To%20Mods%20Chapter1.html)
   * [チャプター2用](https://tepel-chen.github.io/Entrance%20to%20Mods/Entrance%20To%20Mods%20Chapter2.html)
