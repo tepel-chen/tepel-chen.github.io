@@ -10,4 +10,4 @@
   * [チャプター4用](https://tepel-chen.github.io/Entrance%20to%20Mods/Entrance%20To%20Mods%20Chapter4.html)
   * [チャプター5用](https://tepel-chen.github.io/Entrance%20to%20Mods/Entrance%20To%20Mods%20Chapter5.html)
 * [日本語翻訳済みモジュール用プロファイル](/JaProfiles)
-  * コレクションは[こちら](https://steamcommunity.com/sharedfiles/managecollection/?id=2276193037&activeSection=MySubscribedItems)
+  * コレクションは[こちら](https://steamcommunity.com/sharedfiles/filedetails/?id=2276193037)
