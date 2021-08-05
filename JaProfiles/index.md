@@ -3,7 +3,7 @@
 ## 最新版
 
 * <a href="./Ja manual v1.6.json" download>v1.6</a>
-* <a href="./Wordless v1.0.json" download>Wordless v1.0</a>
+* <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
 
