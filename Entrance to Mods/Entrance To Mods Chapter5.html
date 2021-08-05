@@ -1809,32 +1809,6 @@
             </div>
             <div class="page-footer relative-footer">ページ 2/2</div>
         </div>
-        <div id="ForgetItNot" data-boss class="page page-bg-01">
-            <div class="page-header">
-                <span class="page-header-doc-title">Entrance to Mods</span>
-                <span class="page-header-section-title">其忘る勿かれ</span>
-            </div>
-            <div class="page-content">
-                <img src="img/Component/Forget It Not.svg" class="diagram uninvertible">
-                <h2>モジュール詳細：其忘る勿かれ</h2>
-                <p class="flavour-text">この｢忘る｣モジュールはそのまんまだ。</p>
-
-                <p>
-                    このモジュールには、0から9の数字が書かれた10個のボタンと、現在の｢其忘る勿かれ｣モジュールのステージを表す画面、数字を表す画面が存在する。
-                    この数字は、モジュールが解除される度に更新される。
-                    また、モジュールの背景が黄色でない場合、それはこのモジュールではない。
-                </p>
-                <p>このモジュールは、最後に以前に表示されたすべての数字を入力することで解除することができる。</p>
-                <p>｢其忘る勿かれ｣モジュールは無視されるモジュールが解除された場合、ステージが変更されない。これはデフォルトでは、｢Forget Me Now｣の除いたタイトルに｢Forget｣を含むモジュールと、このモジュール同様に最後に解除されなければならないモジュール、特殊な要件があるモジュールを含む。</p>
-                <h3>無視されるモジュール(一部)</h3>
-                <ul>
-                    <li>其忘る勿かれ(Forget It Not)</li>
-                    <li>我忘る勿かれ(Forget Me Not)</li>
-                    <li>之忘る(Forget This)</li>
-                </ul>
-            </div>
-           <div class="page-footer relative-footer">ページ 1/1</div>
-        </div>
         
         <div id="ThirdBase" class="page page-bg-01">
             <div class="page-header">
@@ -3321,6 +3295,82 @@
             </div>
             <div class="page-footer relative-footer">ページ 22/37</div>
         </div>
+        <div id="DigitalRoot" class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Entrance to Mods</span>
+                <span class="page-header-section-title">数字根</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Digital Root.svg" class="diagram">
+                <h2>モジュール詳細：数字根</h2>
+                <p class="flavour-text">オーケー、64の根? - 8だ。いや、その根じゃない。なら4だ! <b>いや、その根じゃない!</b></p>
+                <ul>
+                    <li>モジュールには3つの数字の行と、その下の数字、｢YES｣｢NO｣と書かれたボタンが存在する。</li>
+                    <li>下の数字が、上の3つの数字の数字根であるかどうか判定する。</li>
+                    <li>数字根を得るには、3つの数字を足し、その和のそれぞれの桁を足す。これを、1桁になるまで繰り返す。</li>
+                    <li>下の数字が、上の3つの数字の数字根である場合、｢<span class="rule Yes" data-original="YES">YES</span>｣のボタンを押す。そうでない場合、｢<span class="rule No" data-original="NO">NO</span>｣のボタンを押す</li>
+                </ul>
+            </div>
+            <div class="page-footer relative-footer">ページ 23/37</div>
+        </div>
+        <div id="ConnectionCheck" class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Entrance to Mods</span>
+                <span class="page-header-section-title">接続確認</span>
+            </div>
+            <div class="ConnectionCheck page-content">
+                <img class="diagram" src="img/Component/Connection Check.svg">
+                <h2>モジュール詳細：接続確認</h2>
+                <p class="flavour-text">
+                    なにこれ?電子回路の可視化の類か?もうどうでもいいよ...
+                </p>
+
+                <ul>
+                    <li>
+                        このモジュールは4つのLEDの両側に位置する4組の数字と、｢Check｣ボタンを含む。
+                    </li>
+                    <li>
+                        モジュールを解除するには、次のステップに従う:
+                        <ol>
+                            <li>
+                                どの図を利用するべきかを、下記のルールに従って決定する。
+                            </li>
+                            <li>
+                                それぞれのLEDについて、両側の数字を見て、利用する図においてその数字が書かれた丸が線で接続されているかを確認する。
+                            </li>
+                            <li>
+                                接続されていれば、LEDを緑にする。そうでない場合、赤にする。
+                            </li>
+                            <li>
+                                ｢Check｣ボタンを押す。LEDの状態が正しければ、モジュールは解除される。そうでない場合、ミスが記録される。
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <p class="explain">
+                    正しい図を決定するには、爆弾のシリアルナンバーのいずれかの文字が必要だ。以下のルールを使い、どの文字が必要かを決定する。 そして、次のページでその文字が含まれる図のラベルにあるコードを探す。文字を含むコードのラベルがある図が利用するべき図である。
+                </p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>このモジュールの数字が<strong>すべて異なれば</strong>、シリアルナンバーの<strong>最後の</strong>文字を利用する。</div>
+                                <div>そうでない場合、このモジュールに<strong>｢1｣が1つよりも多く</strong>存在すれば、シリアルナンバーの<strong>最初の</strong>文字を利用する。</div>
+                                <div>そうでない場合、このモジュールに<strong>｢7｣が1つよりも多く</strong>存在すれば、シリアルナンバーの<strong>最後の</strong>文字を利用する。</div>
+                                <div>そうでない場合、このモジュールに<strong>3つ以上の｢2｣</strong>が存在すれば、シリアルナンバーの<strong>二番目の</strong>文字を利用する。</div>
+                                <div>そうでない場合、このモジュールに<strong>｢5｣が存在しなければ</strong>、シリアルナンバーの<strong>五番目の</strong>文字を利用する。</div>
+                                <div>そうでない場合、このモジュールに<strong>｢8｣がちょうど2つ</strong>存在すれば、シリアルナンバーの<strong>三番目の</strong>文字を利用する。</div>
+                                <div>そうでない場合、爆弾に<strong>バッテリーが6本より多く</strong>存在する、あるいは<strong>バッテリーが存在しなければ</strong>、シリアルナンバーの<strong>最後の</strong>文字を利用する。</div>
+                                <div>そうでない場合、爆弾の<strong>バッテリーの本数を数える</strong>。その数字を利用してどのシリアルナンバーの文字を利用するかを決定する。(例: バッテリーが3本あれば、シリアルナンバーの三番目の文字を利用する)</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 24/37</div>
+        </div>
+        
         <div id="TheSwan" data-boss class="page swan-page-1 page-bg-02">
             <div class="page-header">
                 <span class="page-header-doc-title">Entrance to Mods</span>
@@ -3787,81 +3837,6 @@
             </div>
             <div class="page-footer relative-footer">ページ 2/2</div>
         </div>
-        <div id="DigitalRoot" class="page page-bg-02">
-            <div class="page-header">
-                <span class="page-header-doc-title">Entrance to Mods</span>
-                <span class="page-header-section-title">数字根</span>
-            </div>
-            <div class="page-content">
-                <img src="img/Component/Digital Root.svg" class="diagram">
-                <h2>モジュール詳細：数字根</h2>
-                <p class="flavour-text">オーケー、64の根? - 8だ。いや、その根じゃない。なら4だ! <b>いや、その根じゃない!</b></p>
-                <ul>
-                    <li>モジュールには3つの数字の行と、その下の数字、｢YES｣｢NO｣と書かれたボタンが存在する。</li>
-                    <li>下の数字が、上の3つの数字の数字根であるかどうか判定する。</li>
-                    <li>数字根を得るには、3つの数字を足し、その和のそれぞれの桁を足す。これを、1桁になるまで繰り返す。</li>
-                    <li>下の数字が、上の3つの数字の数字根である場合、｢<span class="rule Yes" data-original="YES">YES</span>｣のボタンを押す。そうでない場合、｢<span class="rule No" data-original="NO">NO</span>｣のボタンを押す</li>
-                </ul>
-            </div>
-            <div class="page-footer relative-footer">ページ 23/37</div>
-        </div>
-        <div id="ConnectionCheck" class="page page-bg-03">
-            <div class="page-header">
-                <span class="page-header-doc-title">Entrance to Mods</span>
-                <span class="page-header-section-title">接続確認</span>
-            </div>
-            <div class="ConnectionCheck page-content">
-                <img class="diagram" src="img/Component/Connection Check.svg">
-                <h2>モジュール詳細：接続確認</h2>
-                <p class="flavour-text">
-                    なにこれ?電子回路の可視化の類か?もうどうでもいいよ...
-                </p>
-
-                <ul>
-                    <li>
-                        このモジュールは4つのLEDの両側に位置する4組の数字と、｢Check｣ボタンを含む。
-                    </li>
-                    <li>
-                        モジュールを解除するには、次のステップに従う:
-                        <ol>
-                            <li>
-                                どの図を利用するべきかを、下記のルールに従って決定する。
-                            </li>
-                            <li>
-                                それぞれのLEDについて、両側の数字を見て、利用する図においてその数字が書かれた丸が線で接続されているかを確認する。
-                            </li>
-                            <li>
-                                接続されていれば、LEDを緑にする。そうでない場合、赤にする。
-                            </li>
-                            <li>
-                                ｢Check｣ボタンを押す。LEDの状態が正しければ、モジュールは解除される。そうでない場合、ミスが記録される。
-                            </li>
-                        </ol>
-                    </li>
-                </ul>
-
-                <p class="explain">
-                    正しい図を決定するには、爆弾のシリアルナンバーのいずれかの文字が必要だ。以下のルールを使い、どの文字が必要かを決定する。 そして、次のページでその文字が含まれる図のラベルにあるコードを探す。文字を含むコードのラベルがある図が利用するべき図である。
-                </p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div>このモジュールの数字が<strong>すべて異なれば</strong>、シリアルナンバーの<strong>最後の</strong>文字を利用する。</div>
-                                <div>そうでない場合、このモジュールに<strong>｢1｣が1つよりも多く</strong>存在すれば、シリアルナンバーの<strong>最初の</strong>文字を利用する。</div>
-                                <div>そうでない場合、このモジュールに<strong>｢7｣が1つよりも多く</strong>存在すれば、シリアルナンバーの<strong>最後の</strong>文字を利用する。</div>
-                                <div>そうでない場合、このモジュールに<strong>3つ以上の｢2｣</strong>が存在すれば、シリアルナンバーの<strong>二番目の</strong>文字を利用する。</div>
-                                <div>そうでない場合、このモジュールに<strong>｢5｣が存在しなければ</strong>、シリアルナンバーの<strong>五番目の</strong>文字を利用する。</div>
-                                <div>そうでない場合、このモジュールに<strong>｢8｣がちょうど2つ</strong>存在すれば、シリアルナンバーの<strong>三番目の</strong>文字を利用する。</div>
-                                <div>そうでない場合、爆弾に<strong>バッテリーが6本より多く</strong>存在する、あるいは<strong>バッテリーが存在しなければ</strong>、シリアルナンバーの<strong>最後の</strong>文字を利用する。</div>
-                                <div>そうでない場合、爆弾の<strong>バッテリーの本数を数える</strong>。その数字を利用してどのシリアルナンバーの文字を利用するかを決定する。(例: バッテリーが3本あれば、シリアルナンバーの三番目の文字を利用する)</div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="page-footer relative-footer">ページ 24/37</div>
-        </div>
         <div class="page page-bg-04">
             <div class="page-header">
                 <span class="page-header-doc-title">Entrance to Mods</span>
@@ -4205,6 +4180,32 @@
                 </tbody></table>
             </div>
             <div class="page-footer relative-footer">ページ 1/1</div>
+        </div>
+        <div id="ForgetItNot" data-boss class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Entrance to Mods</span>
+                <span class="page-header-section-title">其忘る勿かれ</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Forget It Not.svg" class="diagram uninvertible">
+                <h2>モジュール詳細：其忘る勿かれ</h2>
+                <p class="flavour-text">この｢忘る｣モジュールはそのまんまだ。</p>
+
+                <p>
+                    このモジュールには、0から9の数字が書かれた10個のボタンと、現在の｢其忘る勿かれ｣モジュールのステージを表す画面、数字を表す画面が存在する。
+                    この数字は、モジュールが解除される度に更新される。
+                    また、モジュールの背景が黄色でない場合、それはこのモジュールではない。
+                </p>
+                <p>このモジュールは、最後に以前に表示されたすべての数字を入力することで解除することができる。</p>
+                <p>｢其忘る勿かれ｣モジュールは無視されるモジュールが解除された場合、ステージが変更されない。これはデフォルトでは、｢Forget Me Now｣の除いたタイトルに｢Forget｣を含むモジュールと、このモジュール同様に最後に解除されなければならないモジュール、特殊な要件があるモジュールを含む。</p>
+                <h3>無視されるモジュール(一部)</h3>
+                <ul>
+                    <li>其忘る勿かれ(Forget It Not)</li>
+                    <li>我忘る勿かれ(Forget Me Not)</li>
+                    <li>之忘る(Forget This)</li>
+                </ul>
+            </div>
+           <div class="page-footer relative-footer">ページ 1/1</div>
         </div>
         <div id="CombinationLock" class="page page-bg-01">
             <div class="page-header">
