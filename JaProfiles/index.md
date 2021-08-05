@@ -5,6 +5,10 @@
 * [v1.6](./Ja manual v1.6.json){: download}
 * [Wordless v1.0](./Wordless v1.0.json){: download}
 
+Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
+
+どちらのプロファイルも**分析担当者用**のプロファイルです。必要に応じて処理担当者用に変更してください。
+
 ## 変更ログ
 
 * Ja Manual v1.6 - 保存場所をGithubに変更、Blind Alley追加
@@ -15,6 +19,7 @@
 * [Mod Selector MOD](https://steamcommunity.com/sharedfiles/filedetails/?id=801400247)を利用すると使える、出現モジュールを制限するためのシステムです。
 * 一部のMODには複数のモジュールが含まれています。そのうちの一部のみをプレイしたい場合に使うことができます。
 * また、初めて一緒にプレイするときにも、分析担当者がプレイできるモジュールのみでプレイするためにも利用できます。
+* プロファイルの作成・変更は、Mod Selector MODのタブレット内の「Profiles→Create New Profiles」と「Profiles→Edit Profiles」から行うか、[Profile Editor](https://ktane.timwi.de/More/Profile%20Editor.html)から行う(推奨)ことができます。
 * 設定方法
   * [Mod Selector MOD](https://steamcommunity.com/sharedfiles/filedetails/?id=801400247)をインストールしてください。
   * タブレットから「Profiles→Open Mod Profile Folder」を開いてください。プロファイルを置くべきフォルダが開きます。
