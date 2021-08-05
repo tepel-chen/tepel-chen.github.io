@@ -2,8 +2,8 @@
 
 ## 最新版
 
-* [v1.6](./Ja manual v1.6.json)
-* [Wordless v1.0](./Wordless v1.0.json)
+* [v1.6](./Ja manual v1.6.json){: download}
+* [Wordless v1.0](./Wordless v1.0.json){: download}
 
 ## 変更ログ
 
