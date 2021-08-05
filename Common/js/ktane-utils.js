@@ -17,6 +17,7 @@ e.onload = function()
 {
     $(function()
     {
+        const lang = $('html').attr('lang') || 'en';
         let alertTimeout;
         let notification = $('<div id="notification">').appendTo("body").hide();
         function showNotification(str, color)
@@ -30,7 +31,26 @@ e.onload = function()
 
 
         // OPTIONS MENU
-        let options = $(`<div id="optionsMenu">
+        let options = $(lang == "ja" ? 
+        `<div id="optionsMenu">
+            <h2>オプション (Alt-O)</h2>
+            <div class='option-group'>
+                <h3>ハイライト</h3>
+                <div><input type='checkbox' id='highlighter-enabled'>&nbsp;<label for='highlighter-enabled' accesskey='h'>有効</label> (Alt-H)</div>
+                <div>色: <select id='highlighter-color'></select> (Alt-<span id='highlighter-color-index'>1</span>)</div>
+                <div>ハイライト: <button id='clear-highlights' accesskey='c'>消去</button> (Alt-C)</div>
+            </div>
+            <div class='option-group'>
+                <h3>レイアウト</h3>
+                <div><input type='radio' name='page-layout' class='page-layout' id='page-layout-vertical'>&nbsp;<label for='page-layout-vertical' accesskey='v'>1列(Alt-V)</div>
+                <div><input type='radio' name='page-layout' class='page-layout' id='page-layout-side-by-side'>&nbsp;<label for='page-layout-side-by-side' accesskey='s'>2列(Alt-S)</div>
+            </div>
+            <div class='option-group'>
+                <h3>ダークモード</h3>
+                <div><input type='checkbox' id='dark-mode-enabled'>&nbsp;<label for='dark-mode-enabled' accesskey='w'>有効</label> (Alt-W)</div>
+            </div>
+        </div>`:
+        `<div id="optionsMenu">
             <h2>Options (Alt-O)</h2>
             <div class='option-group'>
                 <h3>Highlighter</h3>
@@ -83,30 +103,30 @@ e.onload = function()
 
         // HIGHLIGHTER
         let colors = [
-            { color: "rgba(128, 128, 128, 0.4)", name: 'Gray' },
-            { color: "rgba(68, 130, 255, 0.4)", name: 'Blue' },
-            { color: "rgba(223, 32, 32, 0.4)", name: 'Red' },
-            { color: "rgba(34, 195, 34, 0.4)", name: 'Green' },
-            { color: "rgba(223, 223, 32, 0.4)", name: 'Yellow' },
-            { color: "rgba(223, 0, 223, 0.4)", name: 'Magenta' },
-            { color: "rgba(223, 128, 0, 0.4)", name: 'Orange' },
-            { color: "rgba(0, 223, 223, 0.4)", name: 'Cyan' },
-            { color: "rgba(255, 255, 255, 0.4)", name: 'White' },
-            { color: "rgba(0, 0, 0, 0.4)", name: 'Black' }];
+            { color: "rgba(128, 128, 128, 0.4)", name: 'Gray', janame: 'グレー'},
+            { color: "rgba(68, 130, 255, 0.4)", name: 'Blue', janame: '青'},
+            { color: "rgba(223, 32, 32, 0.4)", name: 'Red', janame: '赤'},
+            { color: "rgba(34, 195, 34, 0.4)", name: 'Green', janame: '緑'},
+            { color: "rgba(223, 223, 32, 0.4)", name: 'Yellow', janame: '黄'},
+            { color: "rgba(223, 0, 223, 0.4)", name: 'Magenta', janame: 'マゼンタ'},
+            { color: "rgba(223, 128, 0, 0.4)", name: 'Orange', janame: 'オレンジ'},
+            { color: "rgba(0, 223, 223, 0.4)", name: 'Cyan', janame: 'シアン'},
+            { color: "rgba(255, 255, 255, 0.4)", name: 'White', janame: '白'},
+            { color: "rgba(0, 0, 0, 0.4)", name: 'Black', janame: '黒'}];
         let currentColor = 1;
         let setColor = function(color) { currentColor = color; };   // The mobile UI overrides this function
 
         $('#highlighter-enabled').click(function() { localStorage.setItem('ktane-highlighter-enabled', $('#highlighter-enabled').prop('checked')); });
         const colorSelect = $('#highlighter-color')
         for (const [index, color] of colors.entries()) {
-            $(`<option value="${index}">`).attr("selected", index == currentColor ? "" : undefined).text(color.name).appendTo(colorSelect);
+            $(`<option value="${index}">`).attr("selected", index == currentColor ? "" : undefined).text(lang==='ja' ? color.janame : color.name).appendTo(colorSelect);
         }
 
         colorSelect.on("change", function(e)
         {
             setColor(parseInt(colorSelect.val()));
             $("#highlighter-color-index").text(currentColor);
-            showNotification(`Highlighter color: ${colors[currentColor].name.toLowerCase()}`, colors[currentColor].color);
+            showNotification(`${lang=="ja" ? "ハイライト色" : "Highlighter color"}: ${lang=="ja" ? colors[currentColor].janame : colors[currentColor].name.toLowerCase()}`, colors[currentColor].color);
         });
 
         // An array of elementHighlights.
