@@ -11,3 +11,5 @@
   * [チャプター5用](https://tepel-chen.github.io/Entrance%20to%20Mods/Entrance%20To%20Mods%20Chapter5.html)
 * [日本語翻訳済みモジュール用プロファイル](/JaProfiles)
   * コレクションは[こちら](https://steamcommunity.com/sharedfiles/filedetails/?id=2276193037)
+* [マニュアル日本語化ガイドライン](/TranslationGuideline)
+  * [テンプレート](/TranslationGuideline/TemplateJa.zip)
