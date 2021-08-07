@@ -1,4 +1,11 @@
-﻿# Github page from tepel
+﻿---
+layout: default
+title: tepelのKTaNEリソースページ
+description: tepelが作成したKTaNEのリソース一覧です。MODのマニュアルやチュートリアル、翻訳情報などがあります。
+lang: ja_JP
+---
+
+# tepelのKTaNEリソースページ(tepel's KTaNE Resorces)
 
 ## Contents
 
