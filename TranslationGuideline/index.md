@@ -46,6 +46,19 @@
 * 別ファイルのSVG(マニュアル右上のSVGを含む)の文字はすべてパスに変換する
   * Inkscapeで文字を選択→Ctrl+Shift+C
 
+## フォントについて
+
+* 日本語のFontは"Noto Serif JP"を基本とする。
+* 英字や数字が連続していて、等幅フォントでないと見にくい場合は"Special Elite"を使う。
+* フォントは通常**ひらがな・カタカタ・英字・数字・常用漢字・一部の記号以外対応していない**ので注意
+  * 対応している文字は[font-japanese.css](https://ktane.timwi.de/HTML/css/font-japanese.css)のコメントを見ること。
+* フォントに文字を追加する方法。
+  * [サブセットフォントメーカー](https://opentype.jp/subsetfontmk.htm)に[Noto Serif JP](https://fontmeme.com/jfont/noto-serif-jp-font/)の元ファイルと[font-japanese.css](https://ktane.timwi.de/HTML/css/font-japanese.css)のコメント+追加したい文字を利用してサブセットを作成する。
+  * [WOFFコンバータ](https://opentype.jp/woffconv.htm)を利用してWOFFに変換する
+  * font-japanese.cssのコメントをアップデートする。
+  * Githubを使う場合は、アップデートしたものでプルリクエストを送れば良い
+  * #repo-requestを使う場合、**フォントを変更した旨を追記して**zipファイルを送る
+
 ## ルールシードについて
 
 * [ルールシードMOD](https://steamcommunity.com/sharedfiles/filedetails/?id=2037350348)を使うと、シードによってマニュアルが書き換えることができる。
