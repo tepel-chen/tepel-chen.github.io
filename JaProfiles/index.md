@@ -8,7 +8,7 @@ lang: ja_JP
 
 ## 最新版
 
-* <a href="./Ja manual v1.6.json" download>v1.6</a>
+* <a href="./Ja manual v1.7.json" download>v1.7</a>
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -17,7 +17,9 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 ## 変更ログ
 
-* Ja Manual v1.6 - 保存場所をGithubに変更、Blind Alley追加
+* v1.7 - レントゲン(X-ray)、モールスマティック(Morsematics)追加
+* <a href="./Ja manual v1.6.json" download>v1.6</a> - 保存場所をGithubに変更、ブラインド・アレイ(Blind Alley)追加
+
 
 
 ## プロファイルについて
