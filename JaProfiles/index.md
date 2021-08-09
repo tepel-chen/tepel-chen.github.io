@@ -17,8 +17,8 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 ## 変更ログ
 
-* v1.7 - レントゲン(X-ray)、モールスマティック(Morsematics)追加
-* <a href="./Ja manual v1.6.json" download>v1.6</a> - 保存場所をGithubに変更、ブラインド・アレイ(Blind Alley)追加
+* \[21.08.10\] v1.7 - レントゲン(X-ray)、モールスマティック(Morsematics)追加
+* \[21.08.06\] <a href="./Ja manual v1.6.json" download>v1.6</a> - 保存場所をGithubに変更、ブラインド・アレイ(Blind Alley)追加
 
 
 
