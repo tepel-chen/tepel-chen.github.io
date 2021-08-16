@@ -8,7 +8,7 @@ lang: ja_JP
 
 ## 最新版
 
-* <a href="./Ja manual v1.9.json" download>v1.9</a>
+* <a href="./Ja manual v1.10.json" download>v1.10</a>\[最終更新: 21.08.16\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -39,6 +39,7 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 ## 変更ログ
 
+* \[21.08.16\] <a href="./Ja manual v1.10.json" download>v1.10</a> - 奥行きペグ(Perspective Pegs)、歪曲スロット(Skewed Slots)追加
 * \[21.08.13\] <a href="./Ja manual v1.9.json" download>v1.9</a> - 質問回答(Answering Questions)、会議妨害(Filibuster)、リスニング(Listening)、方向キューブ(Orientation cube)、配管(Plumbing)、ダイヤル式電話(Rotary Phone)、正方形ボタン(Square Button)追加(Hatosableさん)
 * \[21.08.11\] <a href="./Ja manual v1.8.json" download>v1.8</a> - アナグラム(Anagrams)、集中(Concentration)、計算(Math)、ワードスクランブル(Word Scramble)追加(Hatosableさん、ありがとうございます!)
 * \[21.08.10\] <a href="./Ja manual v1.7.json" download>v1.7</a> - レントゲン(X-ray)、モールスマティック(Morsematics)追加
