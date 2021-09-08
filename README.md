@@ -20,3 +20,4 @@ lang: ja_JP
   * コレクションは[こちら](https://steamcommunity.com/sharedfiles/filedetails/?id=2276193037)
 * [マニュアル日本語化ガイドライン](/TranslationGuideline)
   * [テンプレート](/TranslationGuideline/TemplateJa.zip)
+* [Twitch Play(Discord Play)のコマンド集](/tpCommands)
