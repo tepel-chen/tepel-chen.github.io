@@ -8,7 +8,7 @@ lang: ja_JP
 
 ## 最新版
 
-* <a href="./Ja manual v1.13.json" download>v1.13</a>\[最終更新: 21.09.09\]
+* <a href="./Ja manual v1.14.json" download>v1.14</a>\[最終更新: 21.09.09\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -39,6 +39,7 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 ## 変更ログ
 
+* \[21.09.24\] <a href="./Ja manual v1.14.json" download>v1.14</a> - 蝶番(Hinges)、色どりスイッチ(Multicolored Switches)、色変えスイッチ(Recolored Switches)、色なしスイッチ(Uncolored Switches)追加(Hatosableさん)、偽漢字(Not Kanji)追加
 * \[21.09.09\] <a href="./Ja manual v1.13.json" download>v1.13</a> - 42、501、間違い(A mistake)、点字(Braille)、デフ・アレイ(Deaf Alley)、多角形(Polygons)、...?、タップ・コード(Tap Code)、9次元超立方体(The Octadecayotton)追加(Hatosableさん)、二進法パズル(Binary Puzzle)追加
 * \[21.08.23\] <a href="./Ja manual v1.12.json" download>v1.12</a> - ブラックホール(Black Hole)、101匹ワンちゃん(101 Dalmatians)追加
 * \[21.08.21\] <a href="./Ja manual v1.11.json" download>v1.11</a> - クド数独(Kudosudoku)、形状変化(Shape Shift)、神秘スクエア(Mystic Square)追加
