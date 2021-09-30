@@ -8,6 +8,7 @@ const PROFILE_PATH = "../JaProfiles";
 (async () => {
   const data = await fetch(JSON_URL);
   const json = await data.json();
+  const names = {};
   const result = {
     DisabledList: json.KtaneModules
       .filter(mod => mod.Sheets && mod.Sheets.every(sheet => !sheet.includes('日本語')))
@@ -18,7 +19,10 @@ const PROFILE_PATH = "../JaProfiles";
           mod.Origin !== "Vanilla" && 
           ["Regular", "Needy"].includes(mod.Type)
         ))
-      .map(mod => mod.ModuleID),
+      .map(mod => {
+        names[mod.ModuleID] = [mod.Name, mod.Sheets.find(sheet => sheet.includes('日本語')).match(/\(日本語 — ([^)]+)\)/)[1]]
+        return mod.ModuleID
+      }),
     Operation: 0
   };
 
@@ -39,8 +43,11 @@ const PROFILE_PATH = "../JaProfiles";
   if(changed.length === 0) {
     console.log("No change detected");
   } else {
-    changed.forEach(mod => console.log(`Enabled: ${mod}`));
-    await fs.promises.writeFile(`${PROFILE_PATH}//Ja manual v1.${lastVersion+1}.json`, JSON.stringify(result, null, 2))
+    const date = new Date();
+    const datestr = `${date.getFullYear()% 100}.${("0" + (new Date().getMonth()+1)).substr(-2,2)}.${("0" + new Date().getDate()).substr(-2,2)}`
+    console.log(`* <a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a>\\[最終更新: ${datestr}\\]`)
+    console.log(`\\[${datestr}\\] <a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a> ${changed.map(mod => `${names[mod][1]}(${names[mod][0]})`).join("、")}追加`);
+    await fs.promises.writeFile(`${PROFILE_PATH}//Ja manual v1.${lastVersion+1}.json`, JSON.stringify(result, null, 2));
   }
 
 })()
