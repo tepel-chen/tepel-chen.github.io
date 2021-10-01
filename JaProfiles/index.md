@@ -8,7 +8,7 @@ lang: ja_JP
 
 ## 最新版
 
-* <a href="./Ja manual v1.16.json" download>v1.16</a>\[最終更新: 21.10.01\]
+* <a href="./Ja manual v1.17.json" download>v1.17</a> \[最終更新: 21.10.02\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -38,8 +38,9 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
   * [Profile Revealer](https://steamcommunity.com/sharedfiles/filedetails/?id=2007817583)から、現在の選択しているモジュールがどのプロファイルによって有効化しているかを確認することができます。どの分析担当者にモジュールを割り振るかを決めるのに便利です。
 
 ## 変更ログ
+* \[21.10.02\] <a href="./Ja manual v1.17.json" download>v1.17</a> ブロックス(Bloxx)、シロナガスクジラ(Blue Whale)、論理キーパッド(Boolean Keypad)、ブーブチューブ(Boob Tube)、論理迷路(Boolean Maze)、ブローラーデータベース(Brawler Database)、休憩時間(Breaktime)、壊れたボタン(Broken Buttons)、イギリススラング(British Slang)追加
 * \[21.10.01\] <a href="./Ja manual v1.16.json" download>v1.16</a> 1000単語(1000 Words)、アンチチェンバー(Antichamber)、アルス・ゴエティア識別(Ars Goetia Identification)、アートの価格設定(Art Pricing)、Atbash暗号(Atbash Cipher)、占星術(Astrology)、音声キーパッド(Audio Keypad)、悪文(Bad Wording)、芸術鑑賞(Art Appreciation)、二進数(Binary)、バイバインの言葉(Baybayin Words)、ブラックジャック(Blackjack)、瞬きの停止(Blinkstop)、ブロックバスター(Blockbusters)、誕生日ケーキ(Birthday Cake)、アソート・アレンジメント(The Assorted Arrangement)、ブロック(The Block)追加(ひむさん)
-* \[21.09.28\] <a href="./Ja manual v1.15.json" download>v1.15</a> - 16コイン(16 coins)、81、9-Ball(9ボール)、アメイジングボタン(A-maze-ing Buttons)、蓄積(Accumulation)、加算(Addition)、アドベンチャーゲーム(Adventure Game)、錬金術(Alchemy)、エイリアンファイリングの色(Alien Filing Colors)、アルファベット番号(Alphabet Numbers)、アルファベットルール(Alphabetical Ruling)、アモングス(amougus)、アロートーク(Arrow Talk)追加(ひむさん)
+* \[21.09.28\] <a href="./Ja manual v1.15.json" download>v1.15</a> - 16コイン(16 coins)、81、9-Ball(9ボール)、アメイジングボタン(A-maze-ing Buttons)、蓄積(Accumulation)、加算(Addition)、アドベンチャーゲーム(Adventure Game)、錬金術(Alchemy)、エイリアンファイリングの色(Alien Filing Colors)、アルファベット番号(Alphabet Numbers)、アルファベットルール(Alphabetical Ruling)、アモングス(amougus)、アロートーク(Arrow Talk)追加(ひむさん)、
 * \[21.09.24\] <a href="./Ja manual v1.14.1.json" download>v1.14.1</a> - 蝶番(Hinges)は現在バグ(爆弾の裏側から誤って選択される場合がある)があるため修正が入るまで無効化
 * \[21.09.24\] <a href="./Ja manual v1.14.json" download>v1.14</a> - 蝶番(Hinges)、色どりスイッチ(Multicolored Switches)、色変えスイッチ(Recolored Switches)、色なしスイッチ(Uncolored Switches)追加(Hatosableさん)、偽漢字(Not Kanji)追加
 * \[21.09.09\] <a href="./Ja manual v1.13.json" download>v1.13</a> - 42、501、間違い(A mistake)、点字(Braille)、デフ・アレイ(Deaf Alley)、多角形(Polygons)、...?、タップ・コード(Tap Code)、9次元超立方体(The Octadecayotton)追加(Hatosableさん)、二進法パズル(Binary Puzzle)追加
