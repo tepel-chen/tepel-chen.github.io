@@ -8,7 +8,7 @@ lang: ja_JP
 
 ## 最新版
 
-* <a href="./Ja manual v1.17.json" download>v1.17</a> \[最終更新: 21.10.02\]
+* <a href="./Ja manual v1.18.json" download>v1.18</a> \[最終更新: 21.10.09\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -38,7 +38,9 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
   * [Profile Revealer](https://steamcommunity.com/sharedfiles/filedetails/?id=2007817583)から、現在の選択しているモジュールがどのプロファイルによって有効化しているかを確認することができます。どの分析担当者にモジュールを割り振るかを決めるのに便利です。
 
 ## 変更ログ
-* \[21.10.02\] <a href="./Ja manual v1.17.json" download>v1.17</a> ブロックス(Bloxx)、シロナガスクジラ(Blue Whale)、論理キーパッド(Boolean Keypad)、ブーブチューブ(Boob Tube)、論理迷路(Boolean Maze)、ブローラーデータベース(Brawler Database)、休憩時間(Breaktime)、壊れたボタン(Broken Buttons)、イギリススラング(British Slang)追加
+
+* \[21.10.09\] <a href="./Ja manual v1.18.json" download>v1.18</a> 盗難警報(Burglar Alarm)、蝶(Butterflies)、ボタングリッド(Button Grid)、ボタンの順序(Button Order)、順番ボタン(Button Sequence)、カエサルサイクル(Caesar Cycle)、キャッチフレーズ(Catchphrase)、文字コード(Character Codes)、チャンバー５(Chamber No. 5)、中国の数え方(Chinese Counting)、コード進行(Chord Progressions)、コードクオリティー(Chord Qualities)、古典主義オーダー(Classical Order)、コードクラッカー(Code Cracker)、色トーク(Colo(u)r Talk)、色の加算(Color Addition)、色の生成(Color Generator)、色付き六角形(Color Hexagons)、色の解読(Color Decoding)、色の番号(Color Numbers)、色の１と２(Color One Two)、色付きボタン(Colored Buttons)、色付き英字(Colored Letters)、色付きキーパッド(Colored Keys)、カラフル発狂(Colorful Insanity)、色付き矢印(Coloured Arrows)、複雑なキーパッド(Complex Keypad)、条件ボタン(Conditional Buttons)、料理(Cooking)、電卓(The Calculator)、コード(The Code)、色付き迷路(The Colored Maze)追加(ひむさん)
+* \[21.10.02\] <a href="./Ja manual v1.17.json" download>v1.17</a> ブロックス(Bloxx)、シロナガスクジラ(Blue Whale)、論理キーパッド(Boolean Keypad)、ブーブチューブ(Boob Tube)、論理迷路(Boolean Maze)、ブローラーデータベース(Brawler Database)、休憩時間(Breaktime)、壊れたボタン(Broken Buttons)、イギリススラング(British Slang)追加(ひむさん)
 * \[21.10.01\] <a href="./Ja manual v1.16.json" download>v1.16</a> 1000単語(1000 Words)、アンチチェンバー(Antichamber)、アルス・ゴエティア識別(Ars Goetia Identification)、アートの価格設定(Art Pricing)、Atbash暗号(Atbash Cipher)、占星術(Astrology)、音声キーパッド(Audio Keypad)、悪文(Bad Wording)、芸術鑑賞(Art Appreciation)、二進数(Binary)、バイバインの言葉(Baybayin Words)、ブラックジャック(Blackjack)、瞬きの停止(Blinkstop)、ブロックバスター(Blockbusters)、誕生日ケーキ(Birthday Cake)、アソート・アレンジメント(The Assorted Arrangement)、ブロック(The Block)追加(ひむさん)
 * \[21.09.28\] <a href="./Ja manual v1.15.json" download>v1.15</a> - 16コイン(16 coins)、81、9-Ball(9ボール)、アメイジングボタン(A-maze-ing Buttons)、蓄積(Accumulation)、加算(Addition)、アドベンチャーゲーム(Adventure Game)、錬金術(Alchemy)、エイリアンファイリングの色(Alien Filing Colors)、アルファベット番号(Alphabet Numbers)、アルファベットルール(Alphabetical Ruling)、アモングス(amougus)、アロートーク(Arrow Talk)追加(ひむさん)、
 * \[21.09.24\] <a href="./Ja manual v1.14.1.json" download>v1.14.1</a> - 蝶番(Hinges)は現在バグ(爆弾の裏側から誤って選択される場合がある)があるため修正が入るまで無効化
