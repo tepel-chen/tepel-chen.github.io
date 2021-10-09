@@ -4,7 +4,7 @@ import fs from 'fs';
 const JSON_URL = "https://ktane.timwi.de/json/raw";
 const PROFILE_PATH = "../JaProfiles";
 
-const ignore = ["hinges", "boneAppleTea", "boggle", "BrokenBinary"];
+const ignore = ["hinges", "boneAppleTea", "boggle", "BrokenBinary", "SouvenirModule"];
 
 (async () => {
   const data = await fetch(JSON_URL);
@@ -46,7 +46,7 @@ const ignore = ["hinges", "boneAppleTea", "boggle", "BrokenBinary"];
     const date = new Date();
     const datestr = `${date.getFullYear()% 100}.${("0" + (new Date().getMonth()+1)).substr(-2,2)}.${("0" + new Date().getDate()).substr(-2,2)}`
     console.log(`* <a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a> \\[最終更新: ${datestr}\\]`)
-    console.log(`\\[${datestr}\\] <a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a> ${changed.map(mod => `${names[mod][1]}(${names[mod][0]})`).join("、")}追加`);
+    console.log(`* \\[${datestr}\\] <a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a> ${changed.map(mod => `${names[mod][1]}(${names[mod][0]})`).join("、")}追加`);
     changed.forEach(c => console.log(`https://steamcommunity.com/sharedfiles/filedetails/?id=${names[c][2]}`));
     await fs.promises.writeFile(`${PROFILE_PATH}//Ja manual v1.${lastVersion+1}.json`, JSON.stringify(result, null, 2));
   }
