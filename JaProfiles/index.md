@@ -8,7 +8,7 @@ lang: ja_JP
 
 ## 最新版
 
-* <a href="./Ja manual v1.19.json" download>v1.19</a> \[最終更新: 21.10.09\]
+* <a href="./Ja manual v1.20.json" download>v1.20</a> \[最終更新: 21.10.11\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -39,6 +39,8 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 ## 変更ログ
 
+* \[21.10.11\] <a href="./Ja manual v1.20.json" download>v1.20</a> デジタルダイヤル(Digital Dials)、デジタル暗号(Digital Cipher)、次元破壊(Dimension Disruption)、
+方向ボタン(Directional Button)、割り切れる数字(Divisible Numbers)、ドミノ(Dominoes)、何も押すな(Don't Touch Anything)、二桁(Double Digits)、二色(Double Color)、卵(egg)、ルーンパスワード(Elder Password)、新・絵文字算(Emoticon Math)、暗号化サイコロ(Encrypted Dice)追加(ひむさん)
 * \[21.10.09\] <a href="./Ja manual v1.19.json" download>v1.19</a> 0、1-2-3-2-1、14、2048、7、64、欠陥7セグメントディスプレー(Faulty Seven Segment Displays)追加(Hatosableさん)、座標(Coordinates)、コーナー(Corners)、廊下(Corridors)、カウントダウン(Countdown)、クラックボックス(Crackbox)、クレイジートーク(Crazy Talk)、暗号キーパッド(Cryptic Keypad)、暗号化(Cryptography)、暗号パスワード(Cryptic Password)、カーソル迷路(Cursor Maze)、Ｄコード(D-CODE)、Ｄクリプト(D-CRYPT)、DACH迷路(DACH Maze)、日光の方向(Daylight Directions)、間引き(Decimation)、ダイヤル音声(Dialtones)、デトナト(DetoNATO)追加(ひむさん)
 * \[21.10.09\] <a href="./Ja manual v1.18.json" download>v1.18</a> 盗難警報(Burglar Alarm)、蝶(Butterflies)、ボタングリッド(Button Grid)、ボタンの順序(Button Order)、順番ボタン(Button Sequence)、カエサルサイクル(Caesar Cycle)、キャッチフレーズ(Catchphrase)、文字コード(Character Codes)、チャンバー５(Chamber No. 5)、中国の数え方(Chinese Counting)、コード進行(Chord Progressions)、コードクオリティー(Chord Qualities)、古典主義オーダー(Classical Order)、コードクラッカー(Code Cracker)、色トーク(Colo(u)r Talk)、色の加算(Color Addition)、色の生成(Color Generator)、色付き六角形(Color Hexagons)、色の解読(Color Decoding)、色の番号(Color Numbers)、色の１と２(Color One Two)、色付きボタン(Colored Buttons)、色付き英字(Colored Letters)、色付きキーパッド(Colored Keys)、カラフル発狂(Colorful Insanity)、色付き矢印(Coloured Arrows)、複雑なキーパッド(Complex Keypad)、条件ボタン(Conditional Buttons)、料理(Cooking)、電卓(The Calculator)、コード(The Code)、色付き迷路(The Colored Maze)追加(ひむさん)
 * \[21.10.02\] <a href="./Ja manual v1.17.json" download>v1.17</a> ブロックス(Bloxx)、シロナガスクジラ(Blue Whale)、論理キーパッド(Boolean Keypad)、ブーブチューブ(Boob Tube)、論理迷路(Boolean Maze)、ブローラーデータベース(Brawler Database)、休憩時間(Breaktime)、壊れたボタン(Broken Buttons)、イギリススラング(British Slang)追加(ひむさん)
