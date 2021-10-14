@@ -8,7 +8,7 @@ lang: ja_JP
 
 ## 最新版
 
-* <a href="./Ja manual v1.20.json" download>v1.20</a> \[最終更新: 21.10.11\]
+* <a href="./Ja manual v1.21.json" download>v1.21</a> \[最終更新: 21.10.15\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -39,6 +39,9 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 ## 変更ログ
 
+* \[21.10.15\] <a href="./Ja manual v1.21.json" download>v1.21</a> 方程式(Equations)、エラーコード(Error Codes)、エテルナ(Etterna)、スケッチブック(Etch-A-Sketch)、
+偶数か奇数(Even Or Odd)、拡張ボタン順序(Extended Button Order)、拡張パスワード(Extended Password)、因数迷路(Factoring Maze)、因数分解(Factoring)、欠陥背景(Faulty Backgrounds)、欠陥二進数(Faulty Binary)、フェスティバル鍵盤(Festive Piano Keys)、曜日の特定(Find The Date)、ファイア・ダイアモンド(Fire Diamonds)、５文字の単語(Five Letter Words)、国旗(Flags)、光の記憶(Flash Memory)、点滅ライト(Flashing Lights)、殺人(Murder)、数字(The Digit)、アヒル(The Duck)、爆発するペン(The Exploding Pen) 
+追加
 * \[21.10.11\] <a href="./Ja manual v1.20.json" download>v1.20</a> デジタルダイヤル(Digital Dials)、デジタル暗号(Digital Cipher)、次元破壊(Dimension Disruption)、
 方向ボタン(Directional Button)、割り切れる数字(Divisible Numbers)、ドミノ(Dominoes)、何も押すな(Don't Touch Anything)、二桁(Double Digits)、二色(Double Color)、卵(egg)、ルーンパスワード(Elder Password)、新・絵文字算(Emoticon Math)、暗号化サイコロ(Encrypted Dice)追加(ひむさん)
 * \[21.10.09\] <a href="./Ja manual v1.19.json" download>v1.19</a> 0、1-2-3-2-1、14、2048、7、64、欠陥7セグメントディスプレー(Faulty Seven Segment Displays)追加(Hatosableさん)、座標(Coordinates)、コーナー(Corners)、廊下(Corridors)、カウントダウン(Countdown)、クラックボックス(Crackbox)、クレイジートーク(Crazy Talk)、暗号キーパッド(Cryptic Keypad)、暗号化(Cryptography)、暗号パスワード(Cryptic Password)、カーソル迷路(Cursor Maze)、Ｄコード(D-CODE)、Ｄクリプト(D-CRYPT)、DACH迷路(DACH Maze)、日光の方向(Daylight Directions)、間引き(Decimation)、ダイヤル音声(Dialtones)、デトナト(DetoNATO)追加(ひむさん)
