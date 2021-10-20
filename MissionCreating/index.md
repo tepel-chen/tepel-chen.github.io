@@ -10,7 +10,7 @@
 
 ### Modkitのダウンロード
 
-* [ModkitのGithub](https://github.com/Qkrisi/ktanemodkit)からダウンロードして解凍する。
+* [ModkitのGithub](https://github.com/Qkrisi/ktanemodkit/tree/mission_packs)からダウンロードして解凍する。
 
   ![](pic1.png)
 
