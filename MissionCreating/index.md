@@ -1,6 +1,6 @@
 ﻿## ミッションの作り方
 
-### UnityとVisual Studioのダウンロード
+### Unityのダウンロード
 
 * [Unityサイト](https://unity3d.com/jp/get-unity/download)から「Unity Hub をダウンロード」を選択し、Unity Hubをインストールする。
 * [Unityアーカイブ](https://unity3d.com/jp/get-unity/download/archive)の**Unity 2017.4.22**のUnity Hub↓を選択する。
@@ -20,7 +20,7 @@
 
 ### DMGミッションファイルの作成
 
-* DMGミッションファイルの作成方法は[DMGミッションの作り方]を参考にする。ただし、`nopacing`以外のグローバル設定は設定できない。
+* DMGミッションファイルの作成方法は[DMGミッションの作り方](/MissionCreating/dmg)を参考にする。ただし、`nopacing`以外のグローバル設定と`!`による重複設定はできない。
 * 以下の記述方法でミッション名とミッション詳細を指定できる
   * 注意: ミッション名やミッション詳細に日本語名を指定すると一部の漢字が表示されなくなるので、アルファベットで記載する。
 
@@ -111,5 +111,5 @@ factory:finite
 * 「Tags」の「Missions」を選択し、「Change Notes」に変更点(最初の場合は「リリース」などで良い)を入力する
   ![](pic16.png)
 * 「Create New Workshop Item and Publish to Steam」をクリックして公開する
-  * グレーアウトして選択できない場合、一度右上のxをくりっくして「Steam Workshop Tools」のクリックからやり直す。
+  * グレーアウトして選択できない場合、一度右上のxをクリックして「Steam Workshop Tools」のクリックからやり直す。
   ![](pic17.png)
