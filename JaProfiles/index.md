@@ -8,7 +8,7 @@ lang: ja_JP
 
 ## 最新版
 
-* <a href="./Ja manual v1.22.json" download>v1.22</a> \[最終更新: 21.10.21\]
+* <a href="./Ja manual v1.23.json" download>v1.23</a> \[最終更新: 21.11.01\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -34,11 +34,13 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 * その他プロファイルの使い道
   * 分析担当者用プロファイルは、サービスやゲームルームなどのMODも無効化することができます。気分によって違う部屋で固定でプレイしたい場合に便利です。
   * [マニュアルレポジトリ](https://ktane.timwi.de/?lang=ja)の「フィルタ→プロファイルでフィルタする」からレポジトリの検索結果をフィルタすることができます。
-  * [Dynamic Mission Generator](https://steamcommunity.com/sharedfiles/filedetails/?id=1633427044)の生成文字列で、`profile:[name]`を利用することで、プロファイルで有効化されているモジュールからランダムにモジュールを出現させることができます。
+  * [Dynamic Mission Generator](https://steamcommunity.com/sharedfiles/filedetails/?id=1633427044)の生成文字列で、`profile:[name]`を利用することで、プロファイルで有効化されているモジュールからランダムにモジュールを出現させることができます。詳しくは、[DMGミッションの作り方](/MissionCreating/dmg)を参考にする。
   * [Profile Revealer](https://steamcommunity.com/sharedfiles/filedetails/?id=2007817583)から、現在の選択しているモジュールがどのプロファイルによって有効化しているかを確認することができます。どの分析担当者にモジュールを割り振るかを決めるのに便利です。
 
 ## 変更ログ
 
+* \[21.11.01\] <a href="./Ja manual v1.23.json" download>v1.23</a> 悩ましき矢印(Annoying Arrows)、黒色矢印(Black Arrows)、ブラインド矢印(Blind Arrows)、青色矢印(Blue Arrows)、ダブル矢印(Double Arrows)、灰色矢印(Gray Arrows)、緑色矢印(Green Arrows)、橙色矢印(Orange Arrows)、桃色矢印(Pink Arrows)、紫色矢印(Purple Arrows)、虹色矢印(Rainbow Arrows)、赤色矢印(Red Arrows)、鴨羽色矢印(Teal Arrows)、白色矢印(White Arrows)、黄色矢印(Yellow Arrows)追加(Hatosableさん) 暗号化LED(LED Encryption)、LEDグリッド(LED Grid)、ライトサイクル(Light Cycle)、論理(Logic)、大理石(Marble Tumble)、連打算数(Mashematics)、マスターマインド・シンプル(Mastermind Simple)、迷路スクランブラー(Maze Scrambler)、マイクロコントローラ
+ー(Microcontroller)、現代暗号(Modern Cipher)追加(ひむさん)、 Extended Button Order削除(仕様変更後マニュアルが対応していないため)
 * \[21.10.21\] <a href="./Ja manual v1.22.json" download>v1.22</a> カレンダー(Calendar)、チェス(Chess)、グリッドロック(Gridlock)、象形文字(Hieroglyphics)、狩猟(Hunting)、アイスクリーム(Ice Cream)、容疑者特定(Identity Parade)、IKEA、ゲームパッド(The Gamepad)、アイフォン(The iPhone)、ジャック・オー・ランタン(The Jack-O'-Lantern)、ジュークボックス(The Jukebox)、迷宮(The Labyrinth)追加(ひむさん)、手順(Instructions)追加
 * \[21.10.15\] <a href="./Ja manual v1.21.json" download>v1.21</a> 方程式(Equations)、エラーコード(Error Codes)、エテルナ(Etterna)、スケッチブック(Etch-A-Sketch)、偶数か奇数(Even Or Odd)、拡張ボタン順序(Extended Button Order)、拡張パスワード(Extended Password)、因数迷路(Factoring Maze)、因数分解(Factoring)、欠陥背景(Faulty Backgrounds)、欠陥二進数(Faulty Binary)、フェスティバル鍵盤(Festive Piano Keys)、曜日の特定(Find The Date)、ファイア・ダイアモンド(Fire Diamonds)、５文字の単語(Five Letter Words)、国旗(Flags)、光の記憶(Flash Memory)、点滅ライト(Flashing Lights)、殺人(Murder)、数字(The Digit)、アヒル(The Duck)、爆発するペン(The Exploding Pen)追加(ひむさん)
 * \[21.10.11\] <a href="./Ja manual v1.20.json" download>v1.20</a> デジタルダイヤル(Digital Dials)、デジタル暗号(Digital Cipher)、次元破壊(Dimension Disruption)、方向ボタン(Directional Button)、割り切れる数字(Divisible Numbers)、ドミノ(Dominoes)、何も押すな(Don't Touch Anything)、二桁(Double Digits)、二色(Double Color)、卵(egg)、ルーンパスワード(Elder Password)、新・絵文字算(Emoticon Math)、暗号化サイコロ(Encrypted Dice)追加(ひむさん)
