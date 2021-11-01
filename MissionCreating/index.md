@@ -113,3 +113,21 @@ factory:finite
 * 「Create New Workshop Item and Publish to Steam」をクリックして公開する
   * グレーアウトして選択できない場合、一度右上のxをクリックして「Steam Workshop Tools」のクリックからやり直す。
   ![](pic17.png)
+* Steamの自分のワークショップアイテムを確認して、ミッションが追加されたことを確認する。デフォルトで公開設定が非公開になっているので、ミッションのページに進み、「公開設定変更」を「公開」に変更する。
+
+### 更新したい場合
+
+新しいミッションを作成、既存のミッションのバランス調整などを行った後に更新する方法です。
+
+* 「Build AssetBundle」をクリックして、ビルドする。
+* ゲームを起動して、ミッションが更新されていることを確認する
+* 「Steam Workshop Tools」をクリックする
+* 「Change Notes」に変更点を入力する
+  * グレーアウトして選択できない場合、一度右上のxをクリックして「Steam Workshop Tools」のクリックからやり直す。
+* (2回目のみ)バグで一部設定がリセットされている可能性があるので、以下を確認する
+  * Workshop File IDが0でないことを確認する
+  ![](pic20.png)
+  * 0の場合、IDを入力する。これは、Steamの作成したワークショップアイテムのページのURLから確認できる。
+    * 例: URLが`https://steamcommunity.com/sharedfiles/filedetails/?id=2324805341`の場合、IDは`2324805341`
+  * 同様にTagsの情報も消えている場合があるので、必要に同様に入力する。
+* 「Publish changes to Steam」をクリックして公開する
