@@ -8,7 +8,7 @@ lang: ja_JP
 
 ## 最新版
 
-* <a href="./Ja manual v1.26.json" download>v1.26</a> \[最終更新: 21.12.02\]
+* <a href="./Ja manual v1.27.json" download>v1.27</a> \[最終更新: 21.12.05\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -39,6 +39,7 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 ## 変更ログ
 
+* \[21.12.05\] <a href="./Ja manual v1.27.json" download>v1.27</a> ブーズルトーク(BoozleTalk)、ＡＫクレイジートーク(Crazy Talk With A K)、呪いのダブル・オー(Cursed Double-Oh)、ハーモニーシーケンス(Harmony Sequence)、インセイントーク(Insane Talk)、ジェイデン・スミス・トーク(Jaden Smith Talk)、ただの数字(Just Numbers)、キロトーク(Kilo Talk)、ラッキーサイコロ(Lucky Dice)、嘘つきインジケーター(Lying Indicators)、マッチ数学(Matchematics)、リック・モジュール(Module Rick)、モールスボタン(Morse Buttons)追加(ひむさん)、安勘定(Cheap Checkout)、友情(Friendship)、六角迷路(Hexamaze)、抵抗器(Resistors)追加
 * \[21.12.02\] <a href="./Ja manual v1.26.json" download>v1.26</a> カラフル狂気(Colorful Madness)追加(ひむさん)、ブーリアンネットワーク(Boolean Network)、反転ブーリアンネットワーク(Reversed Boolean Network)追加
 * \[21.12.01\] <a href="./Ja manual v1.25.json" download>v1.25</a> 健忘症(Amnesia)、迷路忘る勿かれ(Forget Maze Not)、４ライト(Four Lights)、自由パスワード(Free Password)、果物(Fruits)、ガラクトロン・ベンダー(Gadgetron Vendor)、徐々にスイカ(Gradually Watermelon)、画像記憶(Graphic Memory)、食料品店(Grocery Store)、モジュロ(Modulo)、モールス戦争(Morse War)、ミステリーモジュール(Mystery Module)、お絵描きロジック(Nonogram)、俊敏数字(Number Nimbleness)、ナンバーパッド(Number Pad)、ナンバー(Numbers)、絵画(Painting)、パイ(Pie)、トランプ順序(Point of Order)、詩(Poetry)、Ｘを押せ！(Press X)、逆モールス信号(Reverse Morse)、セ.ッ.ト.(S.E.T.)、サイモンの響き(Simon Sounds)、サイモンの星(Simon's Star)、ファーロイドジュークボックス(The Furloid Jukebox)、巨人の飲み物(The Giant's Drink)、数字暗号(The Number Cipher)、ラジオ(The Radio)、プランジャーボタン(The Plunger Button)、ユニコード(Unicode)、ヴィジュネル暗号(Vigenère Cipher)、視覚障害(Visual Impairment)追加(ひむさん)、回路接続(Probing)、巻き戻し(Going Backwards)追加
 * \[21.11.09\] <a href="./Ja manual v1.24.json" download>v1.24</a> オンリーコネクト(Only Connect)追加(ひむさん)、正方形(A Square)、アビス(Abyss)、バックドア・ハッキング(Backdoor Hacking)、偉大なるブームター(Boomtar the Great)、有限ループ(Finite Loop)、灯台下暗し(Hidden In Plain Sight)、あっち向いてホイ(Look, Look Away)、並行迷路(Parallel Mazes)、Steamセレクター(Steam Selector)、超巨大ブラックホール(Supermassive Black Hole)、頻脈(Tachycardia)、コーンフラワーボタン(The Cornflower Button)、軌跡(Trajectory)追加

@@ -4,7 +4,7 @@ import fs from 'fs';
 const JSON_URL = "https://ktane.timwi.de/json/raw";
 const PROFILE_PATH = "../JaProfiles";
 
-const ignore = ["hinges", "boneAppleTea", "boggle", "BrokenBinary", "SouvenirModule", "eeBgnilleps"];
+const ignore = ["hinges", "boneAppleTea", "boggle", "BrokenBinary", "SouvenirModule", "eeBgnilleps", "insanagrams"];
 
 (async () => {
   const data = await fetch(JSON_URL);

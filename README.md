@@ -1,11 +1,11 @@
 ﻿---
 layout: default
-title: tepelのKTaNEリソースページ
-description: tepelが作成したKTaNEのリソース一覧です。MODのマニュアルやチュートリアル、翻訳情報などがあります。
+title: t-chenのKTaNEリソースページ
+description: t-chenが作成したKTaNEのリソース一覧です。MODのマニュアルやチュートリアル、翻訳情報などがあります。
 lang: ja_JP
 ---
 
-# tepelのKTaNEリソースページ(tepel's KTaNE Resorces)
+# t-chenのKTaNEリソースページ(t-chen's KTaNE Resorces)
 
 ## Contents
 
