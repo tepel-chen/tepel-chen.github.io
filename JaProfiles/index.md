@@ -37,10 +37,19 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
   * [Dynamic Mission Generator](https://steamcommunity.com/sharedfiles/filedetails/?id=1633427044)の生成文字列で、`profile:[name]`を利用することで、プロファイルで有効化されているモジュールからランダムにモジュールを出現させることができます。詳しくは、[DMGミッションの作り方](/MissionCreating/dmg)を参考にする。
   * [Profile Revealer](https://steamcommunity.com/sharedfiles/filedetails/?id=2007817583)から、現在の選択しているモジュールがどのプロファイルによって有効化しているかを確認することができます。どの分析担当者にモジュールを割り振るかを決めるのに便利です。
 
+## 例外について
+
+一部モジュールはマニュアル翻訳済みであっても除外されています。主な理由としては
+* 致命的なバグがある
+* 単語を読み上げるよりも困難な英語力を必要とする。
+
+ただし、**有用な改造マニュアルがある場合はこの限りではありません**。例：[アナグラム 単語リスト](https://ktane.timwi.de/HTML/Anagrams%20translated%20(%E6%97%A5%E6%9C%AC%E8%AA%9E%20%E2%80%94%20%E3%82%A2%E3%83%8A%E3%82%B0%E3%83%A9%E3%83%A0)%20%E5%8D%98%E8%AA%9E%E3%83%AA%E3%82%B9%E3%83%88%20(tepel,%20Timwi).html)
+除外されているモジュールとその理由については[除外モジュール](excluded.md)をご覧ください。
+
 ## 変更ログ
 
 |日付|Ver|更新内容|
-|:--|:--|:--|
+|---|---|---|
 |21.12.07|<a href="./Ja manual v1.29.json" download>v1.29</a>|危険なワイヤ(Risky Wires)、セマモールス(Semamorse)、7本ワイヤ(Seven Wires)追加(ひむさん)|
 |21.12.06|<a href="./Ja manual v1.28.json" download>v1.28</a>|画像ロジック(Pictionary)、ピッグペン暗号(Pigpen Rotations)、素数チェック(Prime Checker)、素数時間(Prime Time)、素数暗号(Prime Encryption)、引用クレイジートーク(Quote Crazy Talk End Quote)追加(ひむさん)、<br>ランドリー(Laundry)追加|
 |21.12.05|<a href="./Ja manual v1.27.json" download>v1.27</a>|ブーズルトーク(BoozleTalk)、ＡＫクレイジートーク(Crazy Talk With A K)、呪いのダブル・オー(Cursed Double-Oh)、ハーモニーシーケンス(Harmony Sequence)、インセイントーク(Insane Talk)、ジェイデン・スミス・トーク(Jaden Smith Talk)、ただの数字(Just Numbers)、キロトーク(Kilo Talk)、ラッキーサイコロ(Lucky Dice)、嘘つきインジケーター(Lying Indicators)、マッチ数学(Matchematics)、リック・モジュール(Module Rick)、モールスボタン(Morse Buttons)追加(ひむさん)、安勘定(Cheap Checkout)、友情(Friendship)、六角迷路(Hexamaze)、抵抗器(Resistors)追加|
