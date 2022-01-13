@@ -8,7 +8,7 @@ lang: ja_JP
 
 ## 最新版
 
-* <a href="./Ja manual v1.30.json" download>v1.30</a> \[最終更新: 22.01.13\]
+* <a href="./Ja manual v1.31.json" download>v1.31</a> \[最終更新: 22.01.14\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -50,6 +50,7 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 |日付|Ver|更新内容|
 |---|---|---|
+|22.01.14|<a href="./Ja manual v1.31.json" download>v1.31</a>|フレーバーテキスト(Flavor Text)、フィズバズ(FizzBuzz)、サイモンの選択(Simon Selects)、サイモンの表比較(Simon's On First)追加(ひむさん)、フィズバズ(FizzBuzz)、フィズバズ(FizzBuzz)追加|
 |22.01.13|<a href="./Ja manual v1.30.json" download>v1.30</a>|リズム(Rhythms)、ルービックキューブ(Rubik's Cube)、シーシェル(Sea Shells)、動物園(Zoo)追加(ひむさん)、ヘンテコスロット(Silly Slots)、鍵をまわせ!2(Turn The Keys)追加|
 |21.12.07|<a href="./Ja manual v1.29.json" download>v1.29</a>|危険なワイヤ(Risky Wires)、セマモールス(Semamorse)、7本ワイヤ(Seven Wires)追加(ひむさん)|
 |21.12.06|<a href="./Ja manual v1.28.json" download>v1.28</a>|画像ロジック(Pictionary)、ピッグペン暗号(Pigpen Rotations)、素数チェック(Prime Checker)、素数時間(Prime Time)、素数暗号(Prime Encryption)、引用クレイジートーク(Quote Crazy Talk End Quote)追加(ひむさん)、<br>ランドリー(Laundry)追加|
