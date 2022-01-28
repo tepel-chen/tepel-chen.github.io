@@ -5,8 +5,8 @@
 * ミッションを文字列で記述してそれを実行してくれるMOD(要[Mod Selector](https://steamcommunity.com/sharedfiles/filedetails/?id=801400247))
 * インストールすると、Mod Selectorのタブレットから起動できる
 
-![](pic3.png)
-![](pic4.png)
+![](/MissionCreating/pic3.png)
+![](/MissionCreating/pic4.png)
 
 ### 使い方
 
@@ -24,9 +24,9 @@
   * モジュールIDにスペースが含まれる場合、クォーテーションマーク(")で括らなければならない
   * モジュールIDの取得方法
     * [レポジトリ](https://ktane.timwi.de/?lang=ja)の「オプション」から「モジュールID」をチェック
-      ![](pic18.png)
+      ![](/MissionCreating/pic18.png)
     * モジュールIDが表示される
-      ![](pic19.png)
+      ![](/MissionCreating/pic19.png)
 * `[個数]*[モジュールID]` - モジュールを指定個数出現させる
 * `[グループ]` - グループから1つランダムでモジュールを出現させる
   * `ALL_SOLVABLE` - 全ての通常モジュール
