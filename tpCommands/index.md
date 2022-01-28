@@ -106,7 +106,7 @@ lang: ja_JP
 | !freeplay start | フリープレイを開始する |
 | !dmg run \[DMGコマンド\] | DMGコマンドを利用してDMGミッションを開始する |
 
-* DMGの詳細は[使用方法ページ](https://github.com/red031000/ktane-DynamicMissionGenerator/blob/master/README.md)を参照してください。
+* DMGの詳細は[使用方法ページ](/Tutorials/dmg)を参照してください。
 
 ### run
 
