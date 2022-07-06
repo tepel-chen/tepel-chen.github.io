@@ -10,7 +10,7 @@ lang: ja_JP
 
 ## 最新版
 
-* <a href="./Ja manual v1.34.json" download>v1.34</a> \[最終更新: 22.07.06\]
+* <a href="./Ja manual v1.35.json" download>v1.35</a> \[最終更新: 22.07.06\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -30,7 +30,8 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 |日付|Ver|更新内容|
 |---|---|---|
-|22.07.06|<a href="./Ja manual v1.34.json" download>v1.34</a>|テトリス(Tetris)、HTTPレスポンス(HTTP Response)、須く忘る(Forget Everything)、太陽(The Sun)、月(The Moon)、ザ・スイッチ(The Switch)、タイミングが全て(Timing is Everything)、アルファベット順確認(Alphabetize)、逆アルファベット順確認(Reverse Alphabetize)、脱獄(Jailbreak)、ワーキングタイトル(Working Title) 、説得力ボタン(Two Persuasive Buttons)、タワー(Towers)、色付き表比較(What's on Second)、ゼナーカード(Zener Cards)、ストライプキー(Striped Keys)、三元タイル(Ternary Tiles)、値キー(Valued Keys)、Ｘモールス信号(XmORse Code)、インデント(Indentation)、句読点(Interpunct)、拡大キーパッド(Keypad Magnified)、プラス(+)、閉じた箱(Shut-the-Box)、星型十二面体(Stellar)、周回ボ タン(Surrounding Buttons)、４ボタン(4 Buttons)、反転記憶(Anti-Memory)追加|
+|22.07.06|<a href="./Ja manual v1.35.json" download>v1.35</a>|脱獄(Jailbreak)削除、蝶番(Hinges)追加|
+|22.07.06|<a href="./Ja manual v1.34.json" download>v1.34</a>|テトリス(Tetris)、HTTPレスポンス(HTTP Response)、須く忘る(Forget Everything)、太陽(The Sun)、月(The Moon)、ザ・スイッチ(The Switch)、タイミングが全て(Timing is Everything)、アルファベット順確認(Alphabetize)、逆アルファベット順確認(Reverse Alphabetize)、脱獄(Jailbreak)、ワーキングタイトル(Working Title) 、説得力ボタン(Two Persuasive Buttons)、タワー(Towers)、色付き表比較(What's on Second)、ゼナーカード(Zener Cards)、ストライプキー(Striped Keys)、三元タイル(Ternary Tiles)、値キー(Valued Keys)、Ｘモールス信号(XmORse Code)、インデント(Indentation)、句読点(Interpunct)、拡大キーパッド(Keypad Magnified)、プラス(+)、閉じた箱(Shut-the-Box)、星型十二面体(Stellar)、周回ボタン(Surrounding Buttons)、４ボタン(4 Buttons)、反転記憶(Anti-Memory)追加|
 |22.06.13|<a href="./Ja manual v1.33.json" download>v1.33</a>|解除レベル100(100 Levels of Defusal)、ブラインド迷路(Blind Maze)、境界音板(Bordered Keys)、複雑ボタン(Complicated Buttons)、クリエーション(Creation)、欠陥順番音板(Disordered Keys)、英語検定(English Test)、方程式X(Equations X)、外国為替レート(Foreign Exchange Rates)、ギター・コード(Guitar Chords)、人事部(Human Resources)、狂ったキーパッド(Kooky Keypad)、残酷マスターマインド(Mastermind Cruel)、順番違い音板(Misordered Keys)、モジュール宿題(Module Homework)、 モールス迷路(Morse-A-Maze)、中和滴定(Neutralization)、プレイフェア暗号(Playfair Cipher)、記録音板(Recorded Keys)、順番替え音板(Reordered Keys)、サイモンの絶叫(Simon Screams) 、サイモンの発話(Simon Speaks)、高順番音板(Tallordered Keys)、双子(The Twin)、順番無し音板(Unordered Keys)、Webデザイン(Web Design)追加|
 |22.01.26|<a href="./Ja manual v1.32.json" download>v1.32</a>|順番音板(Ordered Keys)、サイモンの歌唱(Simon Sings)、ネクロノミコン(The Necronomicon)追加(Hatosableさん)|
 |22.01.14|<a href="./Ja manual v1.31.json" download>v1.31</a>|フレーバーテキスト(Flavor Text)、フィズバズ(FizzBuzz)、サイモンの選択(Simon Selects)、サイモンの表比較(Simon's On First)追加(ひむさん)、フィズバズ(FizzBuzz)、迷路のネズミ(Mouse In The Maze)追加|
