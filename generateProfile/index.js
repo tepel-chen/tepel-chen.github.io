@@ -21,8 +21,12 @@ const ignore = ["Jailbreak", "boneAppleTea", "boggle", "BrokenBinary", "Souvenir
           ["Regular", "Needy"].includes(mod.Type)
         ) && !ignore.includes(mod.ModuleID))
       .map(mod => {
-        names[mod.ModuleID] = [mod.Name, mod.Sheets.find(sheet => sheet.includes('日本語')).match(/\(日本語 — ([^)]+)\)/)[1], mod.SteamID]
-        return mod.ModuleID
+        try {
+          names[mod.ModuleID] = [mod.Name, mod.Sheets.find(sheet => sheet.includes('日本語')).match(/\(日本語 — ([^)]+)\)/)[1], mod.SteamID]
+          return mod.ModuleID
+        } catch {
+          console.log(mod.Sheets.find(sheet => sheet.includes('日本語')))
+        }
       }),
     Operation: 0
   };
