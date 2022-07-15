@@ -6,8 +6,6 @@ const PROFILE_PATH = "../JaProfiles";
 
 const ignore = ["Jailbreak", "boneAppleTea", "boggle", "BrokenBinary", "SouvenirModule", "eeBgnilleps", "insanagrams"];
 
-function addToCollection(s)
-
 
 (async () => {
   const data = await fetch(JSON_URL);
