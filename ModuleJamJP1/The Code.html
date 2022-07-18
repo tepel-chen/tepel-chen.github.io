@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>和音 — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="../Common/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/main.css">
+    <script src="../Common/js/ktane-utils.js"></script>
+    <style>
+        table {
+            margin: auto;
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">和音</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Module Name.svg" class="diagram">
+                <h2>モジュール詳細：和音</h2>
+                <p class="flavour-text">これほど真面目に音楽の授業を習っておけばよかったと思う事はないだろう。</p>
+                <p>このモジュールは、スピーカー、再生ボタン、ディスプレイ、キーボード、リセットボタン、及び送信ボタンで構成されている。<br>
+                    このモジュールを解除するには、3つのステージを完了する必要がある。</p>
+                <p>再生ボタンを押すと、特定のピアノの音が再生される。この音は何度でも聞くことができる。<br>
+                    モジュールで使用される可能性があるのは、黒鍵を含めたド～シである。<br>
+                    また、リセットボタンを押すとドからシまでの<em>白鍵のみ</em>の音が順番に演奏される。この音を基準とする。<br>
+                    再生された音は、ドからシの白鍵のみに対し、１～７の数字に変換される。黒鍵については数字に変換されることはない。<br>
+                    白鍵同士が同じ音になることはない(少なくとも１以上の絶対差が発生する)。</p>
+                <p>以下のルールで特定したコードを入力してステージを次に進める。間違った回答を入力するとミスが記録されるが、ステージ番号は変更されない。</p>
+
+                <h3>ステージ１</h3>
+                <p>ステージ１では、１つの白鍵の音が再生される。</p>
+                <ol>
+                    <li>再生された音の数字の階乗(6!=6*5*4*3*2*1)を取得する。</li>
+                    <li>得られた数字にシリアルナンバーの数字の合計を乗算し、シリアルナンバーの英字の数を加算する。</li>
+                    <li>結果の下四桁を取得する。この時点で３桁以下の場合、４桁になるまで左に０を付ける。</li>
+                    <li>再生された音が「ミ」または「ラ」の場合、数字を逆の順番にする(1234⇒4321)。</li>
+                </ol>
+
+                <h3>ステージ２</h3>
+                <p>ステージ２では、２つの白鍵の音が同時に再生される。</p>
+                <ol>
+                    <li>まず、２つの音の数字どうしを乗算し、シリアルナンバーの左から４番目の英字のアルファベット位置(A=1,B=2...)を加算する。</li>
+                    <li>次に、２つの音の数字の絶対差を求め、シリアルナンバーの左から５番目の英字のアルファベット位置(A=1,B=2...)を加算する。</li>
+                    <li>上記の２つの数字どうしを乗算し、シリアルナンバーの左から４／５番目では無い英字のうち最も左の英字のアルファベット位置(A=1,B=2...)を加算する。</li>
+                    <li>結果の下四桁を取得する。この時点で３桁以下の場合、４桁になるまで左に０を付ける。</li>
+                    <li>以下の条件を上から見て該当する最初の条件に従って各桁を変更する。９を超える場合は最下位桁を使用する。０未満になる場合は絶対値を使用する。</li>
+                    <ul>
+                        <li>５種類以上のポートがある場合、数字は変更しない。</li>
+                        <li>それ以外の場合、単１バッテリーが点灯したインジケーターよりも多い場合、各桁に２を加算する。</li>
+                        <li>それ以外の場合、単３バッテリーの<em>ペア</em>が点灯していないインジケーターよりも多い場合、各桁から２を減算する。</li>
+                        <li>それ以外の場合、再生された２つの音の絶対差が３以下の場合、各桁に再生された２つの音の絶対差の数を加算する。</li>
+                        <li>いずれにも該当しない場合、各桁からポートの数を減算する。</li>
+                    </ul>
+                </ol>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/3</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">和音</span>
+            </div>
+            <div class="page-content">
+                <h3>ステージ３</h3>
+                <p>ステージ３では３つの音が同時に再生され、そのうち２つは白鍵、残りの１つは黒鍵である。</p>
+                <ul>
+                    <li>２つの白鍵のうちより高い音を列に、それ以外を段に使用する。</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th style="background-color:black"></th><th>ド</th><th>レ</th><th>ミ</th><th>ファ</th><th>ソ</th><th>ラ</th><th>シ</th>
+                    </tr>
+                    <tr>
+                        <th>ド</th><td>B</td><td>A</td><td>F</td><td>C</td><td>E</td><td>G</td><td>D</td>
+                    </tr>
+                    <tr>
+                        <th>レ</th><td>C</td><td>G</td><td>D</td><td>A</td><td>F</td><td>B</td><td>E</td>
+                    </tr>
+                    <tr>
+                        <th>ミ</th><td>A</td><td>F</td><td>B</td><td>D</td><td>G</td><td>E</td><td>C</td>
+                    </tr>
+                    <tr>
+                        <th>ファ</th><td>D</td><td>E</td><td>C</td><td>G</td><td>A</td><td>B</td><td>F</td>
+                    </tr>
+                    <tr>
+                        <th>ソ</th><td>E</td><td>B</td><td>G</td><td>F</td><td>D</td><td>C</td><td>A</td>
+                    </tr>
+                    <tr>
+                        <th>ラ</th><td>G</td><td>C</td><td>A</td><td>B</td><td>E</td><td>D</td><td>F</td>
+                    </tr>
+                    <tr>
+                        <th>シ</th><td>F</td><td>G</td><td>E</td><td>D</td><td>B</td><td>A</td><td>C</td>
+                    </tr>
+                </table>
+                <ul>
+                    <li>上の表で得た英字を列に、２つの白鍵の絶対差を段に使用する。<strong>ただし、</strong>シリアルナンバーに母音が含まれている場合、絶対差＋１の値を段に使用する。</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th style="background-color:black"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th>
+                    </tr>
+                    <tr>
+                        <th>1</th><td>4H</td><td>8C</td><td>2U</td><td>1J</td><td>6L</td><td>3Q</td><td>9M</td>
+                    </tr>
+                    <tr>
+                        <th>2</th><td>3K</td><td>9O</td><td>4P</td><td>7G</td><td>2V</td><td>5X</td><td>8A</td>
+                    </tr>
+                    <tr>
+                        <th>3</th><td>2R</td><td>6T</td><td>1C</td><td>5I</td><td>8O</td><td>3G</td><td>9J</td>
+                    </tr>
+                    <tr>
+                        <th>4</th><td>7E</td><td>4V</td><td>5D</td><td>8Z</td><td>9K</td><td>5E</td><td>8F</td>
+                    </tr>
+                    <tr>
+                        <th>5</th><td>2S</td><td>5W</td><td>9L</td><td>2I</td><td>7B</td><td>6F</td><td>5P</td>
+                    </tr>
+                    <tr>
+                        <th>6</th><td>1X</td><td>6Y</td><td>9H</td><td>7H</td><td>6G</td><td>2J</td><td>8K</td>
+                    </tr>
+                    <tr>
+                        <th>7</th><td>5W</td><td>8A</td><td>1Y</td><td>3R</td><td>6V</td><td>2S</td><td>4N</td>
+                    </tr>
+                </table>
+                <ol>
+                    <li>左側の数字にバッテリー、点灯していないインジケーター、空のポートプレート、及びシリアルナンバーの数字の数を加算し、結果の最下位桁を取る。０の場合、代わりにシリアルナンバーの英字の数に置き換える。</li>
+                    <li>右側の英字を２つの白鍵の音の絶対差の数分カエサル暗号を使用して前方(A+1⇒B)にシフトする。</li>
+                </ol>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/3</div>
+        </div>
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">和音</span>
+            </div>
+            <div class="page-content">
+                <ol start="3">
+                    <li>シリアルナンバーに「W,A,O,N」のいずれかが含まれているかシリアルポートがある場合、右側の英字をアルファベット位置(A=1,B=2...)で数字に変換する。それ以外の場合、右側の英字を３６進数で数字に変換する。英字の変換後の数字が１桁の場合、左に０を付ける(3⇒03)。</li>
+                    <li>左側の変換後の数字に１００を乗算し、右側の変換後の数字を加算する。こうすることで３桁の数字を作成できる。</li>
+                    <li>３桁の数字にバッテリーホルダー、点灯したインジケーター、ポートの数、及びシリアルナンバーの英字の数を合計したものを乗算し、結果の下四桁を取得する。</li>
+                    <li>以下の条件を上から見て該当する最初の条件に従って各桁を変更する。９を超える場合は最下位桁を使用する。０未満になる場合は絶対値を使用する。</li>
+                    <ul>
+                        <li>再生された２つの白鍵のうち１つに「ド」が含まれている場合、数字を変更しない。</li>
+                        <li>それ以外の場合、２つの白鍵の音の絶対差が５以上の場合、各桁に単１バッテリーの数を加算する。</li>
+                        <li>それ以外の場合、点灯したインジケーターと点灯していないインジケーターの数が同数であるかインジケーターがない場合、各桁から単３バッテリーの数を減算する。</li>
+                        <li>それ以外の場合、点灯したインジケーターよりも点灯していないインジケーターの方が多い場合、２つの白鍵の絶対差を加算する。</li>
+                        <li>いずれにも該当しない場合、各桁から爆弾のモジュールの総数(このモジュール／特殊モジュールを含める)の数字根を減算する。</li>
+                    </ul>
+                </ol>
+            </div>
+            <div class="page-footer relative-footer">ページ 3/3</div>
+        </div>
+    </div>
+</body>
+
+</html>

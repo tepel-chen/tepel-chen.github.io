@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>暗闇 — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="../Common/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/main.css">
+    <script src="../Common/js/ktane-utils.js"></script>
+    <style>
+        li {
+            margin-bottom: 3%;
+        }
+
+        table {
+            margin: auto;
+            margin-bottom: 9%;
+        }
+        body {
+                background:
+                    url('img/web-background-dark.jpg');
+                background-size: cover;
+                background-blend-mode: multiply;
+        }
+
+        .page {
+            filter: invert(1);
+            color: black;
+            font-weight: bold;
+        }
+
+        .dark .page {
+            filter: invert(0);
+            color: #DDD;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">暗闇</span>
+            </div>
+            <div class="page-content">
+                <h2>モジュール詳細：暗闇</h2>
+                <p class="flavour-text">闇は何もかもを包み、そして消し去るであろう。
+                </p>
+            
+                <li>モジュールには黒い霧が掛かっており、そのままではモジュール本体の視認ができない。</li>
+                <li>モジュールを選択すると、黒い霧が消え、代わりに闇が視界を覆いつくし、モジュールしか視認できなくなる。この状態では、このモジュール以外の音も聞くことができない。</li>
+                <li>モジュール全体には 4×4 のクリックポイントが存在する。それらの内、一つはクリックしてから一秒後に環境音が返される。下の表の内、環境音が返されたポイントと同じ位置にあるセルに記されたクリックポイントを長押しする。</li>
+                <li>正しいポイントを長押しすれば、闇は打ち払われ、モジュールは解除される。間違ったポイントを長押しするとミスが記録され、モジュールはリセットされる。</li>
+                <li>選択を解除すれば、闇は視界から消え、他のモジュールも視認できるようになる。ただし、このモジュールはリセットされる。</li>
+
+                <table>
+                    <tr>
+                        <th>C2</th><th>D1</th><th>C4</th><th>B2</th>
+                    </tr>
+                    <tr>
+                        <th>D3</th><th>B4</th><th>A1</th><th>C1</th>
+                    </tr>
+                    <tr>
+                        <th>C3</th><th>A2</th><th>A3</th><th>D4</th>
+                    </tr>
+                    <tr>
+                        <th>D2</th><th>B1</th><th>B3</th><th>A4</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/1</div>
+        </div>
+    </div>
+</body>
+
+</html>
