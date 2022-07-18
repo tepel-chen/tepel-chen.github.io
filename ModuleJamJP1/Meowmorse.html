@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>にゃんモールス — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="../Common/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/main.css">
+    <script src="../Common/js/ktane-utils.js"></script>
+    <style>
+    .imgbox {
+        display: grid;
+        height: 100%;
+    }
+    .center-fit {
+        max-width: 80%;
+        max-height: 80vh;
+        margin: auto;
+    }
+    .name-table{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Meowmorse</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Meowmorse.svg" class="diagram">
+                <h2>モジュール詳細：にゃんモールス</h2>
+                <p class="flavour-text">&#x1F408 CATインジケーターは存在するかにゃ？</p>
+
+             <ul>
+                 <li>このモジュールは「メタモールス(Metamorse)」<a href="https://ktane.timwi.de/HTML/Metamorse.html">「メタモールス(Metamorse)」</a>のように見えるが、六角形のボタンには耳が生えている。右上のボタンを押すと、猫の鳴き声で歌が演奏される。これは3〜6文字のモールスコードのメッセージである。以下のルールに従って、モールス信号に変換する。</li><br>
+                 <li style="list-style-type: none;"><ul>
+                     <li>インジケーターが2つ未満の場合、シリアルナンバー内のすべての英字を取得し、母音の数を減算し、3で割った余りを求める。</li>
+                     <li>そうでなければ、アルファベット順で最初に登場する3つのインジケーターを取得する。各インジケーターに対して、それが点灯していれば1文字目を、点灯していなければ3文字目を取得し、順に並べる。その単語が「CAT」なら、次のセクションをスキップし、ターゲットの鳴き声を中音にする。
+                     <li>与えられた単語の各文字に対して、アルファベット上の位置(A=1,B=2,..)を求め、合計を求める。その後、シリアルナンバー内の母音の数を減算し、3で割った余りを求める。</li>
+                     <li>値が0の場合、ターゲットの鳴き声は低音である。値が1の場合、ターゲットの鳴き声は中音である。値が2の場合、ターゲットの鳴き声は高音である。</li>
+                     <li>ディスプレーを押すと、常に中音の鳴き声が再生される。</li>
+                 </ul></li><br>
+                 <li>下の表を使って、受信した鳴き声をターゲットの鳴き声と比較した結果を列、鳴き声の長さを段に当てはめて変換する。</li>
+                 <h2><u>表M30W5:</u></h2>
+                 <table>
+                  <tr><th></th><th>低い</th><th>同じ</th><th>高い</th></tr>
+                      <tr><th>伸音</th><td>点</td><td>伸音</td><td>点</td></tr>
+                      <tr><th>long</th><td>伸音</td><td>点</td><td>伸音</td></tr> 
+                 </table>
+                 <br>
+
+                 <li>変換語の単語は、ある猫の名前を示している。表C4T5から名前を探しその猫の音程と答えのフレーズを求める。</li>
+                 <li>矢印ボタンを押して送信する猫の音程を合わせる(上を向いているほど、音が高くなる)。フレーズをモールス信号に変換し、さらに上の表を用いて変換したら、六角形ボタンで入力する。再度右上のボタンを押すと、入力が送信される。</li>
+                 <li>間違った単語を入力すると、ミスが記録される。</li>
+                 <li>1秒より長い長押しは、伸音とみなされる。</li>
+                 <li>フレーズをモールス信号に変換する際は、ターゲットの鳴き声との音程を比較する。</li>
+                 
+             </ul>
+         </div>
+     <div class="page-footer relative-footer">ページ 1/2</div>
+   </div>
+
+   <div class="page page-bg-01">
+    <div class="page-header">
+        <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+        <span class="page-header-section-title">にゃんモールス</span>
+    </div>
+    <div class="page-content">
+     <h2><u>表C4T5:</u></h2>
+     <table class="name-table">
+      <tr><th>名前</th><th>音程</th><th>フレーズ</th></tr>
+          <tr><th>Luna</th><td>高音</td><td>growl</td></tr>
+          <tr><th>Oliver</th><td>低音</td><td>while</td></tr>
+          <tr><th>Bella</th><td>中音</td><td>purr</td></tr>
+          <tr><th>Leo</th><td>"Astrology"または"Constellations"が存在する場合、高音。<br>そうでなければ、低音.</td><td>lion</td></tr> 
+          <tr><th>Tama</th><td>点灯したBOBインジケーターが存在する場合、中音.<br>そうでなければ、高音.</td><td>pets*</td></tr>
+          <tr><th>Sora</th><td>ターゲットの鳴き声が中音の場合、高音.<br>そうでなければ、中音.</td></td><td>rainy</td></tr>
+          <tr><th>Kitty</th><td>バッテリーが偶数の場合、低音.<br>そうでなければ、高音.</td><td>meows</td></tr> 
+          <tr><th>Sugar</th><td>パラレルポートが存在する場合、高音.<br>そうでなければ、低音.</td><td>sweets</td></tr>
+          <tr><th>Jasper</th><td>シリアルナンバーに"T","O","M"のいずれかが存在する場合、高音.<br>そうでなければ、中音.</td><td>fishes</td></tr> 
+          <tr><th>Tiger</th><td>中音から、爆弾の開始分数+1だけ上にシフトする(ループする)。</td><td>africa</td></tr>
+          <tr><th>Melody</th><td>中音。ただし、彼女は歌うのが好きなため、各文字ごとに音程が中音、高音、低音の順に循環する。</b></td><td>notes</td></tr>
+          <tr><th>Tom</th><td>"Mouse In The Maze"が存在する場合、彼はネズミを追いかけてどこかへ行ってしまった。<br><u>その場合、何も入力せずに右上のボタンを素早く3回押す。</u></td><td>jerry</td></tr> 
+     </table>
+     <p>* バッテリーが2つより多い場合、単語は"pochi"になる。
+    </div>
+<div class="page-footer relative-footer">ページ 2/2</div>
+</div>
+
+   </div>
+   </body>
+</html>               

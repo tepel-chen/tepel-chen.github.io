@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>マルコフのジュークボックス — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="../Common/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/main.css">
+    <script src="../Common/js/ktane-utils.js"></script>
+    <style>
+        ul.steps {
+            font-size: .95em;
+        }
+        table.chord{
+            margin-top: 8px;
+            border-style: none;
+        }
+        table.chord thead tr:first-child th:first-child{
+            border-style: none;
+        }
+        table.chord th {
+            width: 40px;
+        }
+        table.chord td {
+            text-align: center;
+        }
+        img.keys {
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">マルコフのジュークボックス</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Malkov's Jukebox.svg" class="diagram">
+                <h2>モジュール詳細：マルコフのジュークボックス</h2>
+                <p class="flavour-text">マルコフに著作権の概念はありません。ご自由にお使いください。</p>
+
+                <p>このモジュールには2つのサイクルするディスプレーと、送信ボタン、鍵盤が含まれる。</p>
+                <p>モジュールを解除するには、正しいコード進行をディスプレーに入力して送信した後、鍵盤で正しいメロディを入力する。</p>
+                <p>間違ったコードを送信するか、間違ったメロディを入力すると、ミスが記録されモジュールがリセットする。</p>
+                <h3>シード値の決定</h3>
+                <ul class="steps">
+                    <li>シリアルナンバーの英字を全てアルファベットでの位置(A=1、B=2、...、Z=26)を10で割ったあまりに変換し、6桁の数字を得る。バッテリーの個数+ポートの個数+シリアルナンバーの英字の数を計算し、これを10で割ったあまりを6桁の数字の最後に付け足して7桁の数字を得る。これを<strong>シード値</strong>と呼ぶ。</li>
+                    <li>以下のステップで「<strong>シード値の次の値</strong>」を参照する場合、最後に利用した桁の数字の次の桁の数字を利用する。これが最初に参照された場合と、最後に利用した桁の数字がシード値の最下位である場合は、シード値の最上桁を参照する。</li>
+                </ul>
+                <h3>コード進行の決定</h3>
+                <ul class="steps">
+                    <li>コード進行は4つのコードからなる。</li>
+                    <li>次ページのテーブルにおいて、列をシード値の次の値、段を一つ前に決定したコードを利用して次のコードを決定する。これが最初のコードである場合、「C」の段を利用する。</li>
+                    <li>決定した4つのコードを<strong>逆順に</strong>モジュールに入力する。左のディスプレーをコードの最初の英字(これをコードの<strong>ルート音</strong>とする)に合わせ、右のディスプレーをそれ以降の英数字(これをコードの<strong>クオリティー</strong>とする)に合わせる。送信ボタンを押すと、選択したコードが送信される。</li>
+                </ul>
+                <h3>メロディの決定</h3>
+                <ul class="steps">
+                    <li>メロディはそれぞれのコードにつき4ノート、合計16ノートで構成される。</li>
+                    <li>送信した最後のコードのクオリティーを利用して、利用するテーブルを決定する。そのテーブルの列をシード値の次の値、段を一つ前に決定したノートを利用して次のノートを決定する。これが最初のノートである場合、「C」を表す段を利用する。</li>
+                    <li>数字は現在利用しているコードのルート音との相対的な距離(単位は半音)を表している(例: ルート音がFの場合、「+2」のノートはGを表す)。対象の段が存在しない場合、次のノートはルート音となる。</li>
+                    <li>4つのノートが決定したら、送信した順で<strong>前のコード</strong>を利用してこれを繰り返す。</li>
+                    <li>決定したメロディーを鍵盤を利用して<strong>逆順に</strong>モジュールに入力する。ノートと鍵盤の関係は「鍵盤とノートの関係」を参照する</li>
+                </ul>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/4</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">マルコフのジュークボックス</span>
+            </div>
+            <div class="page-content">
+                <h3>コードの決定</h3>
+                <table class="chord">
+                    <thead>
+                        <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th>C</th><td colspan="3">G7</td><td colspan="3">G</td><td colspan="2">F</td><td colspan="1">Fm</td><td colspan="1">Am</td></tr>
+                        <tr><th>Dm</th><td colspan="3">Am7</td><td colspan="2">Am</td><td colspan="2">C</td><td colspan="2">Em</td><td colspan="1">G</td></tr>
+                        <tr><th>Dm7</th><td colspan="2">Am7</td><td colspan="2">Am</td><td colspan="2">C</td><td colspan="2">Em</td><td colspan="1">Dm7</td><td colspan="1">G</td></tr>
+                        <tr><th>Em</th><td colspan="3">G</td><td colspan="3">Am</td><td colspan="2">Am7</td><td colspan="2">F</td></tr>
+                        <tr><th>E7</th><td colspan="6">F</td><td colspan="4">Em</td></tr>
+                        <tr><th>F</th><td colspan="2">C</td><td colspan="2">Am</td><td colspan="2">Em</td><td colspan="1">Am7</td><td colspan="1">Em7</td><td colspan="1">G</td><td colspan="1">B♭</td></tr>
+                        <tr><th>Fm</th><td colspan="7">F</td><td colspan="1">G</td><td colspan="1">Am</td><td colspan="1">B♭</td></tr>
+                        <tr><th>G</th><td colspan="4">G7</td><td colspan="2">Dm</td><td colspan="2">Dm7</td><td colspan="1">F</td><td colspan="1">C</td></tr>
+                        <tr><th>G7</th><td colspan="3">Dm7</td><td colspan="2">Dm</td><td colspan="2">G</td><td colspan="2">F</td><td colspan="1">C</td></tr>
+                        <tr><th>Am</th><td colspan="4">G</td><td colspan="3">E7</td><td colspan="2">Em</td><td colspan="1">C</td></tr>
+                        <tr><th>Am7</th><td colspan="3">G</td><td colspan="3">E7</td><td colspan="2">Am</td><td colspan="2">Em</td></tr>
+                        <tr><th>B♭</th><td colspan="6">C</td><td colspan="4">Am</td></tr>
+                    </tbody>
+                </table>
+                <h3>メロディーの決定</h3>
+                <h4>クオリティーなし</h4>
+                <table class="chord">
+                    <thead>
+                        <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th>0</th><td colspan="3">+2</td><td colspan="3">+11</td><td colspan="3">+4</td><td colspan="1">+7</td></tr>
+                        <tr><th>+2</th><td colspan="4">0</td><td colspan="3">+4</td><td colspan="2">+7</td><td colspan="1">+5</td></tr>
+                        <tr><th>+4</th><td colspan="3">+7</td><td colspan="3">0</td><td colspan="2">+2</td><td colspan="2">+5</td></tr>
+                        <tr><th>+5</th><td colspan="5">+7</td><td colspan="4">+4</td><td colspan="1">0</td></tr>
+                        <tr><th>+7</th><td colspan="3">0</td><td colspan="3">+4</td><td colspan="2">+5</td><td colspan="2">+9</td></tr>
+                        <tr><th>+9</th><td colspan="5">+7</td><td colspan="3">+11</td><td colspan="1">0</td><td colspan="1">+4</td></tr>
+                        <tr><th>+11</th><td colspan="6">0</td><td colspan="4">+9</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/4</div>
+        </div>
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">マルコフのジュークボックス</span>
+            </div>
+            <div class="page-content">
+                <h4>m</h4>
+                <table class="chord">
+                    <thead>
+                        <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th>+0</th><td colspan="5">+3</td><td colspan="2">+2</td><td colspan="2">+7</td><td colspan="1">+10</td></tr>
+                        <tr><th>+2</th><td colspan="4">+0</td><td colspan="3">+3</td><td colspan="3">+7</td></tr>
+                        <tr><th>+3</th><td colspan="3">+0</td><td colspan="3">+7</td><td colspan="3">+5</td><td colspan="1">+2</td></tr>
+                        <tr><th>+5</th><td colspan="5">+7</td><td colspan="4">+3</td><td colspan="1">+0</td></tr>
+                        <tr><th>+7</th><td colspan="3">+0</td><td colspan="3">+3</td><td colspan="2">+5</td><td colspan="2">+8</td></tr>
+                        <tr><th>+8</th><td colspan="4">+7</td><td colspan="2">+0</td><td colspan="2">+10</td><td colspan="1">+4</td><td colspan="1">+5</td></tr>
+                        <tr><th>+10</th><td colspan="8">+0</td><td colspan="2">+8</td></tr>
+                    </tbody>
+                </table>
+                <h4>7</h4>
+                <table class="chord">
+                    <thead>
+                        <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th>+0</th><td colspan="3">+2</td><td colspan="3">+10</td><td colspan="3">+4</td><td colspan="1">+7</td></tr>
+                        <tr><th>+2</th><td colspan="4">+0</td><td colspan="3">+4</td><td colspan="1">+7</td><td colspan="1">+5</td><td colspan="1">+10</td></tr>
+                        <tr><th>+4</th><td colspan="3">+7</td><td colspan="3">+0</td><td colspan="2">+2</td><td colspan="2">+5</td></tr>
+                        <tr><th>+5</th><td colspan="5">+7</td><td colspan="4">+4</td><td colspan="1">+0</td></tr>
+                        <tr><th>+7</th><td colspan="3">+0</td><td colspan="3">+4</td><td colspan="2">+9</td><td colspan="1">+5</td><td colspan="1">+10</td></tr>
+                        <tr><th>+9</th><td colspan="5">+7</td><td colspan="4">+10</td><td colspan="1">+0</td></tr>
+                        <tr><th>+10</th><td colspan="6">+0</td><td colspan="4">+9</td></tr>
+                    </tbody>
+                </table>
+                <h4>m7</h4>
+                <table class="chord">
+                    <thead>
+                        <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th>+0</th><td colspan="3">+3</td><td colspan="3">+10</td><td colspan="2">+2</td><td colspan="2">+7</td></tr>
+                        <tr><th>+2</th><td colspan="4">+0</td><td colspan="3">+3</td><td colspan="3">+7</td></tr>
+                        <tr><th>+3</th><td colspan="3">+0</td><td colspan="3">+7</td><td colspan="3">+5</td><td colspan="1">+2</td></tr>
+                        <tr><th>+5</th><td colspan="5">+7</td><td colspan="4">+3</td><td colspan="1">+0</td></tr>
+                        <tr><th>+7</th><td colspan="3">+3</td><td colspan="3">+8</td><td colspan="2">+0</td><td colspan="2">+5</td></tr>
+                        <tr><th>+8</th><td colspan="3">+7</td><td colspan="3">+10</td><td colspan="2">+0</td><td colspan="1">+4</td><td colspan="1">+5</td></tr>
+                        <tr><th>+10</th><td colspan="8">+0</td><td colspan="2">+8</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 3/4</div>
+        </div>
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">マルコフのジュークボックス</span>
+            </div>
+            <div class="page-content">
+                <h3>鍵盤とノートの関係</h3>
+                <img class="keys" src="img/Piano Keys/Piano.png">
+            </div>
+            <div class="page-footer relative-footer">ページ 4/4</div>
+        </div>
+    </div>
+</body>
+
+</html>
