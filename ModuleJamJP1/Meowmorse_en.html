@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Meowmorse — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="../Common/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/main.css">
+    <script src="../Common/js/ktane-utils.js"></script>
+    <style>
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 80%;
+            max-height: 80vh;
+            margin: auto;
+        }
+        .name-table{
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: .89em;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Meowmorse</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Meowmorse.svg" class="diagram">
+                <h2>On the Subject of Meowmorse</h2>
+                <p class="flavour-text">&#x1F408 Is there a CAT indicator on the bomb?</p>
+                
+                <ul>
+                    <li>This module looks like a <a href="https://ktane.timwi.de/HTML/Metamorse.html">Metamorse</a>, but the hexagonal button has triangle ears. Pressing the top right button plays a song with a cat's meow. This decodes to a Morse code message of 3 to 6 letters. There are long pauses between letters. Decode the Morse code according to the following rules:</li><br>
+                    <li style="list-style-type: none;"><ul>
+                        <li>If there are less than 2 indicators, turn each letter in the serial number into its numeric position in the alphabet (A=1, B=2,..., Z=26) and calculate the sum of the numbers. Subtract the number of "M", "E", "0(zero)", and "W" in the serial number from the total, and then modulo it by 3. Go to 4th instruction.</li>
+                        <li>Otherwise, get the first three indicators in alphabetical order. For each indicator, take the first letter if it is lit and the third letter if it is unlit to make a 3-letter word. If the word is "CAT", set the target-meow to the middle tone and skip to the next section.
+                            <li>Turn each letter in the word into its numeric position in the alphabet (A=1, B=2,..., Z=26) and calculate the sum of the numbers. Subtract the number of vowels in the serial number from the number, and then modulo it by 3.</li>
+                            <li>If it is 0, the target-meow is low tone. If it is 1, the target-meow is middle tone. Otherwise, the target-meow is high tone.</li>
+                            <li>Press the display to get the sound of meow with the middle tone.</li>
+                    </ul></li>
+                    <li>For each received meow from the song, use the table below to turn them into a sequence of dots and dashes. Use the column that applies to the pitch of the received meow compared to the target-meow and the row that matches the length of the received meow.</li>
+                </ul>
+            </div>
+            <div class="page-footer relative-footer">Page 1 of 2</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Meowmorse</span>
+            </div>
+            <div class="page-content">
+                <h3>Table M30W5:</h3>
+                <table>
+                    <tr><th></th><th>Lower</th><th>Same</th><th>Higher</th></tr>
+                    <tr><th>Short</th><td>dot</td><td>dash</td><td>dot</td></tr>
+                    <tr><th>Long</th><td>dash</td><td>dot</td><td>dash</td></tr> 
+                </table>
+                <ul>
+                    <li>The morse code represents a word that represents a name of a cat. Find the name in Table C4T5 and get the meow pitch of that cat and the phrase to answer. </li>
+                    <li>Press the arrow to set the pitch for transmission (the higher the cat in the display looks up, the higher the pitch gets).</li>
+                    <li>Use the column that applies to the pitch for transmission compared to the target-meow, and turn them into short and long presses using Table M30W5. Press the hexagonal button to input the phrase. A press for more than 1 second is considered as a long press. Anything shorter than 1 second is considered as a short press.</li>
+                    <li>Press the ear buttons to input the spaces between letters. If the last number of the serial number is even, use right; otherwise, use left.</li>
+                    <li>Press the top-right button to submit the phrase.</li>
+                    <li>If a wrong word is submitted or a wrong ear button is selected, it causes a strike and a new song will be selected.</li>
+                    <li>Whether the sound is higher or not is compared with the target-meow.</li>
+                </ul>
+            </div>
+            <div class="page-footer relative-footer">Page 2 of 3</div>
+        </div>
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Meowmorse</span>
+            </div>
+            <div class="page-content">
+                <h3>Table C4T5:</h3>
+                <table class="name-table inst">
+                    <tr><th>Name</th><th>Pitch</th><th>Phrase</th></tr>
+                    <tr><th>Luna</th><td>High tone</td><td>growl</td></tr>
+                    <tr><th>Oliver</th><td>Low tone</td><td>white</td></tr>
+                    <tr><th>Bella</th><td>Middle tone</td><td>purr</td></tr>
+                    <tr><th>Leo</th><td>If there is an "Astrology" or a "Constellations", high tone.<br>Otherwise, low tone.</td><td>lion</td></tr>
+                    <tr><th>Max</th><td>Low tone. <u>Repeat</u> the phrase X times where X is the maximum number of ports, serials, and indicators.</td><td>notes</td></tr> 
+                    <tr><th>Tama</th><td>If there is a lit BOB indicator, middle tone.<br>Otherwise, high tone.</td><td>pets*</td></tr>
+                    <tr><th>Sora</th><td>If the target-meow is middle tone, high tone.<br>Otherwise, middle tone.</td></td><td>rainy</td></tr>
+                    <tr><th>Kitty</th><td>If there is even number of batteries, low tone.<br>Otherwise, high tone.</td><td>meows</td></tr> 
+                    <tr><th>Sugar</th><td>If there is a Parallel ports, high tone.<br>Otherwise, low tone.</td><td>sweets</td></tr>
+                    <tr><th>Siger</th><td>If there is indicators with "T" or "M", high tone.<br>Otherwise, middle tone.</td><td>fishes</td></tr> 
+                    <tr><th>Tiger</th><td>From the middle tone, shift the pitch up by bomb's initial minutes plus one(wrapping around).</td><td>garfield</td></tr>
+                    <tr><th>Alice</th><td>From the high tone, shift the pitch up by the number of solved modules plus one(wrapping around).</td><td>cheshire</td></tr>
+                    <tr><th>Melody</th><td>Middle tone, but she likes to sing, so her pitch cycles every time a letter is sent, in the order of medium, high, and low.</b></td><td>notes</td></tr>
+                    <tr><th>Tom</th><td>Low tone. If there is a "Mouse In The Maze" on the bomb, he chased the mice and went away; <br><u>Press the top-right button three times quickly, without pushing the hexagonal button.</u></td><td>jerry</td></tr>
+                    <tr><th>Nyan</th><td>Nyanyanya~!! This is the greatest cat ever! From the high tone, shift the pitch up by the number of solved modules plus one(wrapping around). <u>Repeat</u> the phrase (unsolved module * 5) times. The number of unsolved modules is counted when the hexagonal button is pressed for the first time, ignoring any needy modules.</td><td>nya**</td></tr> 
+                </table>
+                <p>* If there are more than 2 batteries,the word is "pochi". </p>
+                <p>** If there is a lit CAR and TRN indicator, the word is "nyan". </p>
+            </div>
+            <div class="page-footer relative-footer">Page 3 of 3</div>
+        </div>
+        
+    </div>
+</body>
+</html>
