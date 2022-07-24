@@ -2,9 +2,13 @@
 import fs from 'fs';
 
 const JSON_URL = "https://ktane.timwi.de/json/raw";
-const PROFILE_PATH = "../JaProfiles";
+const PROFILE_PATH = "./JaProfiles";
+
+const newestRe = /<!-- newest -->\r?\n(.+)\r?\n/mg
+const tableTopRe = /<!-- table top -->/mg
 
 const ignore = ["Jailbreak", "boneAppleTea", "boggle", "BrokenBinary", "SouvenirModule", "eeBgnilleps", "insanagrams"];
+
 
 
 (async () => {
@@ -44,15 +48,22 @@ const ignore = ["Jailbreak", "boneAppleTea", "boggle", "BrokenBinary", "Souvenir
     .filter(mod => !lastProfile.EnabledList.includes(mod));
   
   const changelog = `${changed.map(mod => `${names[mod][1]}(${names[mod][0]})`).join("、")}追加`
-    
   if(changed.length === 0) {
     console.log("No change detected");
   } else {
     console.log(`Added ${changed.length} modules`);
     const date = new Date();
-    const datestr = `${date.getFullYear()% 100}.${("0" + (new Date().getMonth()+1)).substr(-2,2)}.${("0" + new Date().getDate()).substr(-2,2)}`
-    console.log(`* <a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a> \\[最終更新: ${datestr}\\]`)
-    console.log(`|${datestr}|<a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a>|{% include_relative changelog1.${lastVersion + 1}.txt %}|`);
+    const datestr = `${date.getFullYear()% 100}.${("0" + (new Date().getMonth()+1)).substr(-2,2)}.${("0" + new Date().getDate()).substr(-2,2)}`;
+
+    const index = (await fs.promises.readFile(`${PROFILE_PATH}//index.md`)).toString();
+    const edited = index.replace(
+      newestRe, 
+      `<!-- newest -->\r\n* <a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a> \\[最終更新: ${datestr}\\]`
+    ).replace(
+      tableTopRe, 
+      `<!-- table top -->\r\n|${datestr}|<a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a>|{% include_relative changelog1.${lastVersion + 1}.txt %}|`
+    );
+    await fs.promises.writeFile(`${PROFILE_PATH}//index.md`, edited)
     changed.forEach(c => console.log(`https://steamcommunity.com/sharedfiles/filedetails/?id=${names[c][2]}`));
     await fs.promises.writeFile(`${PROFILE_PATH}//changelog1.${lastVersion+1}.txt`, changelog);
     await fs.promises.writeFile(`${PROFILE_PATH}//Ja manual v1.${lastVersion+1}.json`, JSON.stringify(result, null, 2));
