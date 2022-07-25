@@ -27,7 +27,6 @@ lang: ja_JP
 * [おたまじゃくし鍵盤](https://tepel-chen.github.io/ModuleJamJP1/Tadpole%20Piano%20keys.html)(テーマ: 音楽) by @LR （LRai JRTsc4812001 Raicho）
 * [和音](https://tepel-chen.github.io/ModuleJamJP1/The%20Chord.html)(テーマ: 音楽) by @alpha8404/鬱
 
-## 本戦結果
+## 本戦
 
 提出物 - [Meowmorse](https://tepel-chen.github.io/ModuleJamJP1/Meowmorse_en.html)
-(本戦の結果待ち!)
