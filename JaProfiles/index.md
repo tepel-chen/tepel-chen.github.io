@@ -30,7 +30,6 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 |日付|Ver|更新内容|
 |---|---|---|
-<!-- table top -->
 |22.07.25|<a href="./Ja manual v1.40.json" download>v1.40</a>|{% include_relative changelog1.40.txt %}|
 |22.07.16|<a href="./Ja manual v1.39.json" download>v1.39</a>|{% include_relative changelog1.39.txt %}|
 |22.07.10|<a href="./Ja manual v1.37.json" download>v1.37</a>|{% include_relative changelog1.37.txt %}|
