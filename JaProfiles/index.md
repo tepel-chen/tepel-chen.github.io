@@ -11,7 +11,7 @@ lang: ja_JP
 ## 最新版
 
 <!-- newest -->
-* <a href="./Ja manual v1.41.json" download>v1.41</a> \[最終更新: 22.07.25\]
+* <a href="./Ja manual v1.41.json" download>v1.41</a> \[最終更新: 22.07.26\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -31,9 +31,10 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 |日付|Ver|更新内容|
 |---|---|---|
-|22.07.25|<a href="./Ja manual v1.41.json" download>v1.41</a>|{% include_relative changelog1.41.txt %}|
+|22.07.26|<a href="./Ja manual v1.41.json" download>v1.41</a>|{% include_relative changelog1.41.txt %}|
 |22.07.25|<a href="./Ja manual v1.40.json" download>v1.40</a>|{% include_relative changelog1.40.txt %}|
 |22.07.16|<a href="./Ja manual v1.39.json" download>v1.39</a>|{% include_relative changelog1.39.txt %}|
+|22.07.16|<a href="./Ja manual v1.38.json" download>v1.38</a>|{% include_relative changelog1.38.txt %}|
 |22.07.10|<a href="./Ja manual v1.37.json" download>v1.37</a>|{% include_relative changelog1.37.txt %}|
 |22.07.07|<a href="./Ja manual v1.36.json" download>v1.36</a>|モンスプロード・ファイト！(Monsplode, Fight!)、シンク(Sink)、廃棄物管理(Waste Management)、四角(Shikaku)、ベネディクト・カンバーバッチ(Benedict Cumberbatch)、チャレンジ＆コンタクト(Challenge & Contact)、Ｋレイジートーク(Krazy Talk)、ゾニ文字(Zoni)、UNRELATEDアナグラム(Unrelated Anagrams)、バーテンディング(Bartending)、疑問符(Question Mark)、LED算(LED Math)、ターシャの悲鳴(Tasha Squeals)、煉獄(Purgatory)、三角ボタン(The Triangle Button)、欠陥シンク(Faulty Sink)、サイモンの停止(Simon Stops)、超動数字(Hyperactive Numbers)、7つの大罪(Seven Deadly Sins)、星座(Constellations)、セイフティ・スクエア(Safety Square)、緑色暗号(Green Cipher)、青色暗号(Blue Cipher)、キーパッドロック(Keypad Lock)、ジェンガ(Jenga)、性格(Natures)、パスコード(Passcodes)、残忍キーパッド(Cruel Keypads)、シンボルターシャ(Symbolic Tasha)、パスワード生成(Password Generator)、電球セット(Light Bulbs)、順序ワイヤ(Wire Ordering)、パターンロック(Pattern Lock)、マインクラフト・パロディー(Minecraft Parody)、ナンバーワング(NumberWang)、星(Stars)、音声モールス(Audio Morse)、心臓(The Heart)、暗算(Mental Math)、頭脳耐久ゲーム(NOT NOT)、ピクセル暗号(Pixel Cipher)、アセンブリコード(Assembly Code)、聖杯(Chalices)、色付きサイクルボタン(Color-Cycle Button)、アルファベットタイル(Alphabet Tiles)、アナザー・キーパッド(Another Keypad Module)、戻りボタン(Back Buttons)、ボウリング(Bowling)、二進法ボタン(Binary Buttons)、キャンディーランド(Candy Land)、水槽(Aquarium)、ストレス解消(Antistress)、つまらない野球(Blaseball)、不可解な箱(Baffling Box)、偽鍵盤(Not Piano Keys)、大量ボタン(Buttonage)、真っ白なカード(Blank Card)、ブラインド・サークル(Blind Circle)、チャンネルサーフィン(Channel Surfing)追加|
 |22.07.06|<a href="./Ja manual v1.35.json" download>v1.35</a>|脱獄(Jailbreak)削除、蝶番(Hinges)追加|
