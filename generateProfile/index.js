@@ -6,7 +6,7 @@ const PROFILE_PATH = "./JaProfiles";
 
 const newestRe = /<!-- newest -->\r?\n(.+)\r?\n/mg
 const tableTopRe = /\|---\|---\|---\|/mg
-const ignore = ["Jailbreak", "boneAppleTea", "boggle", "BrokenBinary", "SouvenirModule", "eeBgnilleps", "insanagrams"];
+const ignore = ["Jailbreak", "boneAppleTea", "boggle", "BrokenBinary", "SouvenirModule", "eeBgnilleps", "insanagrams", "skinnyWires", "LOOKATME"];
 
 
 
@@ -57,7 +57,7 @@ const ignore = ["Jailbreak", "boneAppleTea", "boggle", "BrokenBinary", "Souvenir
     const index = (await fs.promises.readFile(`${PROFILE_PATH}//index.md`)).toString();
     const edited = index.replace(
       newestRe, 
-      `<!-- newest -->\r\n* <a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a> \\[最終更新: ${datestr}\\]`
+      `<!-- newest -->\r\n* <a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a> \\[最終更新: ${datestr}\\]\n`
     ).replace(
       tableTopRe, 
       `|---|---|---|\r\n|${datestr}|<a href="./Ja manual v1.${lastVersion + 1}.json" download>v1.${lastVersion + 1}</a>|{% include_relative changelog1.${lastVersion + 1}.txt %}|`
