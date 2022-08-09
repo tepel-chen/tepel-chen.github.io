@@ -11,7 +11,7 @@ lang: ja_JP
 ## 最新版
 
 <!-- newest -->
-* <a href="./Ja manual v1.42.json" download>v1.42</a> \[最終更新: 22.07.31\]
+* <a href="./Ja manual v1.43.json" download>v1.43</a> \[最終更新: 22.08.09\]
 * <a href="./wordless v1.0.json" download>Wordless v1.0</a>
 
 Wordlessは日本語訳は存在しないものの、英語の含まれていないマニュアルが存在するものを有効化します。(具体例: [❖](https://ktane.timwi.de/HTML/%E2%9D%96.html))
@@ -31,6 +31,7 @@ Wordlessは日本語訳は存在しないものの、英語の含まれていな
 
 |日付|Ver|更新内容|
 |---|---|---|
+|22.08.09|<a href="./Ja manual v1.43.json" download>v1.43</a>|{% include_relative changelog1.43.txt %}|
 |22.07.31|<a href="./Ja manual v1.42.json" download>v1.42</a>|{% include_relative changelog1.42.txt %}|
 |22.07.26|<a href="./Ja manual v1.41.json" download>v1.41</a>|{% include_relative changelog1.41.txt %}|
 |22.07.25|<a href="./Ja manual v1.40.json" download>v1.40</a>|{% include_relative changelog1.40.txt %}|
