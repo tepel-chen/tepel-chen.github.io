@@ -6,6 +6,8 @@ lang: ja_JP
 ---
 # 日本語対応モジュールプロファイル
 
+**[新しいサイトに移転しました。](https://ktane.regularofvanilla.com/profile/changelog)**
+
 プロファイルの詳しい使い方は[プロファイルについて](/Tutorials/profile)を御覧ください。
 
 ## 最新版
