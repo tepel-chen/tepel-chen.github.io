@@ -10,7 +10,7 @@ lang: ja_JP
 ## エントリー
 
 * [かるた](https://tepel-chen.github.io/ModuleJamJP2/Karuta.html)(テーマ: 言語) by ???
-* [モジュール演算](https://tepel-chen.github.io/ModuleJamJP2/Words%20Math.html)(テーマ: 言語) by ???
+* [言ノ葉算](https://tepel-chen.github.io/ModuleJamJP2/Words%20Math.html)(テーマ: 言語) by ???
 * [トポロジー記憶](https://tepel-chen.github.io/ModuleJamJP2/Topology%20Memory.html)(テーマ: 数学) by ???
 * [フェルマーの最終定理](https://tepel-chen.github.io/ModuleJamJP2/Fermat's%20Last%20Theorem.pdf)(テーマ: 数学) by ???
 * [モジュール演算](https://tepel-chen.github.io/ModuleJamJP2/Mod%20Operation.html)(テーマ: 数学) by ???
