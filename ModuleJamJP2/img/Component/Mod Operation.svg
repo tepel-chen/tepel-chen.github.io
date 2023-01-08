@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg fill="none" version="1.1" viewBox="0 0 348 348" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width="2">
+  <path d="m5.079 5.776h336.91v337.67h-336.91z"/>
+  <path d="m282.73 40.554c0-8.376 6.966-15.165 15.56-15.165 4.126 0 8.084 1.597 11.001 4.441 2.918 2.844 4.558 6.702 4.558 10.724 0 8.376-6.966 15.165-15.56 15.165-8.593 0-15.559-6.79-15.559-15.165z"/>
+ </g>
+ <rect x="15.581" y="66.689" width="317.87" height="105.96" fill="#000" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4141"/>
+ <g transform="translate(4.6608)">
+  <g fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.292">
+   <rect x="45.109" y="94.889" width="47.37" height="49.557"/>
+   <rect x="146.17" y="94.889" width="47.37" height="49.557"/>
+   <rect x="247.23" y="94.889" width="47.37" height="49.557"/>
+  </g>
+  <text x="102.56635" y="132.20627" fill="#fdffff" font-family="sans-serif" font-size="40px" style="line-height:1.25" xml:space="preserve"><tspan x="102.56635" y="132.20627">+</tspan></text>
+  <text x="203.61597" y="132.20627" fill="#ffffff" font-family="sans-serif" font-size="40px" style="line-height:1.25" xml:space="preserve"><tspan x="203.61597" y="132.20627">×</tspan></text>
+ </g>
+ <text x="32.843853" y="281.34058" fill="#000000" font-family="sans-serif" font-size="71.198px" stroke-width="1.7799" style="line-height:1.25" xml:space="preserve"><tspan x="32.843853" y="281.34058" stroke-width="1.7799">=</tspan></text>
+ <g fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="201.31" y="225.85" width="66.112" height="68.525" stroke-width="2.6619"/>
+  <path d="m182.41 277.21-29.712-16.918 29.507-17.272z" stroke-width="2.292"/>
+  <path transform="scale(-1,1)" d="m-286.6 277.21-29.712-16.918 29.507-17.272z" stroke-width="2.292"/>
+ </g>
+</svg>

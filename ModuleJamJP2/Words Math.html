@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>言ノ葉算 — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="../Common/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/main.css">
+    <script src="../Common/js/ktane-utils.js"></script>
+    <style>
+        @media screen and (min-width: 1100px) {
+            .page {
+                transform: rotate(90deg);
+                margin-top:-100px;
+                margin-bottom:-100px;
+            }
+        }
+        @media print, screen and (min-width: 1100px) {
+            .page {
+                position: relative;
+            }
+            .page-content {
+                font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif; 
+                position: absolute;
+                left: 50%;
+                top: 49%;
+                transform: translate(-50%, -50%) rotate(-90deg);
+                width: 24cm;
+                height: 18cm;
+                min-height: initial;
+                margin: 0;
+                padding: 0;
+                writing-mode: vertical-rl;
+            }
+			
+            .ev-page-header-section-title {
+			   color: #ffffff;
+               float: right;
+            }
+			
+			.ev-page-header-doc-title {
+	           color: #ffffff;
+               float: left;
+}
+
+            .flavour-text {
+                font-size: 9pt;
+            }
+			
+			.ev-flavour-text {
+	color: #ffffff;
+    font-style: italic;
+    font-size: 9pt;
+   }
+			
+            .heading {
+                position: absolute;
+                left: 0;
+                top: 1cm;
+            }
+			
+             .ev-page-footer {
+	            color: #ffffff;
+                text-align: center;
+           }
+            .relative-footer {
+				color: #ffffff;
+                position: absolute;
+                left: 50%;
+                bottom: .2cm;
+                transform: translate(-50%, 0);
+            }
+            .page p {
+                padding: 0 .7em;
+            }
+            .poems {
+                position: relative;
+            }
+			.ev {
+            color: #ffffff;
+        }
+            .poem2 {
+                position: absolute;
+                top: 50%;
+                right: 0;
+            }
+			
+			.footnote {
+				color: #ffffff;
+            font-size: 75%;
+        }
+			
+            .align-down {
+                padding-top: 3em;
+            }
+        }
+			
+.page-bg-wk {
+    background-image: url("./img/page-bg-noise-wk.png");
+}
+
+.page-bg-kk {
+    background-image: url("./img/page-bg-noise-kk.png");
+}
+
+@media screen and (min-width: 900px) {
+body.multipage .section {
+    display: block !important;
+    flex-wrap: wrap;
+}
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="page page-bg-wk">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">言ノ葉算</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Words Math.svg" class="diagram">
+                <h2>モジュール詳細：言ノ葉算</h2>
+                <p class="flavour-text">「言葉」は無限で儚い…</p>
+                <div class="poems">
+                    <div class="poem1">
+                        <p>
+                            このモジュールは小さなディスプレー、八つの長方形のボタン、<br>
+                            五つの正方形のボタンで構成されている。<br>
+						</p>
+						<p>
+                            初期状態では休止状態となっているが、爆弾にある無視されないモジュールが一つ解除されるとディスプレーに漢数字が表示される。<br>
+                            この数字はそのステージでの「目標値」となる。この値は、無視されないモジュールが解除される度に更新される。入力フェーズでは、まず一つ目のステージの「目標値」に*できるだけ近づけるように計算し、その値に到達した後、次のステージの「目標値」に*できるだけ近づけるように計算する。この動作を、ステージが無くなるまで繰り返す。
+                        </p>
+						<p>長方形のボタンは初期状態では空白であるが、入力フェーズに入ると、それぞれに単語が表示される。それらの単語はある数字となる。計算した数字はまず「██」からスタートし、そこから、記号が書かれた正方形のボタンを押してから、いずれかの単語のボタンを押す。すると、数字が入力される。それぞれの単語の数字は、付録：単語帳の表を読み順で数えた</p>
+                        <p>
+							爆弾にある無視されないモジュールがすべて解除されると、ディスプレーが再び空白と<br>
+						</p>
+                    </div>
+                    
+					
+                </div>
+            </div>
+            <div class="page-footer relative-footer"></div>
+        </div>
+		<div class="page page-bg-kk">
+            <div class="page-header">
+                <span class="ev-page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="ev-page-header-section-title">言ノ葉算</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Words Math R.svg" class="diagram">
+                <h2 class="ev">モジュール詳細：言ノ葉算</h2>
+                <p class="ev-flavour-text">「言葉」は無限で儚く、散っては…<b>蘇る。</b></p>
+                <div class="poems">
+                    <div class="poem1">
+                        
+						<p class="ev">
+						<b>このモジュールは改造されている。</b></p>
+						<p class="ev">二つ以上のステージが生成されている状態で、いずれかのモジュールが解除されると、ランダムでディスプレーの上にあるスイッチが動作する。スイッチが動作すると、<b>強制的に</b>入力フェーズに入る。<br>この時、入力フェーズとなったことを知らせるアラームが鳴る。<br>
+						自分からスイッチをオフに操作することはできず、スイッチをオフにするには最低でも一つのステージを突破する必要がある。</p>
+						<p class="ev">
+						 手に入れた「目標値」に*できるだけ近づけるように入力を行うこと。入力フェーズを無視して他のモジュールを解除するとミスが記録される。一つのステージを突破すると、入力フェーズが継続するか、終了するかがランダムで決定される。入力フェーズが終了する場合、自動的にスイッチがオフに動作する。<br>スイッチが動作した場合、最初の「目標値」は前回の動作時で最後に入力したステージの次のステージの「目標値」を使用する。ステージが無くなる場合、最初のステージにループする。今回が一回目の動作である場合、「目標値」はステージ一のものを使用する。
+						</p>
+						<p class="ev">「***計算した数字」の初期状態は、オフセットが設定されている。<br>
+					    最初にその数を求めてから、入力を始める。次のルールを順番に適用し、<br>「***計算した数字」の初期状態を求める。</p>
+						<li class="ev">シリアルナンバーにあるすべての数字を連結させる。</li>
+						<li class="ev">その数に爆弾にあるモジュール数の下一桁を十倍したものを足す。</li>
+						<li class="ev">その数にバッテリーの数を掛ける。バッテリーがない場合、何もしない。</li>
+						<li class="ev">英語名に「Math」がある(このモジュールを除く)モジュールがある場合、それに合致するモジュールの数だけ足す。このルールが適用された場合、※以外のルールはすべて無視する。</li>
+						<li class="ev">英語名に「Word」があるモジュールがこのモジュール以外にない場合、その数を二乗する。</li>
+						<li class="ev">点灯したTRNがある場合、その数に十七を足す。</li>
+						<li class="ev">ステレオRCAポートがある場合、その数を三で割る。小数点以下は削除する。</li>
+						<li class="ev">モジュール「漢字」または「偽漢字」がある場合、その数を四で掛ける。</li>
+						<li class="ev">モジュール「詩」がある場合、その数から一だけ引く。</li>
+						<li class="ev">※<em>この時、値が九百九十九を超える場合、千より上の位を削除する。</em></li>
+						<p class="ev">この値が現在の「***計算した数字」である。この値からスタートする。</p>
+						</div>
+                    
+					
+                </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/2</div>
+    </div>
+		<div class="page page-bg-kk">
+            <div class="page-header">
+                <span class="ev-page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="ev-page-header-section-title">言ノ葉算</span>
+            </div>
+            <div class="page-content">
+                <div class="poems">
+                    <div class="poem1">
+						<p class="ev">単語の数字はめちゃめちゃになってしまっている。付録：単語帳の表を参照すること。<br>
+						その単語がひらがなである場合、数字は表にあるその単語まで下に移動した数である。<br>(右上から開始、一番下に到達した場合、一列左の一番上へ移動)<br>
+						それ以外の場合、その単語が英語である場合、数字は表にあるその単語まで下に移動した数である。(左上から開始、一番下に到達した場合、一列右の一番上へ移動)<br>
+						それ以外の場合、その単語がカタカナである場合、数字は表にあるその単語までデカルト順で移動した数である。(左下から開始、一番右に到達した場合、上の段の一番左へ移動)<br>
+						それ以外の場合、数字は表にあるその単語まで通常の読み順で移動した数である。<br>(左上から開始、一番右に到達した場合、下の段の一番左へ移動)<br>
+						</p>
+						<p class="ev"><b>ただし、</b>単語が右から左に書かれている場合、手に入れた数字の十の位と一の位を入れ替える。手に入れた数字が一桁である場合、十の位に「ゼロ」があるものと考える。<br>RJ-45ポートがある場合、手に入れた数字に五だけ加算する。</p>
+						<p class="ev">ボタンの単語は一度使用すると消滅し、二十五秒ごとに新しい単語のボタンが一つ現れる。一つのステージ内で、どれだけの単語を使用しても構わないが、「計算した数字」がゼロから九百九十九の範囲から外れてしまったり、ボタンの単語が「あふれて」しまう場合、ミスが記録される。</p>
+                        <p class="ev">他のすべての無視されないモジュールが解除されると、ディスプレーが空白になる。スイッチをオンにすると、最終入力フェーズに移る。今までに表示された「目標値」に*できるだけ近づけるように<b>最初のステージから</b>全て入力する。途中でミスが記録された場合、スイッチは自動でオフの位置になる。最後のステージまで入力されると、モジュールが解除される。</p>
+						<p class="ev"><b>重要：モジュールには追加で制限時間が設けられている。最後に数字が入力されてから三十秒以内に、次の数字が入力されなければ、ミスが記録される。また、これとは別に、前のステージが突破されてから約一分三十秒以内に次のステージを突破できなかった場合も、ミスが記録される。大まかな制限時間は、ディスプレーに表示される枠で把握する。<br>(赤枠が三十秒のタイマー、白枠が一分三十秒のタイマー)</b></p>
+						<p class="footnote"><b>* </b>「できるだけ近づける」とは、「目標値」から誤差±十五以内で、これ以上現在あるボタンを押すと「目標値」から離れる計算となってしまう状態を示す。ステージを突破すると「ポーン」という音で知らせる。</p>
+						<p class="footnote"><b>** </b>記号のボタンは、＋は通常の足し算、×は通常の掛け算と同じように機能する。｜は現在の「計算した数字」から次に押されたボタンの数字を引く。÷は現在の「計算した数字」から次に押されたボタンの数字で割る。小数点以下は全て削除される。</p>
+						<p class="footnote"><b>***</b>「計算した数字」は一切表示されない。また、「計算した数字」は数字がゼロから九百九十九の範囲外にならない限り<i>永遠に</i>引き継がれ、最終入力フェーズに入っても<b>リセットされない</b>。ただし、二回だけ、空白の正方形のボタンを使用し、「計算した数字」をミスなしで初期状態にリセットできる。</p>
+                    </div>
+                    
+					
+                </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/2</div>
+    </div>
+		<div class="page page-bg-05">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">言ノ葉算</span>
+            </div>
+            <div class="page-content">
+                <div class="poems">
+                    <div class="poem1">
+						<h2>付録：単語帳(漢字)</h2>
+						<table>
+						<tbody>
+						<tr>
+							<td>生命</td>
+							<td>衣服</td>
+							<td>野菜</td>
+							<td>氷河</td>
+							<td>大空</td>
+							<td>警察</td>
+							<td>野球</td>
+							<td>忍者</td>
+							<td>洗濯</td>
+							<td>永遠</td>
+						</tr>
+						<tr>
+							<td>未来</td>
+							<td>知恵</td>
+							<td>帽子</td>
+							<td>医者</td>
+							<td>薬品</td>
+							<td>砂漠</td>
+							<td>果物</td>
+							<td>風車</td>
+							<td>新聞</td>
+							<td>道路</td>
+						</tr>
+						<tr>
+							<td>世界</td>
+							<td>森林</td>
+							<td>動物</td>
+							<td>鉛筆</td>
+							<td>天国</td>
+							<td>牛肉</td>
+							<td>勇気</td>
+							<td>飛翔</td>
+							<td>宝石</td>
+							<td>相撲</td>
+						</tr>
+						<tr>
+							<td>思考</td>
+							<td>図書</td>
+							<td>菓子</td>
+							<td>自由</td>
+							<td>破壊</td>
+							<td>性格</td>
+							<td>数字</td>
+							<td>制御</td>
+							<td>砂糖</td>
+							<td>血液</td>
+						</tr>
+						<tr>
+							<td>鋼鉄</td>
+							<td>車両</td>
+							<td>順番</td>
+							<td>起爆</td>
+							<td>稲妻</td>
+							<td>解除</td>
+							<td>神秘</td>
+							<td>記憶</td>
+							<td>病院</td>
+							<td>電話</td>
+						</tr>
+						<tr>
+							<td>笑顔</td>
+							<td>勉強</td>
+							<td>勝利</td>
+							<td>運転</td>
+							<td>爆弾</td>
+							<td>紅茶</td>
+							<td>大砲</td>
+							<td>怨霊</td>
+							<td>名前</td>
+							<td>日本</td>
+						</tr>
+						<tr>
+							<td>神様</td>
+							<td>安泰</td>
+							<td>複雑</td>
+							<td>動画</td>
+							<td>烏賊</td>
+							<td>友達</td>
+							<td>水星</td>
+							<td>照明</td>
+							<td>太陽</td>
+							<td>逆襲</td>
+						</tr>
+						<tr>
+							<td>今日</td>
+							<td>暗号</td>
+							<td>信頼</td>
+							<td>恐竜</td>
+							<td>音楽</td>
+							<td>午後</td>
+							<td>業火</td>
+							<td>爆発</td>
+							<td>米国</td>
+							<td>嫉妬</td>
+						</tr>
+						<tr>
+							<td>特別</td>
+							<td>刀剣</td>
+							<td>学校</td>
+							<td>空気</td>
+							<td>平和</td>
+							<td>地獄</td>
+							<td>手紙</td>
+							<td>強欲</td>
+							<td>恋愛</td>
+							<td>苦痛</td>
+						</tr>
+						<tr>
+							<td>希望</td>
+							<td>電気</td>
+							<td>珈琲</td>
+							<td>時間</td>
+							<td>協力</td>
+							<td>心臓</td>
+							<td>金庫</td>
+							<td>両親</td>
+							<td>悪夢</td>
+							<td>終末</td>
+						</tr>
+						</tbody>
+						</table>
+                    </div>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">第一頁</div>
+		</div>
+		</div>
+</body>
+
+</html>
