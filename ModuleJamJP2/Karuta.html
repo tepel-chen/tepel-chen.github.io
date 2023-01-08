@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>かるた — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="../Common/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/main.css">
+    <script src="../Common/js/ktane-utils.js"></script>
+
+    <style>
+        .small {
+            font-size: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">かるた</span>
+            </div>
+            <div class="page-content">
+                <h2>モジュール詳細：かるた</h2>
+                <p class="flavour-text">KTANE Japanにはかるたの有段者がいるらしいぜ！</p>
+                <p class="appendix-reference" id="appendix-reference">
+                    <span>和文モールスについては「付録：和文モールス表」を参照すること。</span>
+                <p>
+                <ul>
+                    <li>このモジュールには、百人一首で使用されるかるたが表示されている。ただしモジュールには日本語ではなく、0から9の赤、緑または黒の色が付いた数字で構成された数列が上の句の形式(五七五)で表示されている。また下には3つのカードがあり、上の句の一部を切り取った3文字を暗号化した状態で表示されている。</li>
+                    <li>このモジュールを解除するには、暗号化された数字を下の句の一部に復号化し、それに対応した上の句の一部が表示されたかるたを送信する必要がある。</li>
+                </ul>
+                <h3>ステップ1：暗号化された部分の特定</h3>
+                <p>モジュールに表示されている数字は五七五形式だが、復号化すると下の句の七・七の前半または後半のどちらかになる。つまり、どの部分が暗号化されているのかを特定する必要がある。<br>下のリストを上から見て当てはまる最初の条件を使用する。</p>
+                <ol>
+                    <li>点灯したBOBインジケーターがある場合、前半の七文字が暗号化されている。</li>
+                    <li>それ以外の場合、RCAステレオポートがあり、点灯していないインジケーターがない場合、後半の七文字が暗号化されている。</li>
+                    <li>それ以外の場合、シリアルナンバーに「K/A/R/U/T/A」のいずれかと共通する英字がある場合、前半の七文字が暗号化されている。</li>
+                    <li>それ以外の場合、爆弾にあるモジュールの総数が開始分数よりも多い場合、後半の七文字が暗号化されている。</li>
+                    <li>それ以外の場合、ポートプレートが無い場合、前半の七文字が暗号化されている。</li>
+                    <li>それ以外の場合、モジュールに表示されている数字に0~9の全ての数字が使用されている場合、後半の七文字が暗号化されている。</li>
+                    <li>それ以外の場合、数字の色が赤よりも緑の方が多い場合、前半の七文字が暗号化されている。</li>
+                    <li>いずれにも該当しない場合、後半の七文字が暗号化されている。</li>
+                </ol>
+                <h3>ステップ2：ペアの作成</h3>
+                <ul>
+                    <li>次に暗号化された数字を使用して7つの数字のペアを作成する。ただし、真ん中の七文字の数字から変換されたモールス信号の文字によって、よってペアの作成方法が変化する場合がある。</li>
+                    <li>シリアルナンバーの最後の数字が奇数の場合は赤は「-」で緑=「.」となり、偶数の場合は逆とする。黒の数字は無視する。</li>
+                </ul>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/8</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">かるた</span>
+            </div>
+            <div class="page-content">
+                <ul>
+                    <li>真ん中の数字から取得したモールス信号の文字が母音(あ・い・う・え・お)の場合、暗号化された数字の最初の五文字に真ん中の七文字の上から2・3文字目を後ろに繋げたものをペアの一文字目、最後の五文字に真ん中の七文字の上から5・6文字目を後ろに繋げたものをペアの二文字目とする。</li>
+                    <li>それ以外の場合、暗号化された数字の真ん中の七文字をペアの一文字目、最初の五文字の上から1・2・4・5文字目、最後の五文字の上から1・3・5文字目を順番に取得した文字列をペアの二文字目として使用する。</li>
+                </ul>
+                <h3>ステップ3：数字の変換</h3>
+                <p>最初と最後の五文字の色をモールス信号に変換する必要がある。暗号化されている下の句が前半の場合は赤は「-」で緑=「.」となり、後半の場合は逆とする。黒の数字は無視する。</p>
+                <p>取得したモールス信号の文字のいずれかが母音または「か」「る」「た」になる場合、ペアを交換する必要がある。</p>
+                <p>各ペアの一文字目を列に、二文字目を段に使用して七文字のひらがなを取得する。</p>
+                <table style="margin: auto;">
+                    <tr>
+                        <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th style="background-color: black;"></th>
+                    </tr>
+                    <tr>
+                        <td>あ</td><td>け</td><td>ひ</td><td>の</td><td>ぐ</td><td>そ</td><td>が</td><td>る</td><td>ふ</td><td>と</td><th>0</th>
+                    </tr>
+                    <tr>
+                        <td>で</td><td>か</td><td>よ</td><td>ず</td><td>ぜ</td><td>が</td><td>ぽ</td><td>づ</td><td>ぼ</td><td>え</td><th>1</th>
+                    </tr>
+                    <tr>
+                        <td>つ</td><td>ら</td><td>さ</td><td>ぎ</td><td>い</td><td>じ</td><td>ほ</td><td>く</td><td>て</td><td>な</td><th>2</th>
+                    </tr>
+                    <tr>
+                        <td>の</td><td>に</td><td>こ</td><td>た</td><td>べ</td><td>も</td><td>ご</td><td>ゆ</td><td>ぷ</td><td>が</td><th>3</th>
+                    </tr>
+                    <tr>
+                        <td>か</td><td>ぶ</td><td>を</td><td>む</td><td>な</td><td>き</td><td>で</td><td>へ</td><td>ぴ</td><td>の</td><th>4</th>
+                    </tr>
+                    <tr>
+                        <td>り</td><td>め</td><td>ね</td><td>ん</td><td>ぢ</td><td>は</td><td>う</td><td>げ</td><td>る</td><td>だ</td><th>5</th>
+                    </tr>
+                    <tr>
+                        <td>も</td><td>ゐ</td><td>す</td><td>ち</td><td>れ</td><td>ゑ</td><td>ま</td><td>い</td><td>そ</td><td>て</td><th>6</th>
+                    </tr>
+                    <tr>
+                        <td>た</td><td>し</td><td>ろ</td><td>ざ</td><td>う</td><td>ぱ</td><td>と</td><td>や</td><td>わ</td><td>は</td><th>7</th>
+                    </tr>
+                    <tr>
+                        <td>ぺ</td><td>ん</td><td>み</td><td>ぬ</td><td>け</td><td>ど</td><td>に</td><td>く</td><td>ら</td><td>こ</td><th>8</th>
+                    </tr>
+                    <tr>
+                        <td>せ</td><td>ば</td><td>ね</td><td>お</td><td>び</td><td>ぷ</td><td>し</td><td>れ</td><td>ぞ</td><td>わ</td><th>9</th>
+                    </tr>
+                </table>
+                <p>取得した7つの文字は百人一首の下の句の一部になっている。付録：百人一首一覧から該当するものを特定する。</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/8</div>
+        </div>
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">かるた</span>
+            </div>
+            <div class="page-content">
+                <h3>ステップ4：かるたの解読</h3>
+                <ul>
+                    <li>下の各かるたには6つの数字が横2×縦3で並んでいる。</li>
+                    <li>読み順で1・2番目、3・4番目、5・6番目をそれぞれペアとして、ステップ3の表を使用して文字に変換する。</li>
+                    <li>取得した3つの文字は上の句の一部に対応している。3文字は順番に並んでいるが、五・七・五の区切りを無視して表示されている可能性がある。</li>
+                </ul>
+                <h3>ステップ5：かるたの送信</h3>
+                <ul>
+                    <li>復号化した下の句に対応する上の句に含まれている3文字が表示されたかるたを押して送信する。</li>
+                    <li>間違ったかるたを送信するとミスが記録され、モジュールがリセットされる。</li>
+                </ul>
+            </div>
+            <div class="page-footer relative-footer">ページ 3/8</div>
+        </div>
+        <div class="page page-bg-04">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">かるた</span>
+            </div>
+            <div class="page-content">
+                <h2>付録：和文モールス表</h2>
+                <table class="morse-signal-table">
+                    <tr class="morse-interpret">
+                        <th>和文モールス信号一覧</th>
+                    </tr>
+                    <tr class="morse-interpret">
+                        <td>
+                            <p>1.短い点灯は点</p>
+                            <p>2.長い点灯はダッシュ</p>
+                            <p>3.文字間には長い休止</p>
+                            <p>4.単語間には非常に長い休止。</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img id="morseSignalImg" src="img/japanese-morse.svg"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 4/8</div>
+        </div>
+        <div class="page page-bg-05">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">かるた</span>
+            </div>
+            <div class="page-content">
+                <h2>付録：百人一首一覧</h2>
+                <table class="small">
+                    <tr>
+                        <th>歌番号</th>
+                        <th>上の句</th>
+                        <th>下の句</th>
+                        <th>作者</th>
+                    </tr>
+                    <tr>
+                        <td>1</td><td>あきのたの　かりほのいほの　とまをあらみ</td><td>わがころもでは　つゆにぬれつつ</td><td>天智天皇</td>
+                    </tr>
+                    <tr>
+                        <td>2</td><td>はるすぎて　なつきにけらし　しろたへの</td><td>ころもほすてふ　あまのかぐやま</td><td>持統天皇</td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td>あしびきの　やまどりのをの　しだりをの</td><td>ながながしよを　ひとりかもねむ</td><td>柿本人麻呂</td>
+                    </tr>
+                    <tr>
+                        <td>4</td><td>たごのうらに　うちいでてみれば　しろたへの</td><td>ふじのたかねに　ゆきはふりつつ</td><td>山部赤人</td>
+                    </tr>
+                    <tr>
+                        <td>5</td><td>おくやまに　もみぢふみわけ　なくしかの</td><td>こゑきくときぞ　あきはかなしき</td><td>猿丸大夫</td>
+                    </tr>
+                    <tr>
+                        <td>6</td><td>かささぎの　わたせるはしに　おくしもの</td><td>しろきをみれば　よぞふけにける</td><td>中納言家持</td>
+                    </tr>
+                    <tr>
+                        <td>7</td><td>あまのはら　ふりさけみれば　かすがなる</td><td>みかさのやまに　いでしつきかも</td><td>安倍仲麿</td>
+                    </tr>
+                    <tr>
+                        <td>8</td><td>わがいほは　みやこのたつみ　しかぞすむ</td><td>よをうぢやまと　ひとはいふなり</td><td>喜撰法師</td>
+                    </tr>
+                    <tr>
+                        <td>9</td><td>はなのいろは　うつりにけりな　いたづらに</td><td>わがみよにふる　ながめせしまに</td><td>小野小町</td>
+                    </tr>
+                    <tr>
+                        <td>10</td><td>これやこの　ゆくもかへるも　わかれては</td><td>しるもしらぬも　あふさかのせき</td><td>蝉丸</td>
+                    </tr>
+                    <tr>
+                        <td>11</td><td>わたのはら　やそしまかけて　こぎいでぬと</td><td>ひとにはつげよ　あまのつりぶね</td><td>参議篁</td>
+                    </tr>
+                    <tr>
+                        <td>12</td><td>あまつかぜ　くものかよひぢ　ふきとぢよ</td><td>をとめのすがた　しばしとどめむ</td><td>僧正遍照</td>
+                    </tr>
+                    <tr>
+                        <td>13</td><td>つくばねの　みねよりおつる　みなのがは</td><td>こひぞつもりて　ふちとなりぬる</td><td>陽成院</td>
+                    </tr>
+                    <tr>
+                        <td>14</td><td>みちのくの　しのぶもぢずり　たれゆゑに</td><td>みだれそめにし　われならなくに</td><td>河原左大臣</td>
+                    </tr>
+                    <tr>
+                        <td>15</td><td>きみがため　はるののにいでて　わかなつむ</td><td>わがころもでに　ゆきはふりつつ</td><td>光孝天皇</td>
+                    </tr>
+                    <tr>
+                        <td>16</td><td>たちわかれ　いなばのやまの　みねにおふる</td><td>まつとしきかば　いまかへりこむ</td><td>中納言行平</td>
+                    </tr>
+                    <tr>
+                        <td>17</td><td>	ちはやぶる　かみよもきかず　たつたがは</td><td>からくれなゐに　みづくくるとは</td><td>在原業平朝臣</td>
+                    </tr>
+                    <tr>
+                        <td>18</td><td>	すみのえの　きしによるなみ　よるさへや</td><td>ゆめのかよひぢ　ひとめよくらむ</td><td>藤原敏行朝臣</td>
+                    </tr>
+                    <tr>
+                        <td>19</td><td>	なにはがた　みじかきあしの　ふしのまも</td><td>あはでこのよを　すぐしてよとや</td><td>伊勢</td>
+                    </tr>
+                    <tr>
+                        <td>20</td><td>	わびぬれば　いまはたおなじ　なにはなる</td><td>みをつくしても　あはむとぞおもふ</td><td>元良親王</td>
+                    </tr>
+                    <tr>
+                        <td>21</td><td>いまこむと　いひしばかりに　ながつきの</td><td>ありあけのつきを　まちいでつるかな</td><td>素性法師</td>
+                    </tr>
+                    <tr>
+                        <td>22</td><td>ふくからに　あきのくさきの　しをるれば</td><td>むべやまかぜを　あらしといふらむ</td><td>文屋康秀</td>
+                    </tr>
+                    <tr>
+                        <td>23</td><td>つきみれば　ちぢにものこそ　かなしけれ</td><td>わがみひとつの　あきにはあらねど</td><td>大江千里</td>
+                    </tr>
+                    <tr>
+                        <td>24</td><td>このたびは　ぬさもとりあへず　たむけやま</td><td>もみぢのにしき　かみのまにまに</td><td>菅家</td>
+                    </tr>
+                    <tr>
+                        <td>25</td><td>なにしおはば　あふさかやまの　さねかづら</td><td>ひとにしられで　くるよしもがな</td><td>三条右大臣</td>
+                    </tr>
+                    <tr>
+                        <td>26</td><td>をぐらやま　みねのもみぢば　こころあらば</td><td>いまひとたびの　みゆきまたなむ</td><td>貞信公</td>
+                    </tr>
+                    <tr>
+                        <td>27</td><td>みかのはら　わきてながるる　いづみがは</td><td>いつみきとてか　こひしかるらむ</td><td>中納言兼輔</td>
+                    </tr>
+                    <tr>
+                        <td>28</td><td>やまざとは　ふゆぞさびしさ　まさりける</td><td>ひとめもくさも　かれぬとおもへば</td><td>源宗于朝臣</td>
+                    </tr>
+                    <tr>
+                        <td>29</td><td>こころあてに　をらばやをらむ　はつしもの</td><td>おきまどはせる　しらぎくのはな</td><td>凡河内躬恒</td>
+                    </tr>
+                    <tr>
+                        <td>30</td><td>ありあけの　つれなくみえし　わかれより</td><td>あかつきばかり　うきものはなし</td><td>壬生忠岑</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 5/8</div>
+        </div>
+        <div class="page page-bg-06">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">かるた</span>
+            </div>
+            <div class="page-content">
+                <h2>付録：百人一首一覧（続き）</h2>
+                <table class="small">
+                    <tr>
+                        <th>歌番号</th>
+                        <th>上の句</th>
+                        <th>下の句</th>
+                        <th>作者</th>
+                    </tr>
+                    <tr>
+                        <td>31</td><td>あさぼらけ　ありあけのつきと　みるまでに</td><td>よしののさとに　ふれるしらゆき</td><td>坂上是則</td>
+                    </tr>
+                    <tr>
+                        <td>32</td><td>やまがはに　かぜのかけたる　しがらみは</td><td>ながれもあへぬ　もみぢなりけり</td><td>春道列樹</td>
+                    </tr>
+                    <tr>
+                        <td>33</td><td>ひさかたの　ひかりのどけき　はるのひに</td><td>しづごころなく　はなのちるらむ</td><td>紀友則</td>
+                    </tr>
+                    <tr>
+                        <td>34</td><td>たれをかも　しるひとにせむ　たかさごの</td><td>まつもむかしの　ともならなくに</td><td>藤原興風</td>
+                    </tr>
+                    <tr>
+                        <td>35</td><td>ひとはいさ　こころもしらず　ふるさとは</td><td>はなぞむかしの　かににほひける</td><td>紀貫之</td>
+                    </tr>
+                    <tr>
+                        <td>36</td><td>なつのよは　まだよひながら　あけぬるを</td><td>くものいづこに　つきやどるらむ</td><td>清原深養父</td>
+                    </tr>
+                    <tr>
+                        <td>37</td><td>しらつゆに　かぜのふきしく　あきののは</td><td>つらぬきとめぬ　たまぞちりける</td><td>文屋朝康</td>
+                    </tr>
+                    <tr>
+                        <td>38</td><td>わすらるる　みをばおもはず　ちかひてし</td><td>ひとのいのちの　をしくもあるかな</td><td>右近</td>
+                    </tr>
+                    <tr>
+                        <td>39</td><td>あさぢふの　をののしのはら　しのぶれど</td><td>あまりてなどか　ひとのこひしき</td><td>参議等</td>
+                    </tr>
+                    <tr>
+                        <td>40</td><td>しのぶれど　いろにいでにけり　わがこひは</td><td>ものやおもふと　ひとのとふまで</td><td>平兼盛</td>
+                    </tr>
+                    <tr>
+                        <td>41</td><td>こひすてふ　わがなはまだき　たちにけり</td><td>ひとしれずこそ　おもひそめしか</td><td>壬生忠見</td>
+                    </tr>
+                    <tr>
+                        <td>42</td><td>ちぎりきな　かたみにそでを　しぼりつつ</td><td>すゑのまつやま　なみこさじとは</td><td>清原元輔</td>
+                    </tr>
+                    <tr>
+                        <td>43</td><td>あひみての　のちのこころに　くらぶれば</td><td>むかしはものを　おもはざりけり</td><td>権中納言敦忠</td>
+                    </tr>
+                    <tr>
+                        <td>44</td><td>あふことの　たえてしなくは　なかなかに</td><td>ひとをもみをも　うらみざらまし</td><td>中納言朝忠</td>
+                    </tr>
+                    <tr>
+                        <td>45</td><td>あはれとも　いふべきひとは　おもほえで</td><td>身のいたづらに　なりぬべきかな</td><td>謙徳公</td>
+                    </tr>
+                    <tr>
+                        <td>46</td><td>ゆらのとを　わたるふなびと　かぢをたえ</td><td>ゆくへもしらぬ　こひのみちかな</td><td>曾禰好忠</td>
+                    </tr>
+                    <tr>
+                        <td>47</td><td>やへむぐら　しげれるやどの　さびしきに</td><td>ひとこそみえね　あきはきにけり</td><td>恵慶法師</td>
+                    </tr>
+                    <tr>
+                        <td>48</td><td>かぜをいたみ　いはうつなみの　おのれのみ</td><td>くだけてものを　おもふころかな</td><td>源重之</td>
+                    </tr>
+                    <tr>
+                        <td>49</td><td>みかきもり　ゑじのたくひの　よるはもえ</td><td>ひるはきえつつ　ものをこそおもへ</td><td>大中臣能宣</td>
+                    </tr>
+                    <tr>
+                        <td>50</td><td>きみがため　をしからざりし　いのちさへ</td><td>ながくもがなと　おもひけるかな</td><td>藤原義孝</td>
+                    </tr>
+                    <tr>
+                        <td>51</td><td>かくとだに　えやはいぶきの　さしもぐさ</td><td>さしもしらじな　もゆるおもひを</td><td>藤原実方朝臣</td>
+                    </tr>
+                    <tr>
+                        <td>52</td><td>あけぬれば　くるるものとは　しりながら</td><td>なほうらめしき　あさぼらけかな</td><td>藤原道信朝臣</td>
+                    </tr>
+                    <tr>
+                        <td>53</td><td>なげきつつ　ひとりぬるよの　あくるまは</td><td>いかにひさしき　ものとかはしる</td><td>右大将道綱母</td>
+                    </tr>
+                    <tr>
+                        <td>54</td><td>わすれじの　ゆくすゑまでは　かたければ</td><td>けふをかぎりの　いのちともがな</td><td>儀同三司母</td>
+                    </tr>
+                    <tr>
+                        <td>55</td><td>たきのおとは　たえてひさしく　なりぬれど</td><td>なこそながれて　なほきこえけれ</td><td>大納言公任</td>
+                    </tr>
+                    <tr>
+                        <td>56</td><td>あらざらむ　このよのほかの　おもひでに</td><td>いまひとたびの　あふこともがな</td><td>和泉式部</td>
+                    </tr>
+                    <tr>
+                        <td>57</td><td>めぐりあひて　みしやそれとも　わかぬまに</td><td>くもがくれにし　よはのつきかな</td><td>紫式部</td>
+                    </tr>
+                    <tr>
+                        <td>58</td><td>ありまやま　ゐなのささはら　かぜふけば</td><td>いでそよひとを　わすれやはする</td><td>大弐三位</td>
+                    </tr>
+                    <tr>
+                        <td>59</td><td>やすらはで　ねなましものを　さよふけて</td><td>かたぶくまでの　つきをみしかな</td><td>赤染衛門</td>
+                    </tr>
+                    <tr>
+                        <td>60</td><td>おほえやま　いくののみちの　とほければ</td><td>まだふみもみず　あまのはしだて</td><td>小式部内侍</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 6/8</div>
+        </div>
+        <div class="page page-bg-07">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">かるた</span>
+            </div>
+            <div class="page-content">
+                <h2>付録：百人一首一覧（続き）</h2>
+                <table class="small">
+                    <tr>
+                        <th>歌番号</th>
+                        <th>上の句</th>
+                        <th>下の句</th>
+                        <th>作者</th>
+                    </tr>
+                    <tr>
+                        <td>61</td><td>いにしへの　ならのみやこの　やへざくら</td><td>けふここのへに　にほひぬるかな</td><td>伊勢大輔</td>
+                    </tr>
+                    <tr>
+                        <td>62</td><td>よをこめて　とりのそらねは　はかるとも</td><td>よにあふさかの　せきはゆるさじ</td><td>清少納言</td>
+                    </tr>
+                    <tr>
+                        <td>63</td><td>いまはただ　おもひたえなむ　とばかりを</td><td>ひとづてならで　いふよしもがな</td><td>左京大夫道雅</td>
+                    </tr>
+                    <tr>
+                        <td>64</td><td>あさぼらけ　うぢのかはぎり　たえだえに</td><td>あらはれわたる　せぜのあじろぎ</td><td>権中納言定頼</td>
+                    </tr>
+                    <tr>
+                        <td>65</td><td>うらみわび　ほさぬそでだに　あるものを</td><td>こひにくちなむ　なこそをしけれ</td><td>相模</td>
+                    </tr>
+                    <tr>
+                        <td>66</td><td>もろともに　あはれとおもへ　やまざくら</td><td>はなよりほかに　しるひともなし</td><td>前大僧正行尊</td>
+                    </tr>
+                    <tr>
+                        <td>67</td><td>はるのよの　ゆめばかりなる　たまくらに</td><td>かひなくたたむ　なこそをしけれ</td><td>周防内侍</td>
+                    </tr>
+                    <tr>
+                        <td>68</td><td>こころにも　あらでうきよに　ながらへば</td><td>こひしかるべき　よはのつきかな</td><td>三条院</td>
+                    </tr>
+                    <tr>
+                        <td>69</td><td>あらしふく　みむろのやまの　もみぢばは</td><td>たつたのかはの　にしきなりけり</td><td>能因法師</td>
+                    </tr>
+                    <tr>
+                        <td>70</td><td>さびしさに　やどをたちいでて　ながむれば</td><td>いづこもおなじ　あきのゆふぐれ</td><td>良暹法師</td>
+                    </tr>
+                    <tr>
+                        <td>71</td><td>ゆふされば　かどたのいなば　おとづれて</td><td>あしのまろやに　あきかぜぞふく</td><td>大納言経信</td>
+                    </tr>
+                    <tr>
+                        <td>72</td><td>おとにきく　たかしのはまの　あだなみは</td><td>かけじやそでの　ぬれもこそすれ</td><td>祐子内親王家紀伊</td>
+                    </tr>
+                    <tr>
+                        <td>73</td><td>たかさごの　をのへのさくら　さきにけり</td><td>とやまのかすみ　たたずもあらなむ</td><td>権中納言匡房</td>
+                    </tr>
+                    <tr>
+                        <td>74</td><td>うかりける　ひとをはつせの　やまおろしよ</td><td>はげしかれとは　いのらぬものを</td><td>源俊頼朝臣</td>
+                    </tr>
+                    <tr>
+                        <td>75</td><td>ちぎりおきし　させもがつゆを　いのちにて</td><td>あはれことしの　あきもいぬめり</td><td>藤原基俊</td>
+                    </tr>
+                    <tr>
+                        <td>76</td><td>わたのはら　こぎいでてみれば　ひさかたの</td><td>くもゐにまがふ　おきつしらなみ</td><td>法性寺入道前<br>関白太政大臣</td>
+                    </tr>
+                    <tr>
+                        <td>77</td><td>せをはやみ　いはにせかるる　たきがはの</td><td>われてもすゑに　あはむとぞおもふ</td><td>崇徳院</td>
+                    </tr>
+                    <tr>
+                        <td>78</td><td>あはぢしま　かよふちどりの　なくこゑに</td><td>いくよねざめぬ　すまのせきもり</td><td>源兼昌</td>
+                    </tr>
+                    <tr>
+                        <td>79</td><td>あきかぜに　たなびくくもの　たえまより</td><td>もれいづるつきの　かげのさやけさ</td><td>左京大夫顕輔</td>
+                    </tr>
+                    <tr>
+                        <td>80</td><td>ながからむ　こころもしらず　くろかみの</td><td>みだれてけさは　ものをこそおもへ</td><td>待賢門院堀河</td>
+                    </tr>
+                    <tr>
+                        <td>81</td><td>ほととぎす　なきつるかたを　ながむれば</td><td>ただありあけの　つきぞのこれる</td><td>後徳大寺左大臣</td>
+                    </tr>
+                    <tr>
+                        <td>82</td><td>おもひわび　さてもいのちは　あるものを</td><td>うきにたへぬは　なみだなりけり</td><td>道因法師</td>
+                    </tr>
+                    <tr>
+                        <td>83</td><td>よのなかよ　みちこそなけれ　おもひいる</td><td>やまのおくにも　しかぞなくなる</td><td>皇太后宮大夫俊成</td>
+                    </tr>
+                    <tr>
+                        <td>84</td><td>ながらへば　またこのごろや　しのばれむ</td><td>うしとみしよぞ　いまはこひしき</td><td>藤原清輔朝臣</td>
+                    </tr>
+                    <tr>
+                        <td>85</td><td>よもすがら　ものおもふころは　あけやらで</td><td>ねやのひまさへ　つれなかりけり</td><td>俊恵法師</td>
+                    </tr>
+                    <tr>
+                        <td>86</td><td>なげけとて　つきやはものを　おもはする</td><td>かこちがほなる　わがなみだかな</td><td>西行法師</td>
+                    </tr>
+                    <tr>
+                        <td>87</td><td>むらさめの　つゆもまだひぬ　まきのはに</td><td>きりたちのぼる　あきのゆふぐれ</td><td>寂蓮法師</td>
+                    </tr>
+                    <tr>
+                        <td>88</td><td>なにはえの　あしのかりねの　ひとよゆゑ</td><td>みをつくしてや　こひわたるべき</td><td>皇嘉門院別当</td>
+                    </tr>
+                    <tr>
+                        <td>89</td><td>たまのをよ　たえなばたえね　ながらへば</td><td>しのぶることの　よわりもぞする</td><td>式子内親王</td>
+                    </tr>
+                    <tr>
+                        <td>90</td><td>みせばやな　をじまのあまの　そでだにも</td><td>ぬれにぞぬれし　いろはかはらず</td><td>殷富門院大輔</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 7/8</div>
+        </div>
+        <div class="page page-bg-08">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">かるた</span>
+            </div>
+            <div class="page-content">
+                <h2>付録：百人一首一覧（続き）</h2>
+                <table class="small">
+                    <tr>
+                        <th>歌番号</th>
+                        <th>上の句</th>
+                        <th>下の句</th>
+                        <th>作者</th>
+                    </tr>
+                    <tr>
+                        <td>91</td><td>きりぎりす　なくやしもよの　さむしろに</td><td>ころもかたしき　ひとりかもねむ</td><td>後京極摂政<br>前太政大臣</td>
+                    </tr>
+                    <tr>
+                        <td>92</td><td>わがそでは　しほひにみえぬ　おきのいしの</td><td>ひとこそしらね　かわくまもなし</td><td>二条院讃岐</td>
+                    </tr>
+                    <tr>
+                        <td>93</td><td>よのなかは　つねにもがもな　なぎさこぐ</td><td>あまのをぶねの　つなでかなしも</td><td>鎌倉右大臣</td>
+                    </tr>
+                    <tr>
+                        <td>94</td><td>みよしのの　やまのあきかぜ　さよふけて</td><td>ふるさとさむく　ころもうつなり</td><td>参議雅経</td>
+                    </tr>
+                    <tr>
+                        <td>95</td><td>おほけなく　うきよのたみに　おほふかな</td><td>わがたつそまに　すみぞめのそで</td><td>前大僧正慈円</td>
+                    </tr>
+                    <tr>
+                        <td>96</td><td>はなさそふ　あらしのにはの　ゆきならで</td><td>ふりゆくものは　わがみなりけり</td><td>入道前太政大臣</td>
+                    </tr>
+                    <tr>
+                        <td>97</td><td>こぬひとを　まつほのうらの　ゆふなぎに</td><td>やくやもしほの　みもこがれつつ</td><td>権中納言定家</td>
+                    </tr>
+                    <tr>
+                        <td>98</td><td>かぜそよぐ　ならのをがはの　ゆふぐれは</td><td>みそぎぞなつの　しるしなりける</td><td>従二位家隆</td>
+                    </tr>
+                    <tr>
+                        <td>99</td><td>ひともをし　ひともうらめし　あぢきなく</td><td>よをおもふゆゑに　ものおもふみは</td><td>後鳥羽院</td>
+                    </tr>
+                    <tr>
+                        <td>100</td><td>ももしきや　ふるきのきばの　しのぶにも</td><td>なほあまりある　むかしなりけり</td><td>順徳院</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 8/8</div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>モジュール演算 — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="../Common/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/main.css">
+    <script src="../Common/js/ktane-utils.js"></script>
+    <script async>
+        const TABLE_ROWS = 20;
+        const c = {
+            SIMON: "サイモン",
+            WIRE: "ワイヤ",
+            MORSE: "モールス",
+            CRUEL: "残忍",
+            COLOR: "色",
+            BLANK: "空",
+            VANILLA: "バニラ",
+            BOSS: "ボス",
+            PASSWORD: "パスワード",
+            MAZE: "迷路",
+            MUSIC: "音楽",
+            MEMORY: "記憶",
+            CIPHER: "暗号",
+            ENCRYPTION: "文字変換",
+            MATH: "数学",
+            CUBE: "立方体",
+            SPHERE: "球",
+            LOGIC: "論理",
+            DISPLAY: "ディスプレー",
+            PUZZLE: "パズル",
+            TALK: "会話",
+            SYMBOL: "シンボル",
+            LETTER: "文字",
+            NUMBER: "数字",
+            TIME: "時間",
+            GAME: "ゲーム",
+            RED: "赤",
+            BLACK: "黒",
+            SOLO: "ソロ",
+            BIT: "ビット",
+            LIGHT: "ライト",
+            SWITCH: "スイッチ",
+            VENN: "ベン図"
+        };
+        const modules = [
+            {name: "Wires", ja: "ワイヤ", characters: [c.WIRE, c.VANILLA, c.COLOR]},
+            {name: "Simon Says", ja: "サイモンゲーム", characters: [c.SIMON, c.VANILLA]},
+            {name: "Password", ja: "パスワード", characters: [c.PASSWORD, c.VANILLA]},
+            {name: "Morse Code", ja: "モールス信号", characters: [c.MORSE, c.VANILLA, c.LIGHT]},
+            {name: "Memory", ja: "記憶", characters: [c.MEMORY, c.VANILLA, c.DISPLAY]},
+            {name: "Maze", ja: "迷路", characters: [c.MATH, c.VANILLA]},
+            {name: "Keypad", ja: "キーパッド", characters: [c.VANILLA, c.SYMBOL]},
+            {name: "Complicated Wires", ja: "複雑ワイヤ", characters: [c.VENN, c.VANILLA, c.WIRE]},
+            {name: "Colour Flash", ja: "カラーフラッシュ", characters: [c.COLOR, c.DISPLAY]},
+            {name: "Piano Keys", ja: "鍵盤", characters: [c.MUSIC]},
+            {name: "Semaphore", ja: "セマフォア", characters: [c.ENCRYPTION]},
+            {name: "Switches", ja: "スイッチ", characters: [c.SWITCH]},
+            {name: "Orientation Cube", ja: "方向キューブ", characters: [c.CUBE]},
+            {name: "Morsematics", ja: "モールス・マティック", characters: [c.MORSE, c.RED]},
+            {name: "Connection Check", ja: "接続確認", characters: [c.SWITCH, c.NUMBER]},
+            {name: "Forget Me Not", ja: "我忘る勿かれ", characters: [c.RED, c.BOSS]},
+            {name: "Logic", ja: "論理", characters: [c.LETTER, c.LOGIC]},
+            {name: "Crazy Talk", ja: "クレイジートーク", characters: [c.TALK, c.DISPLAY, c.SWITCH]},
+            {name: "Plumbing", ja: "配管", characters: [c.RED, c.COLOR, c.MAZE, c.PUZZLE]},
+            {name: "Cruel Piano Keys", ja: "残忍鍵盤", characters: [c.RED, c.MUSIC, c.CRUEL]},
+            {name: "Chess", ja: "チェス", characters: [c.GAME, c.DISPLAY]},
+            {name: "Mouse In The Maze", ja: "迷路のネズミ", characters: [c.MAZE, c.SPHERE]},
+            {name: "Number Pad", ja: "ナンバーパッド", characters: [c.NUMBER]},
+            {name: "Alphabet", ja: "アルファベット", characters: [c.LETTER]},
+            {name: "Monsplode, Fight!", ja: "モンスプロード・ファイト!", characters: [c.GAME, c.DISPLAY]},
+            {name: "Blind Alley", ja: "ブラインド・アレイ", characters: [c.BLANK]},
+            {name: "Symbolic Password", ja: "シンボルパスワード", characters: [c.SYMBOL, c.PASSWORD]},
+            {name: "Rhythms", ja: "リズム", characters: [c.MUSIC, c.LIGHT]},
+            {name: "Color Math", ja: "色算", characters: [c.COLOR, c.MATH]},
+            {name: "Rubik's Cube", ja: "ルービックキューブ", characters: [c.COLOR, c.CUBE, c.PUZZLE]},
+            {name: "FizzBuzz", ja: "フィズバズ", characters: [c.COLOR, c.MATH, c.DISPLAY]},
+            {name: "Bitwise Operations", ja: "ビット演算", characters: [c.BIT, c.MATH, c.DISPLAY]},
+            {name: "Fast Math", ja: "速算", characters: [c.MATH, c.DISPLAY, c.TIME]},
+            {name: "Binary LEDs", ja: "二進法LED", characters: [c.BIT, c.WIRE, c.COLOR]},
+            {name: "Color Morse", ja: "カラーモールス", characters: [c.COLOR, c.MORSE]},
+            {name: "Mastermind Simple", ja: "マスターマインド・シンプル", characters: [c.GAME, c.COLOR, c.SOLO]},
+            {name: "Mastermind Cruel", ja: "残忍マスターマインド", characters: [c.GAME, c.COLOR, c.CRUEL, c.RED]},
+            {name: "Morse-A-Maze", ja: "モールス迷路", characters: [c.MORSE, c.MAZE]},
+            {name: "Colored Switches", ja: "カラースイッチ", characters: [c.COLOR, c.SWITCH]},
+            {name: "Perplexing Wires", ja: "煩雑ワイヤ", characters: [c.VENN, c.COLOR]},
+
+            
+            {name: "Tap Code", ja: "タップコード", characters: [c.BLANK, c.ENCRYPTION]},
+            {name: "A Mistake", ja: "間違い", characters: [c.BLANK, c.TIME]},
+            {name: "42", ja: "42", characters: [c.BLANK, c.BOSS, c.NUMBER, c.SOLO]},
+            {name: "Echolocation", ja: "反響迷路", characters: [c.BLANK, c.BLACK, c.MAZE]},
+            {name: "Trajectory", ja: "軌跡", characters: [c.BLANK, c.BLACK, c.COLOR]},
+            {name: "Sensor Maze", ja: "センサー迷路", characters: [c.BLANK, c.LIGHT, c.MAZE]},
+            {name: "Simon Senses", ja: "サイモンの感覚", characters: [c.BLANK, c.SIMON, c.MAZE]},
+            
+            {name: "Simon Sings", ja: "サイモンの歌唱", characters: [c.SIMON, c.MUSIC]},
+            {name: "Simon Sends", ja: "サイモンの送信", characters: [c.SIMON, c.MORSE]},
+            {name: "Not Simaze", ja: "偽サイモンゲーム", characters: [c.SIMON, c.MAZE]},
+            {name: "Simon Samples", ja: "サイモンの音源", characters: [c.SIMON, c.MUSIC, c.BLACK]},
+            {name: "Simon Speaks", ja: "サイモンの発話", characters: [c.SIMON, c.TALK]},
+            {name: "Simon Stages", ja: "サイモンのステージ", characters: [c.SIMON, c.BOSS, c.BLACK]},
+            {name: "Simon Selects", ja: "サイモンの選択", characters: [c.SIMON, c.BIT]},
+            {name: "Simon Swindles", ja: "サイモンの詐欺", characters: [c.SIMON, c.GAME]},
+
+            {name: "The Wire", ja: "ザ・ワイヤ", characters: [c.WIRE, c.COLOR, c.VENN, c.TIME]},
+            {name: "The Cube", ja: "キューブ", characters: [c.CUBE, c.WIRE, c.COLOR, c.ENCRYPTION]},
+            {name: "Forget Them All", ja: "悉く忘る", characters: [c.WIRE, c.COLOR, c.BOSS]},
+            {name: "Boolean Wires", ja: "論理ワイヤ", characters: [c.WIRE, c.LOGIC, c.DISPLAY]},
+            {name: "Not Wiresword", ja: "偽ワイヤ", characters: [c.WIRE, c.PASSWORD, c.COLOR]},
+
+            {name: "Reverse Morse", ja: "逆モールス信号", characters: [c.MORSE, c.ENCRYPTION, c.COLOR]},
+            {name: "XmORse Code", ja: "Xモールス信号", characters: [c.MORSE, c.BIT, c.BLACK]},
+            {name: "Semamorse", ja: "Xモールス信号", characters: [c.MORSE, c.ENCRYPTION, c.BLACK, c.COLOR]},
+            {name: "Not Connection Check", ja: "偽接続確認", characters: [c.MORSE, c.SWITCH, c.NUMBER]},
+
+            {name: "Countdown", ja: "カウントダウン", characters: [c.MATH, c.SOLO]},
+            {name: "Cruel Countdown", ja: "残忍カウントダウン", characters: [c.CRUEL, c.MATH, c.SOLO]},
+            {name: "Cruel Digital Root", ja: "残忍数字根", characters: [c.CRUEL, c.MATH]},
+            {name: "Cruel Boolean Maze", ja: "残忍論理迷路", characters: [c.CRUEL, c.LOGIC, c.MAZE]},
+            {name: "Boolean Maze", ja: "論理迷路", characters: [c.LOGIC, c.MAZE]},
+            {name: "Cruel Keypads", ja: "論理迷路", characters: [c.CRUEL, c.RED]},
+            {name: "Binary", ja: "二進法", characters: [c.BIT, c.DISPLAY]},
+            {name: "Cruel Binary", ja: "残忍二進法", characters: [c.CRUEL, c.BIT, c.DISPLAY]},
+
+            {name: "Souvenir", ja: "思い出", characters: [c.BOSS, c.BLACK, c.MEMORY]},
+            {name: "Forget Everything", ja: "須く忘る", characters: [c.BOSS, c.BLACK, c.MEMORY, c.COLOR]},
+            {name: "Tallordered Keys", ja: "高順番音板", characters: [c.BOSS, c.COLOR, c.MEMORY]},
+            {name: "Forget Enigma", ja: "エニグマ忘る", characters: [c.BOSS, c.CIPHER, c.MEMORY]},
+            {name: "Organization", ja: "組織", characters: [c.BOSS]},
+            {name: "Divided Squares", ja: "分割スクエア", characters: [c.BOSS, c.COLOR]},
+            {name: "Forget Me Later", ja: "後に我忘る", characters: [c.BOSS, c.BLACK, c.MEMORY]},
+            {name: "14", ja: "14", characters: [c.BOSS, c.MATH, c.NUMBER, c.MEMORY]},
+            {name: "Forget The Colors", ja: "色忘る", characters: [c.BOSS, c.COLOR, c.MEMORY]},
+            {name: "The Twin", ja: "双子", characters: [c.BOSS, c.COLOR, c.MORSE, c.MEMORY]},
+            {name: "Kugelblitz", ja: "クーゲルブリッツ", characters: [c.BOSS, c.COLOR, c.SPHERE, c.BIT, c.MEMORY]},
+            {name: "A_N_D", ja: "AND", characters: [c.BOSS, c.LOGIC, c.BIT, c.MEMORY]},
+            {name: "Forget Maze Not", ja: "迷路忘る勿かれ", characters: [c.BOSS, c.MAZE, c.BLACK, c.MEMORY]},
+            {name: "Concentration", ja: "集中", characters: [c.BOSS, c.RED, c.MEMORY]},
+            {name: "Piano Paradox", ja: "矛盾鍵盤", characters: [c.BOSS, c.MUSIC, c.MEMORY]},
+            {name: "Binary Memory", ja: "二進数記憶", characters: [c.BOSS, c.BIT, c.MEMORY]},
+            {name: "HyperForget", ja: "超忘る", characters: [c.BOSS, c.CUBE, c.MEMORY]},
+            {name: "Iconic", ja: "アイコニック", characters: [c.BOSS, c.SOLO]},
+
+            {name: "Extended Password", ja: "拡張パスワード", characters: [c.RED, c.PASSWORD]},
+            {name: "Elder Password", ja: "ルーンパスワード", characters: [c.ENCRYPTION, c.PASSWORD]},
+            {name: "Free Password", ja: "自由パスワード", characters: [c.SOLO, c.PASSWORD]},
+
+            {name: "The Labyrinth", ja: "迷宮", characters: [c.MAZE, c.BLACK]},
+            {name: "The Colored Maze", ja: "色付き迷路", characters: [c.MAZE, c.COLOR]},
+            {name: "Lockpick Maze", ja: "ロックピック迷路", characters: [c.MAZE, c.TIME]},
+            {name: "KayMazey Talk", ja: "K迷路トーク", characters: [c.MAZE, c.TALK]},
+            {name: "Mystic Maze", ja: "ミスティック迷路", characters: [c.MAZE, c.ENCRYPTION]},
+            {name: "Factoring Maze", ja: "因数迷路", characters: [c.MAZE, c.MATH]},
+            {name: "Saimoe Maze", ja: "最萌迷路", characters: [c.MAZE, c.SYMBOL]},
+            {name: "Maze³", ja: "迷路³", characters: [c.MAZE, c.CUBE, c.COLOR]},
+            {name: "A-maze-ing Buttons", ja: "メイジングボタン", characters: [c.MAZE, c.TIME, c.COLOR]},
+
+            {name: "Harmony Sequence", ja: "ハーモニーシーケンス", characters: [c.MUSIC, c.SOLO]},
+            {name: "The Black Page", ja: "ザ・ブラックページ", characters: [c.MUSIC, c.BLACK, c.DISPLAY]},
+            {name: "Audio Keypad", ja: "音声キーパッド", characters: [c.MUSIC, c.SYMBOL]},
+
+            {name: "The Number Cipher", ja: "数字暗号", characters: [c.CIPHER, c.NUMBER]},
+            {name: "Black Cipher", ja: "黒色暗号", characters: [c.CIPHER, c.BLACK, c.DISPLAY]},
+            {name: "Red Cipher", ja: "赤色暗号", characters: [c.CIPHER, c.RED, c.DISPLAY]},
+            {name: "Yellow Cipher", ja: "黄色暗号", characters: [c.CIPHER, c.DISPLAY, c.MORSE]},
+            {name: "Indigo Cipher", ja: "藍色暗号", characters: [c.CIPHER, c.LOGIC, c.BIT, c.DISPLAY, c.MORSE]},
+            {name: "Pixel Cipher", ja: "ピクセル暗号", characters: [c.CIPHER, c.BIT, c.DISPLAY]},
+            {name: "Not Kanji", ja: "偽漢字", characters: [c.CIPHER, c.CUBE, c.DISPLAY]},
+            {name: "D-CIPHER", ja: "D暗号", characters: [c.CIPHER, c.ENCRYPTION, c.BLACK]},
+            {name: "Caesar's Maths", ja: "カエサル数学", characters: [c.CIPHER, c.MATH]},
+
+            {name: "Lombax Cube", ja: "ロンバックスキューブ", characters: [c.ENCRYPTION, c.CUBE, c.COLOR]},
+            {name: "Crazy Talk With A K", ja: "Kから始まるクレイジートーク", characters: [c.TALK, c.MATH, c.BLACK]},
+            {name: "Emoji Math", ja: "絵文字算", characters: [c.ENCRYPTION, c.MATH, c.DISPLAY]},
+            {name: "Letter Math", ja: "英字数学", characters: [c.LETTER, c.MATH, c.DISPLAY]},
+            {name: "Mental Math", ja: "暗算", characters: [c.MATH, c.BLACK, c.TIME, c.SOLO]},
+
+            {name: "Dimension Disruption", ja: "次元破壊", characters: [c.CUBE, c.LETTER]},
+            {name: "Baffling Box", ja: "不可解な箱", characters: [c.CUBE, c.SPHERE]},
+            {name: "Pattern Cube", ja: "パターンキューブ", characters: [c.CUBE, c.SYMBOL]},
+            {name: "Yatzee", ja: "ヤッツィー", characters: [c.CUBE, c.COLOR, c.GAME]},
+            {name: "Lucky Dice", ja: "ラッキーサイコロ", characters: [c.CUBE, c.COLOR]},
+
+            {name: "The Sphere", ja: "球", characters: [c.SPHERE, c.BLACK, c.COLOR]},
+            {name: "Spot the Difference", ja: "間違い探し", characters: [c.SPHERE, c.COLOR]},
+            
+            {name: "NOT NOT", ja: "頭脳耐久ゲーム", characters: [c.LOGIC, c.BLACK]},
+
+            {name: "Crackbox", ja: "クラックボックス", characters: [c.NUMBER, c.PUZZLE]},
+            {name: "Binary Puzzle", ja: "二進法パズル", characters: [c.BIT, c.PUZZLE]},
+            {name: "TetraVex", ja: "テトラヴェックス", characters: [c.COLOR, c.PUZZLE]},
+            
+            {name: "Standard Crazy Talk", ja: "標準クレイジートーク", characters: [c.COLOR, c.TALK, c.BLACK]},
+            {name: "BoozleTalk", ja: "ブーズルトーク", characters: [c.ENCRYPTION, c.TALK, c.BLACK]},
+            {name: "X01", ja: "ダーツ", characters: [c.MATH, c.GAME]},
+            {name: "Tennis", ja: "テニス", characters: [c.BIT, c.GAME]},
+            {name: "Horrible Memory", ja: "恐怖記憶", characters: [c.MEMORY, c.COLOR]},
+            {name: "Boggle", ja: "ボグル", characters: [c.PUZZLE, c.LETTER]},
+            {name: "Flash Memory", ja: "フラッシュメモリ", characters: [c.SOLO, c.LIGHT, c.MEMORY]},
+            {name: "Memorable Buttons", ja: "記憶ボタン", characters: [c.SYMBOL, c.MEMORY]},
+            {name: "egg", ja: "卵", characters: [c.TIME, c.SOLO, c.SPHERE]},
+            {name: "Multicolored Switches", ja: "色どりスイッチ", characters: [c.BIT, c.SWITCH, c.COLOR]},
+        ];
+
+        modules.sort((a, b) => a.ja.localeCompare(b.ja))
+
+        window.addEventListener("load", () => {
+            const $tables = document.querySelectorAll(".characters-table tbody");
+            for(let i = 0; i < $tables.length; i++) {
+                const $table = $tables[i];
+                const modules_part = modules.slice(i*TABLE_ROWS, (i+1)*TABLE_ROWS);
+
+                for(let mod of modules_part) {
+                    const $tr = document.createElement("tr");
+
+                    const $imgTd = document.createElement("td");
+                    const $img = document.createElement("img");
+                    $img.setAttribute("src", `https://ktane.timwi.de/Icons/${mod.name}.png`);
+                    $imgTd.appendChild($img);
+
+                    const $nameTd = document.createElement("td");
+                    $nameTd.appendChild(document.createTextNode(mod.ja));
+
+                    const $cTd = document.createElement("td");
+                    $cTd.appendChild(document.createTextNode(mod.characters.join("、")));
+
+                    $tr.appendChild($imgTd);
+                    $tr.appendChild($nameTd);
+                    $tr.appendChild($cTd);
+                    $table.appendChild($tr)
+                }
+            }
+
+        })
+    </script>
+    <style>
+        .characters-table-container {
+            display: flex;
+            
+        }
+        .characters-table {
+            font-size: .8em;
+            margin-right: 8px;
+        }
+        .characters-table tr{
+            max-height: 40px;
+        }
+        .characters-table th, .characters-table td{
+            padding: .3em .3em .2em;
+        }
+        .characters-table th:first-child{
+            width: 56px;
+        }
+        .characters-table td:first-child {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">モジュール演算</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Mod Operation.svg" class="diagram">
+                <h2>モジュール詳細：モジュール演算</h2>
+                <p class="flavour-text">爆弾の時間だよ!全員集合!</p>
+                <ul>
+                    <li>このモジュールには<u>モジュール式</u>が表示された大きなディスプレーと、モジュールのアイコンが表示された小さなディスプレー、アイコンを切り替える2つの方向ボタンがある。</li>
+                    <li><u>モジュール式</u>は必ず3つのモジュールのアイコンと、それらの間にある2つの演算子からなる。</li>
+                    <li>モジュールのアイコンはそのモジュールの特徴を表す集合として解釈される。それぞれのモジュールが表す特徴の集合は<i>表:モジュールの特徴</i>を参照する。</li>
+                    <li>演算子はその左右のモジュールの特徴の集合を、一つの新しい集合に変換する。ただし、必ず2つの演算子のうち左の演算子を先に計算する。それぞれの演算子の計算方法については、<i>表:演算子</i>を参照する。</li>
+                    <li>
+                        <u>モジュール式</u>を計算すると、小さなディスプレーに表示されるアイコンのモジュールか、爆弾に含まれるモジュールのうちの一つを表す集合になる。
+                        <ul>
+                            <li>方向ボタンで小さなディスプレーを計算結果のアイコンに合わせ、そのディスプレーを押すとモジュールが解除される。</li>
+                            <li>方向ボタンで小さなディスプレーを「?」のアイコンに合わせた後、別ののモジュールを解除すると、「?」のアイコンがそのモジュールのアイコンに置き換わる。これは、ミスを記録する以外の方法で元に戻すことはできない。</li>
+                            <li>誤ったアイコンが表示されている状態でディスプレーを押すとミスが記録される。「?」アイコンから切り替わったアイコンがある場合、そのアイコンは「?」に戻る。</li>
+                            <li>爆弾に含まれるモジュールのうちの一つが計算結果であり、小さなディスプレーに表示されるアイコンに計算結果が含まれない場合、小さなディスプレーを「?」のアイコンに合わせずに爆弾に含まれるそのモジュールを全て解除すると、ミスが記録され、モジュール式が別のものに切り替わる。</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>表:演算子</h3>
+                <table class="operater-table">
+                    <thead>
+                        <tr><th>演算子</th><th>計算結果</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>+</td><td>左右の集合のいずれかに含まれる要素全てからなる集合。両方に含まれていたとしても、要素は一つとしてカウントされる。</td></tr>
+                        <tr><td>-</td><td>左の集合に含まれる要素のうち、右の集合に含まれない要素全てからなる集合。</td></tr>
+                        <tr><td>×</td><td>左右の集合の両方に含まれる要素全てからなる集合。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/5</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">モジュール演算</span>
+            </div>
+            <div class="page-content">
+                <h3>表:モジュールの特徴</h3>
+                <div class="characters-table-container">
+                    <table class="characters-table" id="characters-table1">
+                        <thead>
+                            <tr><th>アイコン</th><th>モジュール名</th><th>特徴</th></tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <table class="characters-table" id="characters-table1">
+                        <thead>
+                            <tr><th>アイコン</th><th>モジュール名</th><th>特徴</th></tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <p>※次ページに続く</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/5</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">モジュール演算</span>
+            </div>
+            <div class="page-content">
+                <h3>表:モジュールの特徴(続き)</h3>
+                <div class="characters-table-container">
+                    <table class="characters-table" id="characters-table1">
+                        <thead>
+                            <tr><th>アイコン</th><th>モジュール名</th><th>特徴</th></tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <table class="characters-table" id="characters-table1">
+                        <thead>
+                            <tr><th>アイコン</th><th>モジュール名</th><th>特徴</th></tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <p>※次ページに続く</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 3/5</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">モジュール演算</span>
+            </div>
+            <div class="page-content">
+                <h3>表:モジュールの特徴(続き)</h3>
+                <div class="characters-table-container">
+                    <table class="characters-table" id="characters-table1">
+                        <thead>
+                            <tr><th>アイコン</th><th>モジュール名</th><th>特徴</th></tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <table class="characters-table" id="characters-table1">
+                        <thead>
+                            <tr><th>アイコン</th><th>モジュール名</th><th>特徴</th></tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <p>※次ページに続く</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 4/5</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">モジュール演算</span>
+            </div>
+            <div class="page-content">
+                <h3>表:モジュールの特徴(続き)</h3>
+                <div class="characters-table-container">
+                    <table class="characters-table" id="characters-table1">
+                        <thead>
+                            <tr><th>アイコン</th><th>モジュール名</th><th>特徴</th></tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 5/5</div>
+        </div>
+    </div>
+</body>
+
+</html>
