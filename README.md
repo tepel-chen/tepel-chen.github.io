@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: t-chenのKTaNEリソースページ
 description: t-chenが作成したKTaNEのリソース一覧です。MODのマニュアルやチュートリアル、翻訳情報などがあります。
