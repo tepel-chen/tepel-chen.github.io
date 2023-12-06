@@ -4,7 +4,7 @@ title: Twitch Play(Discord Play)の基本コマンド
 lang: ja_JP
 ---
 
-# Twitch Play(Discord Play)のコマンド集
+# Twitch Play(Discord Play)の基本コマンド集
 
 ## 基本コマンド
 とりあえずこれだけ覚えておいたらOK!
@@ -18,18 +18,17 @@ lang: ja_JP
 | !# uc | #の番号の割り当てを解除する |
 | !# help | #のモジュールのヘルプメッセージを表示する |
 | !# zoom | #のモジュールを拡大する |
-| !# tilt | #のモジュールを傾ける |
+| !# tilt up | #のモジュールを上から見る角度に傾ける(right, left, down, uprightなども有効) |
 | !bomb time | 現在の時間を確認する |
 | !edgework | エッジワークを確認する |
 | !unclaimed | まだ割り当てられていないモジュールを3つ表示する |
+| !find forget | forgetと名前のついたモジュールを表示する |
 
 ### 待機状態
 
 | コマンド | 説明 |
 | ------ | --- |
 | !run \[数\] \[分配設定\] | 指定のモジュール数と分配設定で爆弾を開始する。例: !run 11 vanilla \[モジュール数11、全てバニラ\] !run 23 mixed \[モジュール数23、50%バニラ、50%MOD\] !run 47 fair \[モジュール数47、MODもバニラ含めてすべてランダム\] |
-| !binder search \[文字列\] | 文字列のミッションを探す |
-| !binder select # | バインダーの#個目の選択箇所を選択する | 
 | !retry | (失敗後の結果画面) リトライする |
 | !back | (結果画面) 待機画面に戻る |
 
