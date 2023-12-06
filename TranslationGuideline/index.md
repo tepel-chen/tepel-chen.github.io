@@ -63,7 +63,7 @@
 ## ルールシードについて
 
 * [ルールシードMOD](https://steamcommunity.com/sharedfiles/filedetails/?id=2037350348)を使うと、シードによってマニュアルが書き換えることができる。
-  * 例: [3D迷路#5](https://ktane.timwi.de/HTML/3D%20Maze%20translated%20(%E6%97%A5%E6%9C%AC%E8%AA%9E%20%E2%80%94%203D%E8%BF%B7%E8%B7%AF)%20(tepel).html#5)と[3D迷路#10](https://ktane.timwi.de/HTML/3D%20Maze%20translated%20(%E6%97%A5%E6%9C%AC%E8%AA%9E%20%E2%80%94%203D%E8%BF%B7%E8%B7%AF)%20(tepel).html#10)
+  * 例: [3D迷路#5](https://ktane.timwi.de/HTML/3D%20Maze%20translated%20(%E6%97%A5%E6%9C%AC%E8%AA%9E%20%E2%80%94%203D%E8%BF%B7%E8%B7%AF)%20(tchen).html#5)と[3D迷路#10](https://ktane.timwi.de/HTML/3D%20Maze%20translated%20(%E6%97%A5%E6%9C%AC%E8%AA%9E%20%E2%80%94%203D%E8%BF%B7%E8%B7%AF)%20(tchen).html#10)
 * 判別方法: `<script src="js/ruleseed.js"></script>`が入っていたら基本的にはルールシード対応モジュール(たまにミスって含まれているときもあるから注意)
 * **Javascriptの知識が必要になるので、無理にルールシードに対応しなくてもよい**。マニュアルを非対応にするには`<script src="js/ruleseed.js"></script>`の行を削除すれば良い。
 * ルールシードの対応については、モジュールによるので、よくコードを読んで対応すること。

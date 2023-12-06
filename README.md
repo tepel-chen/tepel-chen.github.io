@@ -27,3 +27,7 @@ lang: ja_JP
 * [Twitch Play(Discord Play)のコマンド集](/tpCommands)
   * [基本コマンドのみ](/tpCommands/basic)
 * [ミッションMOD作成方法](/MissionCreating)
+
+* イベント
+  * [第一回マニュアルJamまとめ](/ModuleJamJP1)
+  * [第二回マニュアルJamまとめ](/ModuleJamJP2)
