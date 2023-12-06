@@ -19,8 +19,8 @@
     * `モジュール名`に日本語のモジュール名
     * `Creator`に自分の名前
     * `-`でも`ー`でもなく`—`なので注意
-    * 元マニュアル以外の翻訳の場合は`Module Name translated (日本語 — モジュール名) (Creator) 用途.html`
-      * 例: `The Button translated (日本語 — ボタン) (Creator) 最適化.html`
+    * 元マニュアル以外の翻訳の場合は`Module Name translated (日本語 — モジュール名) 用途 (Creator).html`
+      * 例: `The Button translated (日本語 — ボタン) 最適化 (Creator).html`
 
 ## アップロード
 
@@ -28,6 +28,7 @@
   * Logbotに`!lint`とコメントをしながらファイルをアップロードする。文法エラーなどがあれば指摘してくれる
   * SVGは[SVGOMG](https://jakearchibald.github.io/svgomg/)を使って圧縮
   * PNGは[PNG Crush](https://pngcrush.com/)を利用して圧縮
+  * デベロッパーモード(マニュアルを開いてalt+P)を確認する。ページ背景画像が不足している場合やページが大きすぎるときに赤く表示してくれる。
 * 方法1 - Githubを使う方法(Gitの使い方がわかる方向け)
   1. [レポジトリのソースコード](https://github.com/Timwi/KtaneContent)をフォークしてクローンする
   2. ファイルを追加してコミット、プッシュする。
@@ -107,8 +108,23 @@
 * Digital root - 数字根
 * Magenta, Cyan - マゼンタ、シアン
   * ピンク、水色などにしない理由は、1. 色の合成で意味を成す場合があるから 2. Magentaと別でPinkがある場合があるから
+* Base 2, Base 10 - 二進法、十進法
+  * 進数は漢数字で
 * 他のモジュール名は、翻訳名と原名のどちらも書く
   * どちらをベースにプレイしている人でもプレイできるように
+* Alphabetic position - アルファベット上での位置
+  * 元マニュアルに書いていない場合でも、(A=1, B=2...)と追記する方が良い(A=0, B=1...とする流派もあるため)
+* A modulo/mod B - AをBで割ったときの余り
+
+### その他間違えやすい用語など
+* Letters - ◯英字 ☓文字
+  * 文字はcharacters
+* Encrypt ↔ Decrypt - 暗号化 ↔ 復号
+  * 復号化では無いので注意
+  * 複合とか複号でもないので注意
+  * Encrypted message ↔ Decrypted message - 暗号 ↔ 復号文
+* Apply - 適用
+  * 適応するではないので注意(環境に適応する ↔ ルールを適用する)
 
 ## 迷ったら...
 
