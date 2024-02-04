@@ -24,8 +24,8 @@ lang: ja_JP
   * 一人で複数個提出した場合でも、投票できる票数は変わりません。
 
 ## 投票受付中 !
-
-期限は2/8(木)21時まで!(アンケート作成中)
+[アンケート](https://docs.google.com/forms/d/10B1SzkbCwJXkQrlkm7w8aTSdvxNy2D4pfIF6Fx6Miic)
+期限は2/8(木)21時まで!
 
 ## エントリー
 
