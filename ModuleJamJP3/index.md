@@ -34,3 +34,4 @@ lang: ja_JP
 * [-](https://tepel-chen.github.io/ModuleJamJP3/-.html)(テーマ: 夢) by ?
 * [起爆スイッチ](https://tepel-chen.github.io/ModuleJamJP3/Tapiring%20Switches.html)(テーマ: 夢) by ?
 * [夢日記](https://tepel-chen.github.io/ModuleJamJP3/Dream%20Diary.html)(テーマ: 夢) by ?
+  * [グロ要素なし](https://tepel-chen.github.io/ModuleJamJP3/Dream%20Diary%20no%gore.html)(テーマ: 夢) by ?
