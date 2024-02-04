@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Spy — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="../Common/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/main.css">
+    <script src="../Common/js/ktane-utils.js"></script>
+    <style>
+        table {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Spy</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Spy.svg" class="diagram">
+                <h2>モジュール詳細：Spy</h2>
+                <p class="flavour-text">本当に優秀なスパイは、爆弾も解除できるらしい。そして今日はなんと、スパイ活動も爆弾処理も同時に行ってもらう。</p>
+                <p>今回は、君にある任務を行ってもらいたい。内容は、君が今スパイ活動を行っているギャングがとある場所に核爆弾を仕掛けており、それを解除しなければならないという事案だ。<br>
+                奴らはとても狡猾な奴らだ。変な詮索をしてスパイだという事がばれてしまったら、どうなってしまうかはわからない…。<br>
+                今回の事案はとても重要事項であり、政府もとんでもない額の報酬を出している。解決した暁には、億万長者になるのも夢じゃない。<br>
+                以下に今回の活動におけるマニュアルを記載しておく。この流れに従い、活動してくれ。諸君の健闘を祈る。</p>
+                <h3>活動マニュアル</h3>
+                <p>今回の事案における活動マニュアルとなっております。記載内容のとおりに動いていただき相応の動きをしていただいた暁には、多大なる額の報酬を贈呈します。必ずこちらをご一読いただき、活動に励んでいただければ幸いです。</p>
+                <h4>モジュールの詳細</h4>
+                <p>こちらのモジュールは、今回行っていただく活動をすべてオンライン上で安全に行っていただくために我々が開発したものになります。読み順に「ギャングとの連絡用ツール」「座標入力ツール」「爆弾遠隔解除ツール」「報酬受け取りツール」となり、爆弾を解除し報酬がもらえれば自動的に解除されるシステムとなっております。<br>
+                今回の活動は急を要する案件となります。爆弾のカウントダウンタイマーが切れたとき、それすなわちミッション失敗だという事を忘れず、迅速に活動していただくよう、お願い申し上げます。</p>
+                <p>また、間違った行動をした場合においてはペナルティとしてこのモジュールが搭載された爆弾に対しミスを記録するようプログラムされております。今回の案件では特にギャングとのやり取りや爆弾の解除など繊細な作業が活動内容に盛り込まれております。冷静な活動を期待しております。</p>
+                <h4>ギャングとのやり取り</h4>
+                <p>ギャングとのやり取りは通常の文字ではなく、暗号化した状態でやり取りが行われています。以下のマニュアルに従い、適切な暗号化を使用してやり取りを行ってください。</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/9</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Spy</span>
+            </div>
+            <div class="page-content">
+                <p>やり取りは常に暗号化された状態で行われます。まず相手から送られてきた暗号文と爆弾のエッジワークを使用し、復号文を作成することから始めます。</p>
+                <p><i>※暗号文に記号が挿入されている場合、復号化時は削除し4文字の単語として考える。</i></p>
+                <ul>
+                    <li>DVI-DポートとPS/2ポートがあり、相手の暗号文に句読点(.)が挿入されている場合、暗号化は適用されていない。そのまま復号文として使用する。</li>
+                    <li>それ以外の場合、シリアルナンバーに4つの数字が含まれており、相手の暗号文にスラッシュ(/)が挿入されている場合、暗号化「d」が適用されている。</li>
+                    <li>それ以外の場合、パラレルポートまたはシリアルポートがあり、相手の暗号文にコロン(:)が挿入されている場合、暗号化「c」が適用されている。</li>
+                    <li>それ以外の場合、単1バッテリーが2つ以上あり、相手の暗号文にハイフン「-」が含まれている場合、暗号化「a」が適用されている。</li>
+                    <li>それ以外の場合、空のポートプレートがあり、相手の暗号文にバックスラッシュ「\」が含まれている場合、暗号化「e」が適用されている。</li>
+                    <li>いずれにも当てはまらない場合、暗号化「b」が適用されている。</li>
+                </ul>
+                <p>以下の表を使用し、暗号化方法を特定しましょう。復号化するには、以下の暗号化の方法の反対を行う必要があります。</p>
+                <table>
+                    <tr>
+                        <th>シリアルナンバーの最初の数字</th><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td>
+                    </tr>
+                    <tr>
+                        <th>奇数</th><td>A</td><td>C</td><td>P</td><td>T</td><td>V</td>
+                    </tr>
+                    <tr>
+                        <th>偶数</th><td>T</td><td>P</td><td>V</td><td>A</td><td>C</td>
+                    </tr>
+                </table>
+                <p>暗号化方法は以下のリストに従って行われております。リスト内に「x」という代数がある場合、シリアルナンバーの数字のうち最大の数字を使用してください。</p>
+                <ul>
+                    <li>A…アフィン暗号(元の英字をアルファベット上の位置の数字に変換し、それを2x+1と乗算して26でモジュロします。結果を再度アルファベット上の位置の数字を使用して英字に変換してください。)</li>
+                    <li>C…シーザー暗号(元の英字から前方にx回シフトした英字に変換してください。)</li>
+                    <li>P…プレイフェア暗号(シリアルナンバーの英字を順番に取得し、それをキーワードとして扱います。マニュアル「<a href="https://ktane.timwi.de/HTML/Playfair%20Cipher%20translated%20(%E6%97%A5%E6%9C%AC%E8%AA%9E%20%E2%80%94%20%E3%83%97%E3%83%AC%E3%82%A4%E3%83%95%E3%82%A7%E3%82%A2%E6%9A%97%E5%8F%B7)%20(hatosable).html">プレイフェア暗号</a>」の「メッセージの解読」の部分に従って復号を行ってください。)</li>
+                    <li>T…アトバッシュ暗号(元の英字をアルファベット上の位置の数字に変換し、27からその数字を引いた結果を再度アルファベット上の位置の数字を使用して英字に変換してください。)</li>
+                    <li>V…ヴィジュネル暗号(元の英字から後方にx回シフトした英字に変換してください。)</li>
+                </ul>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/9</div>
+        </div>
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Spy</span>
+            </div>
+            <div class="page-content">
+                <p>復号文を取得したら、以下の表と爆弾のエッジワークを使用して送信する文の暗号化方法を特定しましょう。</p>
+                <table>
+                    <tr>
+                        <th class="black"></th><th colspan="5">バッテリーの数</th>
+                    </tr>
+                    <tr>
+                        <th>復号化した単語</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4+</td>
+                    </tr>
+                    <tr>
+                        <th>全て母音で構成されている</th><td>c</td><td>a</td><td>b</td><td>d</td><td>e</td>
+                    </tr>
+                    <tr>
+                        <th>1文字目または3文字目に「F」が含まれている</th><td>e</td><td>a</td><td>c</td><td>d</td><td>b</td>
+                    </tr>
+                    <tr>
+                        <th>2文字目または4文字目に「R」が含まれている</th><td>d</td><td>c</td><td>a</td><td>e</td><td>b</td>
+                    </tr>
+                    <tr>
+                        <th>全て子音で構成されている</th><td>e</td><td>a</td><td>d</td><td>b</td><td>c</td>
+                    </tr>
+                    <tr>
+                        <th>暗号文といずれの文字も重複していない</th><td>b</td><td>e</td><td>a</td><td>c</td><td>d</td>
+                    </tr>
+                    <tr>
+                        <th>いずれかの文字がシリアルナンバーに含まれている</th><td>a</td><td>c</td><td>e</td><td>b</td><td>d</td>
+                    </tr>
+                    <tr>
+                        <th>いずれにも当てはまらない</th><td>b</td><td>d</td><td>c</td><td>a</td><td>e</td>
+                    </tr>
+                </table>
+                <p>以下の表を使用し、送信に最適な暗号方法を特定しましょう。</p>
+                <table>
+                    <tr>
+                        <th>シリアルナンバーの最後の数字</th><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td>
+                    </tr>
+                    <tr>
+                        <th>奇数</th><td>V</td><td>A</td><td>C</td><td>P</td><td>T</td>
+                    </tr>
+                    <tr>
+                        <th>偶数</th><td>C</td><td>V</td><td>V</td><td>A</td><td>C</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 3/9</div>
+        </div>
+        <div class="page page-bg-04">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Spy</span>
+            </div>
+            <div class="page-content">
+                <h4>最初のメッセージ</h4>
+                <p>メッセージの画面を開くと、相手の名前が上に表示されたメッセージ画面が表示され、下にはQWERTYキーボードが表示されます。また、実際のキーボードでキー入力することでも文字を入力することができます。</p>
+                <p>メッセージの相手の名前には特定の色が付けられています。その色に従い、相手との正しいやり取りを開始しましょう。<br>
+                    以下のリストに従い、最初に送るメッセージを特定してください。このメッセージは特に暗号化する必要はありません。</p>
+                    <p><b>ただし</b>、このリストは爆弾にあるモジュールの総数分下にシフトしています。例えば、モジュールの総数が5つの場合、赤から5つ下に移動し「シアン」の条件を使用する必要があります。</p>
+                    <ul>
+                        <li>赤:このモジュールを除く爆弾にあるモジュールのうち最もアルファベット順で早いモジュールの最初の3文字を送信してください。文字数が4文字未満の場合、そのモジュールの次にアルファベット順で早いモジュールに変更します。該当するモジュールがない場合、「SPY」を送信してください。</li>
+                        <li>橙:爆弾にあるインジケーターのうち最もアルファベット順で早いラベルを送信してください。インジケーターがない場合、「NON」を送信してください。</li>
+                        <li>黄:爆弾の開始時間をアルファベットに変換し、最初の3文字を送信してください。</li>
+                        <li>ライム:シリアルナンバーの英字を順番に取得し、それが3文字であればそのまま送信してください。2文字の場合は最後に「L」を付けたものを、4文字の場合は最後の英字を削除したものを送信してください。</li>
+                        <li>緑:爆弾が開始した月のアルファベットの最初の3文字を送信してください。</li>
+                        <li>シアン:点灯していないインジケーターより点灯したインジケーターの方が多い場合、「LIT」を送信してください。それ以外の場合、点灯したインジケーターより点灯していないインジケーターの方が多い場合、「UNL」を送信してください。同数の場合、「EQI」を送信してください。</li>
+                        <li>青:モジュールに表示されている相手の名前の色の英名の最初の3文字を送信してください。</li>
+                        <li>紫:単1バッテリーより単3バッテリーの方が多い場合、「AAB」を送信してください。それ以外の場合、単3バッテリーより単1バッテリーの方が多い場合、「DBA」を送信してください。同数の場合、「EQB」を送信してください。</li>
+                        <li>マゼンタ:爆弾が開始した曜日のアルファベットの最初の3文字を送信してください。</li>
+                    </ul>
+                    <p>正しくメッセージを送信すると、相手から2つのメッセージが送られてきます。1つ目爆弾の設置場所の座標、2つ目は爆弾を解除するコードです。</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 4/9</div>
+        </div>
+        <div class="page page-bg-05">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Spy</span>
+            </div>
+            <div class="page-content">
+                <h4>爆弾の設置場所</h4>
+                <p>幸い我々には、ギャングのメンバーリストやそれぞれのメンバーの役職、特性などの情報があります。これらの情報は、復号文から正確な核爆弾の位置を読み取ることに役に立ちます。</p>
+                <p>また、今回の事案はギャングにとってとても重要な作戦となっており、情報漏洩を防ぐために下っ端には間違った場所を教える場合があります。その場合は復号文に修正を加えたものをそのまま送ることによって相手に対し信用できるメンバーであることを示す必要があります。</p>
+                <p>メンバーリストを以下に記してありますので、参考資料として活用してください。</p>
+                <table>
+                    <tr>
+                        <th>メンバー名</th><th>役職</th><th>特性</th>
+                    </tr>
+                    <tr>
+                        <td>Alpha8404</td><td>Executives</td><td>バッテリーが3つ以上あるか、復号文に「A,L,P,H,A」のいずれかが含まれている場合、間違った座標が送られています。</td>
+                    </tr>
+                    <tr>
+                        <td>Arleen</td><td>Chief</td><td>シリアルナンバーに「7」が含まれているか、復号文に英字のアルファベット上の位置の数字が7の倍数である英字が含まれている場合、間違った座標が送られています。</td>
+                    </tr>
+                    <tr>
+                        <td>hatosablelbas</td><td>Executives</td><td>重複したポートがあるか、復号文に重複した英字がある場合、間違った座標が送られています。</td>
+                    </tr>
+                    <tr>
+                        <td>jrtsc4812001raicho</td><td>Manager</td><td>空のポートプレートがあるか、復号文にモールス信号に変換した際に同じ記号が3つ以上含まれている英字がある場合、間違った座標が送られています。</td>
+                    </tr>
+                    <tr>
+                        <td>maximumcombo</td><td>
+                            Manager</td><td>バッテリーホルダーが2つ以下であるか、復号文がすべて子音で構成されている場合、間違った座標が送られています。</td>
+                    </tr>
+                    <tr>
+                        <td>tchen</td><td>
+                            Administrator</td><td>常に間違った座標が送られています。</td>
+                    </tr>
+                    <tr>
+                        <td>tumugi_0624</td><td>Chief</td><td>「T,M,G」のいずれかが含まれたインジケーターがあるか、復号文のすべての英字をアルファベット上の位置の数字に変換し合計した結果が50を超える場合、間違った座標が送られています。</td>
+                    </tr>
+                    <tr>
+                        <td>Y.Y.</td><td>Chief</td><td>点灯していないインジケーターより点灯したインジケーターの方が多いか、復号文のいずれかの2つの英字がアルファベット順で隣接している(AとB、BとC…ZとA)場合、間違った座標が送られています。</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 5/9</div>
+        </div>
+        <div class="page page-bg-06">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Spy</span>
+            </div>
+            <div class="page-content">
+                <p>間違った座標が送られてきた場合、修正コードを送信することによって相手から信用を得る必要があります。<br>
+                間違った座標を<b>現在の修正コード</b>として扱い、以下の手順を上から順に<em>全て</em>行い最終的な修正コードを送信することによって正しいコードが送られてきます(ただし、再受信した座標は再度復号化する必要があります)。</p>
+                <ol>
+                    <li>現在の修正コードを左からアルファベット順になるように並び替える。</li>
+                    <li>バッテリーの数が1~4つの場合、バッテリーの数と等しい位置にある英字をシリアルナンバーの最後の数字分前方にシーザー暗号を用いてシフトする。</li>
+                    <li>ポートの数が1~4つの場合、ポートの数と等しい位置にある英字をシリアルナンバーの最後の数字分前方にシーザー暗号を用いてシフトする。</li>
+                    <li>インジケーターの数が1~4つの場合、インジケーターの数と等しい位置にある英字をシリアルナンバーの最後の数字分前方にシーザー暗号を用いてシフトする。</li>
+                    <li>以下の表を使用し、現在の修正コードを適切な順序に並べる。表の4つの数字は、それぞれの英字のアルファベット順を示している(例えばMOPSを2431で置き換える場合は、OSPMになる。)
+                        <table style="border: none;">
+                            <tr>
+                                <td colspan="2" rowspan="2" style="border: none;"></td><th colspan="4">ポートの数</th>
+                            </tr>
+                            <tr>
+                                <th>0</th><th>1~2</th><th>3~4</th><th>5~</th>
+                            </tr>
+                            <tr>
+                                <th rowspan="4">役<br>職<br>名</th><th>Administrator</th><td>2413</td><td>4123</td><td>3412</td><td>1324</td>
+                            </tr>
+                            <tr>
+                                <th>Executives</th><td>1432</td><td>3124</td><td>4321</td><td>2143</td>
+                            </tr>
+                            <tr>
+                                <th>Manager</th><td>4213</td><td>2314</td><td>1234</td><td>3142</td>
+                            </tr>
+                            <tr>
+                                <th>Chief</th><td>3421</td><td>1243</td><td>2143</td><td>4132</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>シリアルナンバーの全ての数字を合計し、結果を4でモジュロし1を加算する。結果の数字と等しい位置にある英字を削除し、別の英字に置き換える。未解除のモジュールの数より解除済みのモジュールの数の方が多い場合、相手の名前の最初の英字に置き換える。それ以外の場合、解除済みのモジュールの数より未解除のモジュールの数の方が多い場合、相手の名前の最後の英字に置き換える(数字や記号は無視される)。同数の場合、相手の役職名の最初の英字に置き換える。</li>
+                </ol>
+                <p><b>ただし</b>、初期修正コードに「S,P,Y」がすべて含まれている場合、相手は君がスパイかどうか疑割れており、確かめられています。この場合、すべての手順を無視し「WTF」と送信することで正しい座標を受信することができます。</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 6/9</div>
+        </div>
+        <div class="page page-bg-07">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Spy</span>
+            </div>
+            <div class="page-content">
+                <p>正しい座標を受信したら、それをX,Y,Zの数字に変換します。ただし、4つの文字のうち1つはダミーとなります。相手の役職名から、どの文字がダミーであるかを判断することができます。</p>
+                <table>
+                    <tr>
+                        <th>役職名</th><td>Administrator</td><td>Executives</td><td>Manager</td><td>Chief</td>
+                    </tr>
+                    <tr>
+                        <th>ダミーの文字</th><td>1文字目</td><td>2文字目</td><td>3文字目</td><td>4文字目</td>
+                    </tr>
+                </table>
+                <p>残りの3つの英字を順番にX,Y,Zに割り当て、それぞれを36進数として扱い数字に変換します。各数字の数字根を取得し、それを座標として使用することができます。</p>
+                <p>座標入力ツールを開くと、3つの数字とそれらの上下に矢印があるスロットが表示されます。</p>
+                <p>最初に座標入力ツールを開いた時に表示されていた数字を記憶し、先ほどの手順で取得した座標を左から順にX,Y,Zの順番で入力する。</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 7/9</div>
+        </div>
+        <div class="page page-bg-08">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Spy</span>
+            </div>
+            <div class="page-content">
+                <h4>爆弾解除コードの特定</h4>
+                <p>2つ目のメッセージを復号化すると、核爆弾の解除コードを得ることができます。ただし、これらは通常の暗号化のほかに、各役職ごとに特有の暗号化が適用化されています。より上の役職であるほど高度な暗号化がなされており、解読するのが難解になっております。各役職ごとに暗号化する回数は以下の通りです。</p>
+                <table>
+                    <tr>
+                        <th>役職名</th><td>Administrator</td><td>Executives</td><td>Manager</td><td>Chief</td>
+                    </tr>
+                    <tr>
+                        <th>暗号化の回数</th><td>4回</td><td>3回</td><td>2回</td><td>1回</td>
+                    </tr>
+                </table>
+                <p>復号化の方法は以下に記されております。現在受信しているコードを「現在の解除コード」とし、リストを上から順に従って暗号化された回数分復号化してください。</p>
+                <ol>
+                    <li>アルファベット全体から、現在の解除コードに含まれていない文字のうち最もシリアルナンバーの最初の英字にアルファベット順において近い英字を削除する。同率の英字が2つ以上ある場合、それらのうち最もアルファベット順で早い英字を使用する。</li>
+                    <li>これが1回目または3回目の復号化の場合、文字列全体を逆の順序にする。</li>
+                    <li>これが2回目または4回目の復号化の場合、左から1と数えて素数の位置にある英字をすべて抜き出し、順に末尾に移動する。</li>
+                    <li>文字列を5×5のグリッドにする。</li>
+                    <li>シリアルナンバーの数字を左から見て、その数字のルールに従ってグリッドを変換する。最初の数字のルールに従ったら次の数字に移動し、この操作を合計5回行う。最後の数字に到達したら最初の数字に戻る。</li>
+                    <table>
+                        <tr>
+                            <th>シリアルナンバー</th><th>ルール</th>
+                        </tr>
+                        <tr>
+                            <th>0</th><td>2列目と4列目を入れ替える。</td>
+                        </tr>
+                        <tr>
+                            <th>1</th><td>D2の文字を中心とした3×3の文字を、D2を中心に90度時計回りに回転させる。</td>
+                        </tr>
+                        <tr>
+                            <th>2</th><td>1段目と5段目を入れ替える。</td>
+                        </tr>
+                        <tr>
+                            <th>3</th><td>各列を1つ下にシフトさせる。</td>
+                        </tr>
+                        <tr>
+                            <th>4</th><td>B4の文字を中心とした3×3の文字を、B4を中心に90度反時計回りに回転させる。</td>
+                        </tr>
+                        <tr>
+                            <th>5</th><td>グリッド全体をC3を中心に180度回転させる。</td>
+                        </tr>
+                        <tr>
+                            <th>6</th><td>2段目と4段目を入れ替える。</td>
+                        </tr>
+                        <tr>
+                            <th>7</th><td>1列目と5列目を入れ替える。</td>
+                        </tr>
+                        <tr>
+                            <th>8</th><td>四隅の文字をC3を中心に90度反時計に回転させる。</td>
+                        </tr>
+                        <tr>
+                            <th>9</th><td>各段を1つ右にシフトさせる。</td>
+                        </tr>
+                    </table>
+                </ol>
+            </div>
+            <div class="page-footer relative-footer">ページ 8/9</div>
+        </div>
+        <div class="page page-bg-09">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Spy</span>
+            </div>
+            <div class="page-content">
+                <ol>
+                    <li value="6">現在の解除コードをアルファベット上の位置の数字に変換し、数値が25を超える場合は25を減算する。復号化の回数を使用し、正しくグリッドを読む方法を特定する。各数字の位置にある英字に変更したものが新しい現在の解除コードとなる。</li>
+                    <table>
+                        <tr>
+                            <th>復号化の回数</th><th>グリッドの読み方</th>
+                        </tr>
+                        <tr>
+                            <th>1回目</th><td>読み順(左上から開始し、右に読む。一番下に着いたら一つ下の段の一番左から同様に読む。)</td>
+                        </tr>
+                        <tr>
+                            <th>2回目</th><td>デカルト順(左下から開始し、右に読む。一番右に着いたら一つ上の段の一番左から同様に読む。)</td>
+                        </tr>
+                        <tr>
+                            <th>3回目</th><td>中国語の読み順(右上から開始し、下に読む。一番下に着いたら一つ左の列の一番上から同様に読む。)</td>
+                        </tr>
+                        <tr>
+                            <th>4回目</th><td>逆読み順(右下から開始し、左に読む。一番左に着いたら一つ上の段の一番右から同様に読む。)</td>
+                        </tr>
+                    </table>
+                </ol>
+                <p>最終的な解除コードを取得したら、各文字をアルファベット上の位置の数字に変換し、それぞれ数字根を取得しましょう。「爆弾遠隔解除ツール」を開き、結果の4桁の数字を入力します。</p>
+                <br>
+                <h4>解除</h4>
+                <p>全ての工程が終了いたしました。最後に、「報酬受け取りツール」を開き、「送信」ボタンを押してください。入力した内容が正しければ世界の平和は守られ、莫大な資産を得ることができます。間違えれば…</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 9/9</div>
+        </div>
+    </div>
+</body>
+</html>
