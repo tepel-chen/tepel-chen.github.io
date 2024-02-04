@@ -29,7 +29,7 @@ lang: ja_JP
 
 ## エントリー
 
-* [Among Us](https://tepel-chen.github.io/ModuleJamJP3/Karuta.html)(テーマ: 嘘) by ?
+* [Among Us](https://tepel-chen.github.io/ModuleJamJP3/Among%20Us.pdf)(テーマ: 嘘) by ?
 * [Spy](https://tepel-chen.github.io/ModuleJamJP3/Spy.html)(テーマ: 嘘) by ?
 * [-](https://tepel-chen.github.io/ModuleJamJP3/-.html)(テーマ: 夢) by ?
 * [起爆スイッチ](https://tepel-chen.github.io/ModuleJamJP3/Tapiring%20Switches.html)(テーマ: 夢) by ?
