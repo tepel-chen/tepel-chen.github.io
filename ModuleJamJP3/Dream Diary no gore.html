@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>夢日記 — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="../Common/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/main.css">
+    <script src="../Common/js/ktane-utils.js"></script>
+    <style>
+        body {
+            background-image: url("img/Dream Diary/web-background-red.png");
+        }
+        div.diary {
+            margin-bottom: 2em;
+            z-index: 99999;
+
+        }
+        div.diary p.date {
+            margin-bottom: .1em;
+            font-style: italic;
+        }
+        .censored {
+            font-size: .9em;
+            letter-spacing: 1px;
+            word-break: break-all;
+        }
+        /* div.page.page-bg-03.blood {
+            background-image: url("img/Dream Diary/page-bg-noise-03-blood.png");
+        }
+        div.page.page-bg-04.blood {
+            background-image: url("img/Dream Diary/page-bg-noise-04-blood.png");
+        } */
+        img#bird {
+            position: fixed;
+            opacity: 0;
+            transition: opacity .1s;
+            width: 320px;
+        }
+        img#bird.show {
+            transition: opacity .05s;
+            opacity: .5;
+        }
+    </style>
+    <script>
+        
+        setInterval(() => {
+            const el = document.getElementById("bird");
+            if(Math.random() < 0.01) {
+                el.style.left = ((screen.width - el.width) * Math.random()) + "px";
+                el.style.top = ((screen.height - el.height) * Math.random()) + "px";
+                el.style.transform = `rotate(${Math.random()*60-30}deg)`;
+                el.classList.add(["show"])
+                setTimeout(() => {
+                    el.classList.remove(["show"])
+                }, 30)
+
+            }
+        }, 1000)
+    </script>
+</head>
+
+<body>
+    <div><img id="bird" src="img/Dream Diary/bird.png"></div>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">夢日記</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Dream Diary.svg" class="diagram">
+                <h2>モジュール詳細：夢日記</h2>
+                <p class="flavour-text">あかしけ　やなげ　緋色の鳥よ　くさはみねはみ　けをのばせ</p>
+                <p>このモジュールには、夢日記の一部が書かれたページが複数枚含まれる。左右のボタンを押して、表示するページを切り替えることができる。</p>
+                <p>夢日記は<span class="appendix-reference">付録：文章444</span>の一部から引用される。ただし、文章のうちのいくつかの文字が別の文字に置き換わっている。</p>
+                <p>このモジュールを選択してから3~5分の間に、一瞬だけ雛の幻覚が見える。<u>表1</u>において、雛の状態を利用して、送信するキーワードを特定する。</p>
+                <p>ある文字が、キーワードの最初の文字に置き換わっているページを選択する。これを、二文字目、三文字目と繰り返す。キーワードのすべての文字について、対応するページを選択するとモジュールが解除される。</p>
+                <p>爆弾を手放すと、このモジュールは初期状態にリセットされる。このとき、ページに書かれた文章は、別の文章に置き換わる。</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>状態</th>
+                            <th>キーワード</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>左の翼が欠損している</td>
+                            <td>あかしけ</td>
+                        </tr>
+                        <tr>
+                            <td>右の翼が欠損している</td>
+                            <td>やなげ</td>
+                        </tr>
+                        <tr>
+                            <td>左目が欠損している</td>
+                            <td>ひいろのとりよ</td>
+                        </tr>
+                        <tr>
+                            <td>くちばしが欠損している</td>
+                            <td>くさはみねはみ</td>
+                        </tr>
+                        <tr>
+                            <td>頭部が欠損している</td>
+                            <td>けをのばせ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/4</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">夢日記</span>
+            </div>
+            <div class="page-content">
+                <h2>付録：文章444</h2>
+                <div class="diary">
+                    <p class="date">[1992/10/04]</p>
+                    <p>久しぶりに夢を見た。最後に夢を見たのは、もう思い出せないくらい前のことだ。学会の準備のストレスでうまく寝れなかったせいかもしれない。</p>
+                    <p>不思議な夢だった。あたり一面が夕焼けのように赤かった。だが肝心の夕焼けはどこにも見当たらない。そこで私は何かを探していた。何を探していたか、何故探していたかは目が覚めた今ではわからない。まあ、夢なんてそんなもんだろう。</p>
+                </div>
+                <div class="diary">
+                    <p class="date">[1992/10/07]</p>
+                    <p>あの不思議な夢の続きを見た。周りはまた不気味なほどの赤で埋め尽くされていた。私はまた何かを探していた。そこで私は消え入りそうなか細い鳴き声を聞いて、自分が探していたものが何なのか思い出した。雛だ。私はその雛を助けなければならない。早く助けなければその雛は地面で飢え死んでしまうかもしれない。私は焦燥感に駆られていた。</p>
+                    <p>冷や汗を掻きながら目覚めて、この焦りの正体が、明後日に迫った学会に対するものであると気づく。寝ている間くらいは気の休まる時間であってもいいんじゃないか?</p>
+                </div>
+                <div class="diary">
+                    <p class="date">[1992/10/09]</p>
+                    <p>また同じ夢を見た。相変わらず雛は見当たらないままだ。今日の発表が終わればこの不気味な夢ともおさらばだ。気を引き締めて頑張ろう。</p>
+                </div>
+                <div class="diary">
+                    <p class="date">[1992/10/10]</p>
+                    <p>予想虚しく、私はまた雛の夢を見た。声の主はまだ見つからないが、その鳴き声は少しずつ大きくなってきている気がする。声の聞こえる方を探そうにも、一面の刺さるような赤一色で地面がよく見えない。雛を見つけたらこの夢は終わるのだろうか?</p>
+                </div>
+                <div class="diary">
+                    <p class="date">[1992/10/15]</p>
+                    <p>毎日同じ夢を見ていたが、今日になって初めて気づいたことがある。<i>私は空を飛んでいた。</i>腕があったところには羽が生えており、直感で風に乗って滑空することができた。地面がよく見えないのも無理はなかったのだ。気づいた瞬間だけは焦ることもなく自由な気持ちになれた。寝起きがよかったのも何日ぶりだっただろうか。</p>
+                    <p>空を飛べるということは、私が親鳥で、探しているのは自分の子なのだろうか? そうすれば焦燥感にも説明がつく。夢に説明をつけることほど馬鹿らしいこともないのだが。</p>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/4</div>
+        </div>
+        <div class="page page-bg-03 blood">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">夢日記</span>
+            </div>
+            <div class="page-content">
+                <div class="diary">
+                    <p class="date">[1992/10/17]</p>
+                    <p>初めて雛を見つけることができた。しかし、想像していた姿ではなかった。手のひらに乗るほどの大きさの雛は、血のような緋色の羽根がところどころ禿げ、足がひん曲がり、<span class="censored">███</span>が<span class="censored">██</span>していたのだ。私は恐怖し、驚いたところで目が覚めた。冷や汗を掻いていたのはいうまでもない。</p>
+                    <p>それと、最近寝坊することが多くなったような気がする。今日も30分の遅刻だ。学会が終わったから気が緩んでいるのだろう。切り替えなければ。</p>
+                </div>
+                <div class="diary">
+                    <p class="date">[1992/10/20]</p>
+                    <p>今日もまた、私の夢は雛を探すところから始まった。雛を見つけ、その姿に驚いて起きるというパターンが繰り返されている。間抜けなことに、夢を見始めると前日までに見た夢のことはすべて忘れてしまうようだ。</p>
+                    <p>日常生活がうまく送れないほどに、寝坊をするようになってしまった。昨日行った病院では、ストレスによる自律神経の失調と診断された。研究室にはしばらく休養をとると連絡した。</p>
+                </div>
+                <div class="diary">
+                    <p class="date">[1992/10/22]</p>
+                    <p>最初は勘違いかと思ったが、今日確信した。雛は日に日に成長している。初めは雀ほどの大きさだったのが、今はカラスほどの大きさになってしまっている。そして、今日は雛を見つけた先の夢を見た。雛は素早く私に襲いかかり、鋭いくちばしで私の左腕(左翼?)を突いた。私は、飛び起きて私の腕が無事であることを確認して安堵した。</p>
+                    <p>起きたのは昼過ぎだ。今日は14時間ほど寝たことになる。早く前の日常に戻りたい。</p>
+                </div>
+                <div class="diary">
+                    <p class="date">[1992/10/27]</p>
+                    <p>雛を探すなと自分に念じて眠りに入っても、夢を見始める頃にはまたすべて忘れてしまっている。雛はもはや人の背丈ほどの大きさまで成長した。雛は私を見つけるやいなや、私に飛びかかり、鋭い爪で私の首筋を狙った。私は命からがら翔んで逃げることができた。起きたときに引き継がれるのが恐怖心だけでよかった。痛みまで感じるようになったら終わりだ。</p>
+                    <p>飛び起きたときにパニックでベッドランプを壊してしまった。ベッドの周りに何かを置くのをやめようと思う。</p>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 3/4</div>
+        </div>
+        <div class="page page-bg-04 blood">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">夢日記</span>
+            </div>
+            <div class="page-content">
+                <div class="diary">
+                    <p class="date">[1992/11/01]</p>
+                    <p>雛はもはや雛と呼ぶには大きすぎる。その<i>鳥</i>は私が探さなくとも、自ら飛び立って私を探すようになった。今や夢の大半は、あの化け物から逃げているだけの時間だ。</p>
+                    <p>今は午後6時だ。外に広がる夕焼けは、夢の中の赤い景色と違い心を落ち着かせてくれる。もう眠りたくない。あの鳥に食べられたくない。</p>
+                </div>
+                <div class="diary">
+                    <p class="date">[1992/11/04]</p>
+                    <p>今日はまだ食べられなかった。だが、食べられるのも時間の問題だ。</p>
+                </div>
+
+                <div class="diary">
+                    <p class="date">[1992/11/05]</p>
+                    <p>今日も食べられなかった。</p>
+                </div>
+                <div class="diary">
+                    <p class="date">[1992/11/07]</p>
+                    <p>今日も食べられなかった。食べられたくない。</p>
+                </div>
+                <div class="diary">
+                    <p class="date">[日付不詳]</p>
+                    <p>私は親鳥なんかじゃなかった! 自分の子に恐怖するような親なんているはずがない! 雛は確実に治癒し、力をつけた。じゃああいつは何を餌にして成長したんだ? 私はなにを餌として与えてしまった?</p>
+                    <p><i>私は何故夢日記を付け始めたんだ? しかも初日から?</i></p>
+                </div>
+                <div class="diary">
+                    <p class="date">[日付不詳]</p>
+                    <p class="censored">████　███　███████　███████　█████</p>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 4/4</div>
+        </div>
+    </div>
+</body>
+
+</html>
