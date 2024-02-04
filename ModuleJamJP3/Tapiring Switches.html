@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>起爆スイッチ — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="../Common/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Common/css/main.css">
+    <script src="../Common/js/ktane-utils.js"></script>
+    <script src="../Common/js/jquery.3.7.0.min.js"></script>
+    <style>
+    table {
+        margin: 1em auto;
+        text-align: center;
+    }
+    img {
+        margin: 0em auto;
+    }
+    .dark table img, .dark .triangle {
+        filter: invert(80%);
+    }
+    .boom{
+     visibility: hidden;
+    }
+    #yume{
+     color: cadetblue;
+     font-family: Arial, Helvetica, sans-serif;
+     font-style: italic;
+     font-size: 28px;
+    }
+    .space{display: none;
+    height: 1500px;
+    }
+    @media screen and (max-width: 720px), print {
+     .space{
+      display:block;
+     }
+    }
+    #content2{
+     color: cadetblue;
+     font-family: Arial, Helvetica, sans-serif;
+     font-style: italic;
+     visibility: hidden;
+    }
+    </style>
+</head>
+<body>
+    <div class="section" id="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title" id="header">起爆スイッチ</span>
+            </div>
+            <div class="page-content" >
+                <img src="img/Component/Switch Placement.svg" class="diagram">
+                <h2 id="title">モジュール詳細：起爆スイッチ</h2>
+                <p class="flavour-text" id="flavour-text">白黒の 夢ぞ食ひける あやかしの 姿見し者 うつつならずや</p>
+                <p id="paragraph1">このモジュールには、5×5のグリッドのうち、いくつかに白または黒のスイッチが搭載されている。スイッチの初期状態はグリッドに対してY軸方向に垂直である。</p>
+                <p id="caution"><b>追記：このモジュールが搭載された爆弾とマニュアルは、爆破に巻き込まれる恐怖の悪夢にうなされている。<br>モジュールおよびマニュアルのいかなる場所もクリックしてはいけない。ただし、モジュールはカウントダウンタイマーの秒数が素数の時であれば、眠りを妨げずに操作できる。上記の内容を無視した場合の動作について、制作者は一切の責任を負わないものとする。</b></p>
+                <button id="wakeup">マニュアルを起こす</button>
+                <p id="paragraph2">モジュールを安全に解除するには、以下の手順に従う。<span style="font-size: larger;font-weight: bold;">手順を必ず最後まで熟読し、間違いのないように行うこと！</span></p>
+                <p id="yume"></p>
+                <div id="yumelist">
+                <ol>
+                 <li>グリッドのマスを各段ごとに読み順で読む。白いスイッチがある場合、そのマスは1を示し、黒いスイッチの場合は、0を示す。スイッチが存在しないマスは0または1として扱う。</li>
+
+                  <li>シリアルナンバーの各英字を、アルファベット上の位置の数字(A1Z26)に変換する。数字は、それぞれ(数字+シリアルナンバーの最大の数字+1)に変換する。</li>
+                  <li>シリアルナンバーの各文字を5桁の二進数に変換する。これで6つの二進数が取得できるはずである。</li>
+                  <li>各段を左から右、各列を上から下に読んだ際に6つの二進数のいずれかになるようにスイッチを配置する。</li>
+                  
+                  <li>このモジュールはわずかな負荷ですぐに爆発してしまう。スイッチを動かしてから、15秒以内に別のスイッチを操作すると、ミスが記録される。</li>
+
+                  <li>正しい状態にできたら、ステータスライトを押す。回答が正しい場合、モジュールのスイッチが自動的に左または右に倒れる。</li>
+
+                  <li>右に倒れた黒いスイッチの数から左に倒れた白いスイッチの数を引き、左に倒れた黒いスイッチの数を掛ける。右に倒れた白いスイッチの数との最小公倍数を求め、爆弾の残り秒数が求めた数の倍数になったら、再度ステータスライトを押す。ただし、モジュールは眠っているため、時々寝返りを打ってスイッチの状態が変わることがあることに注意してほしい。</li>
+
+                  <li>正しく行われれば、モジュールは解除される。安全に解除できた報酬として、爆弾の残り時間が、初期の残り時間の25%増加する。</li>
+                 </ol>
+                  </div>
+                  <div class="space">
+                  </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/2</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">起<span style="color:black">爆</span>スイッチ</span>
+            </div>
+            <div class="page-content" id="content2">
+             <img src="img/Component/Switch Placement.svg" class="diagram">
+             <h2>モジュール詳細：起獏スイッチ</h2>
+             <p class="comment">もうマニュアルに触っても大丈夫。苦い部分はボクが食べちゃったから。</p>
+             <h3>マニュアルの悪夢を解消</h3>
+             <p>どうやらこのマニュアルは、とあるモジュールによって爆弾が爆発することを恐れているみたいだ。</p>
+
+             <p>以下の条件に最初に合致したモジュールが、マニュアルを苦しませているモジュールだよ。</p>
+             <ul>
+              <li>一番最初のミスが記録されたモジュール。</li>
+              <li>「時間依存」または「即時爆発」の特性を持つモジュール(複数ある場合、それらすべて)。</li>
+              <li>Twitch Playsスコアが最も高い通常モジュール(複数ある場合、それらすべて)。</li>
+              </ul>
+              <p>そのモジュールが解除されれば、マニュアルが見ている悪夢は美味しく食べられるようになるよ。</p>  
+              <p>該当したモジュールの名前(英字のみ)を覚えておくこと！モジュールが見ている悪夢を食べるのに必要な調味料なんだ。</p> 
+              <h3>モジュールの悪夢を解消</h3> 
+              <p>モジュールが見ている夢に、先程取得した名前を、細かなフレーズに砕いて混ぜてほしい。</p>  
+              <p>悪夢モジュールの名前を解除順に並べ、25文字未満の場合は、25文字になるまで繰り返す。25文字を超える場合は先頭25文字をまず使用して部分的なフレーズを作成した後、その後余った文字列を再び使用してね。</p>  
+              <p>文字列を読み順で5×5グリッド内に配置する。その後、白のスイッチがある位置の英字を読み順に取得しよう。これが、このグリッドで取得できる細かく砕いたフレーズだよ。</p>  
+              <p>モジュールを選択した状態で、キーボードを使ってフレーズを順に打ち込もう。入力内容は見えないから注意してね。</p>  
+
+              <p>これで、両方とも夢から覚めたはず。このモジュールの解除方法？それは、マニュアルに直接聞いてみて！</p>  
+            </div>
+            <div class="page-footer relative-footer">ページ 2/2</div>
+        </div>
+    </div>
+    <audio id="audio" controls style="display:none">
+     <source src="audio/Tapiring Switches/boom.mp3" type="audio/mp3">
+ </audio>
+</body>
+<script>
+ window.addEventListener('mousedown', function() {
+  if(!document.getElementById("title").classList.contains("wakeup")){
+  document.getElementById("section").classList.add("boom");
+  document.getElementById('audio').play();
+  setTimeout(() =>  window.close(), 1800);
+  }
+ });
+ //テキスト表示のギミック
+  const fadeIn = async (element, duration) => {
+  let opacity = 0
+  // 基準となるタイムスタンプ
+  const start = performance.now()
+  
+  // ループで少しずつ不透明度を大きくする
+  while (opacity < 1) {
+    element.style.opacity = opacity.toString()
+    const timeStamp = await new Promise(resolve => requestAnimationFrame(resolve))
+    // イージング
+    // タイムスタンプが大きくなるにつれて1に近づく
+    opacity = (timeStamp - start) / duration
+  }
+  element.style.opacity = '1'
+}
+
+const fadeOut = async (element, duration) => {
+  let opacity = 1
+  const start = performance.now()
+  
+  // ループで少しずつ不透明度を小さくする
+  while (opacity > 0) {
+    element.style.opacity = opacity.toString()
+    const timeStamp = await new Promise(resolve => requestAnimationFrame(resolve))
+    const easing = (timeStamp - start) / duration
+    // タイムスタンプが大きくなるにつれて０に近づく
+    opacity = 1 - easing
+  }
+  element.style.opacity = '0'
+}
+
+(async () => {
+  const words = [
+    '',
+    'バクバク……。うえぇ、この夢の味は酷すぎる…。',
+    'もっと美味しいものを食べたいよぉ……。',
+    'そこ！そこのぼーっとしている人！',
+    'どうか、ここにある悪夢をマシなものにしてくれないかな？',
+    'ちょうど下の方に手頃な空間があるから、そこで話そう。'
+  ]
+  const element = document.getElementById("yume")
+  const element2 = document.getElementById("yumelist")
+  // 配列の先頭の文字列をセット
+  element.textContent = words[0]
+  await new Promise(resolve => setTimeout(resolve, 30000))
+  await fadeOut(element2, 5000)
+  // 配列の先頭以外をループする
+  for (const item of words.slice(1)) {
+    // フェードアウト前に3秒間表示する
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    // フェードアウト後、次の文字列をセットして、フェードイン
+    await fadeOut(element, 500)
+    element.textContent = item
+    await fadeIn(element, 500)
+  }
+  var list = document.getElementById("title");
+  list.classList.add("wakeup");
+  document.getElementById("content2").style.visibility="inherit";
+})()
+
+ // ページ最下部までスクロール時にイベント起こす
+ $(window).on('scroll', function () {
+  var doch = $(document).innerHeight(); //ページ全体の高さ
+  var winh = $(window).innerHeight(); //ウィンドウの高さ
+  var bottom = doch - winh; //ページ全体の高さ - ウィンドウの高さ = ページの最下部位置
+  // アニメーション終わるまで空欄&一番下までスクロールした時に実行
+  if (bottom <= $(window).scrollTop() && document.getElementById("title").classList.contains("wakeup") && !document.getElementById("title").classList.contains("wakeup2")) {
+  var flavor = document.getElementById("flavour-text");
+  flavor.innerText="さあ、起きる時間だよ。";
+  var title = document.getElementById("title");
+  var header = document.getElementById("header");
+  var list = document.getElementById("yumelist");
+  var caution = document.getElementById("caution");
+  var paragraph1 = document.getElementById("paragraph1");
+  var yume = document.getElementById("yume");
+  title.innerText="モジュール詳細：Zzz......";
+  header.innerText="Zzz......";
+  list.innerText="";
+  caution.innerText="";
+  yume.innerText="";
+  paragraph1.innerText="むにゃむにゃ……。";
+  paragraph2.innerText="";
+  document.getElementById("title").classList.add("wakeup2");
+  }
+  });
+  var flavor = document.getElementById("flavour-text");
+  var b = document.getElementById("wakeup");
+  b.addEventListener('click', function(){
+   if (document.getElementById("title").classList.contains("wakeup2")) {
+  title.innerText="モジュール詳細：白黒スイッチ";
+  header.innerText="白黒スイッチ";
+  paragraph1.innerText="";
+  caution.innerText="このモジュールに、ミスが記録されることはない。シリアルナンバーの最後の数字が奇数の場合、白いスイッチを右に、黒いスイッチを左に倒す。そうでない場合、逆の状態にする。正しい状態にすると、モジュールは自動的に解除される。";
+  document.getElementById("flavour-text").innerText="今日は目覚めがあまり良くないな。";
+  b.style.visibility="hidden";
+  document.getElementById("content2").style.visibility="hidden";
+   }    
+    }, false);
+ </script>
+
+</html>
