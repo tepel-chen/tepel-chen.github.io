@@ -23,15 +23,25 @@ lang: ja_JP
   * 複数人による合作もOKとします。その場合でも、一つのテーマにつき一人一個のルールは適用されます。
   * 一人で複数個提出した場合でも、投票できる票数は変わりません。
 
-## 投票受付中 !
-[アンケート](https://docs.google.com/forms/d/10B1SzkbCwJXkQrlkm7w8aTSdvxNy2D4pfIF6Fx6Miic)
-期限は2/8(木)21時まで!
-
 ## エントリー
 
-* [Among Us](https://tepel-chen.github.io/ModuleJamJP3/Among%20Us.pdf)(テーマ: 嘘) by ?
-* [Spy](https://tepel-chen.github.io/ModuleJamJP3/Spy.html)(テーマ: 嘘) by ?
-* [-](https://tepel-chen.github.io/ModuleJamJP3/-.html)(テーマ: 夢) by ?
-* [起爆スイッチ](https://tepel-chen.github.io/ModuleJamJP3/Tapiring%20Switches.html)(テーマ: 夢) by ?
-* [夢日記](https://tepel-chen.github.io/ModuleJamJP3/Dream%20Diary.html)(テーマ: 夢) by ?
-  * [グロ要素なし](https://tepel-chen.github.io/ModuleJamJP3/Dream%20Diary%20no%gore.html)(テーマ: 夢) by ?
+* [Among Us](https://tepel-chen.github.io/ModuleJamJP3/Among%20Us.pdf)(テーマ: 嘘) by @arleen0103
+* [Spy](https://tepel-chen.github.io/ModuleJamJP3/Spy.html)(テーマ: 嘘) by @alpha8404
+* [-](https://tepel-chen.github.io/ModuleJamJP3/-.html)(テーマ: 夢) by @jrtsc4812001raicho 
+* [起爆スイッチ](https://tepel-chen.github.io/ModuleJamJP3/Tapiring%20Switches.html)(テーマ: 夢) by @hatosablelbas 
+* [夢日記](https://tepel-chen.github.io/ModuleJamJP3/Dream%20Diary.html)(テーマ: 夢) by @tchen 
+  * [血液表現なし](https://tepel-chen.github.io/ModuleJamJP3/Dream%20Diary%20no%20gore.html)
+
+## 結果
+
+### 構成部門優勝(31点)
+Spy by @alpha8404 
+
+### オリジナリティ部門(29点)
+起爆スイッチ(テーマ: 夢) by @hatosablelbas 
+
+### 面白さ部門(25点)
+起爆スイッチ(テーマ: 夢) by @hatosablelbas 
+
+### 総合優勝(81点)
+Spy by @alpha8404
