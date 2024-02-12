@@ -31,4 +31,4 @@ lang: ja_JP
 * イベント
   * [第一回マニュアルJamまとめ](/ModuleJamJP1)
   * [第二回マニュアルJamまとめ](/ModuleJamJP2)
-  * [第三回マニュアルJamまとめ(投票受付中!)](/ModuleJamJP3)
+  * [第三回マニュアルJamまとめ](/ModuleJamJP3)
