@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="icon" href="favicon.ico">
+		<title>Text-Field Calculator</title>
+		<link rel="stylesheet" href="main.css">
+		<script src="../Common/js/jquery.3.7.0.min.js"></script>
+		<script src="https://unpkg.com/mathjs@13.0.0/lib/browser/math.js"></script>
+		<script>
+			function getType(o) {
+				return Object.prototype.toString.call(o).match(/^\[object\s(.*)\]$/)[1].toLowerCase();
+			}
+
+			function insert(base, pos, insert) {
+				return base.substr(0, pos) + insert + base.substr(pos)
+			}
+
+			// https://stackoverflow.com/a/6234804/8213163
+			function escapeHtml(unsafe) {
+				return unsafe
+					.replace(/&/g, "&amp;")
+					.replace(/</g, "&lt;")
+					.replace(/>/g, "&gt;")
+					.replace(/"/g, "&quot;")
+					.replace(/'/g, "&#039;");
+			}
+
+			math.config({
+				number: "BigNumber",
+				precision: 32
+			});
+
+			$(function() {
+				var output = $(".output");
+				var input = $(".input");
+
+				input.val(localStorage.getItem("content") ?? "");
+
+				function evaluateInput() {
+					var expression = input.val();
+					var result;
+					try {
+						result = math.evaluate(expression);
+					} catch(e) {
+						result = e;
+					}
+
+					var type = getType(result);
+					output.toggleClass("error", type == "error");
+					$("pre").html("");
+					switch (type) {
+						case "number":
+						case "boolean":
+						case "decimal":
+							output.text(result);
+							break;
+						case "function":
+							output.text(math.help(result).doc.description);
+							break;
+						case "error":
+							output.text(result.message);
+							var position = /\(char (\d+)\)/.exec(result.message);
+							if (position) {
+								var pos = parseInt(position[1]);
+								var escaped = escapeHtml(expression);
+								$("pre").html(insert(escaped, pos - 1, "<span class='error'>!</span>"));
+							}
+
+							break;
+						case "object":
+							output.text(result.toString());
+							break;
+						case "string":
+							output.text(result);
+							break;
+						default:
+							output.text("");
+							break;
+					}
+
+					// Put text in localStorage to persist data
+					localStorage.setItem("content", expression);
+				}
+
+				input.on("input", function(e) {
+					evaluateInput();
+				}).on("keydown", function(e) {
+					if (e.key == "Tab") {
+						if (!output.hasClass("error")) {
+							input.select();
+
+							var text = output.text();
+							if (!document.execCommand("insertText", false, text))
+							{
+								input[0].setRangeText(text, 0, input[0].selectionEnd, "end");
+							}
+						}
+						return false;
+					}
+				});
+
+				evaluateInput();
+			})
+		</script>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				min-height: calc(100vh - 20px);
+
+				margin: 10px;
+			}
+
+			.input {
+				width: 100%;
+				box-sizing: border-box;
+				height: 30vh;
+				resize: vertical;
+				margin-bottom: .5em;
+				font-size: inherit;
+			}
+
+			.output {
+				font-family: monospace;
+			}
+
+			.error {
+				color: rgb(255, 50, 50);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<b>Text-Field Calculator (Clone)</b>
+		</header>
+		<textarea class="input" autofocus></textarea>
+		<div class="output-wrap">
+			<div style="font-weight: bold;">Output:</div><div class="output"></div>
+			<pre></pre>
+		</div>
+		<footer>
+			<a href="https://mathjs.org/docs/index.html#documentation">Documentation</a>
+			<a href="https://github.com/samfundev/TextFieldCalculator">Source</a>
+		</footer>
+	</body>
+</html>
